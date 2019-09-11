@@ -210,8 +210,6 @@ image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/
 
 image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/demo-get-promotions/getPromotionsParametersWithValue.png[]
 
-
-```
 * Save the Mule project.
 * Complete flow looks as below.
 
