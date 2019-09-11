@@ -239,4 +239,4 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 ```
 
 == See Also
-* https://github.com/Apisero-Connectors/shop-api-connector-doc/blob/master/release-notes.adoc[​Metrc Connector Release Notes]
+* https://github.com/Apisero-Connectors/shop-api-connector-doc/blob/master/doc/release-notes.adoc[​Metrc Connector Release Notes]
