@@ -25,135 +25,135 @@ The Shop API Connector is compatible with these software versions:
 * Shop API connector is compatible with Mule 4
 * Packages  : Get active packages
 * Product 
-	Get Products By ID
-	Get Products By IDAvailability
-	Get Products By IDBundled Products
-	Get Products By IDImages
-	Get Products By IDLinks
-	Get Products By IDOptions
-	Get Products By IDPrices
-	Get Products By IDPromotions
-	Get Products By IDRecommendations
-	Get Products By IDSet Products
-	Get Products By IDShipping Methods
-	Get Products By IDVariations
-	Get Products By IDs
+	*Get Products By ID
+	*Get Products By IDAvailability
+	*Get Products By IDBundled Products
+	*Get Products By IDImages
+	*Get Products By IDLinks
+	*Get Products By IDOptions
+	*Get Products By IDPrices
+	*Get Products By IDPromotions
+	*Get Products By IDRecommendations
+	*Get Products By IDSet Products
+	*Get Products By IDShipping Methods
+	*Get Products By IDVariations
+	*Get Products By IDs
 * Categories
-	Get Categories By ID
-	Get Categories By IDs
+	*Get Categories By ID
+	*Get Categories By IDs
 * Customers
-	Delete Customers Auth
-	Delete Customers By IDAddresses By ID
-	Delete Customers By IDPayment Instruments By ID
-	Delete Customers By IDProduct Lists By ID
-	Delete Customers By IDProduct Lists By IDItems By ID
-	Get Customers By ID
-	Get Customers By IDAddresses
-	Get Customers By IDAddresses By ID
-	Get Customers By IDBaskets
-	Get Customers By IDOrders
-	Get Customers By IDPayment Instruments
-	Get Customers By IDPayment Instruments By ID
-	Get Customers By IDProduct Lists
-	Get Customers By IDProduct Lists By ID
-	Get Customers By IDProduct Lists By IDItems
-	Get Customers By IDProduct Lists By IDItems By ID
-	Get Customers By IDProduit Lists By IDItems By IDPurchases
-	Get Customers By IDProduct Lists By IDItems By IDPurchases By ID
-	Patch Customers By ID
-	Patch Customers By IDaddresses By ID
-	Patch Customers By IDproduct Lists By ID
-	Patch Customers By IDproduct Lists By IDitems By ID
-	Patch Customers By IDproduct Lists By IDitems By IDpurchases By ID
-	Post Customers
-	Post Customers Auth
-	Post Customers By IDAddresses
-	Post Customers By IDAuth
-	Post Customers By IDPassword Reset
-	Post Customers By IDPayment Instruments
-	Post Customers By IDProduct Lists
-	Post Customers By IDProduct Lists By IDItems
-	Post Customers By IDProduct Lists By IDItems By IDPurchases
-	Post Customers password Reset
-	Put Customers By IDpassword
+	*Delete Customers Auth
+	*Delete Customers By IDAddresses By ID
+	*Delete Customers By IDPayment Instruments By ID
+	*Delete Customers By IDProduct Lists By ID
+	*Delete Customers By IDProduct Lists By IDItems By ID
+	*Get Customers By ID
+	*Get Customers By IDAddresses
+	*Get Customers By IDAddresses By ID
+	*Get Customers By IDBaskets
+	*Get Customers By IDOrders
+	*Get Customers By IDPayment Instruments
+	*Get Customers By IDPayment Instruments By ID
+	*Get Customers By IDProduct Lists
+	*Get Customers By IDProduct Lists By ID
+	*Get Customers By IDProduct Lists By IDItems
+	*Get Customers By IDProduct Lists By IDItems By ID
+	*Get Customers By IDProduit Lists By IDItems By IDPurchases
+	*Get Customers By IDProduct Lists By IDItems By IDPurchases By ID
+	*Patch Customers By ID
+	*Patch Customers By IDaddresses By ID
+	*Patch Customers By IDproduct Lists By ID
+	*Patch Customers By IDproduct Lists By IDitems By ID
+	*Patch Customers By IDproduct Lists By IDitems By IDpurchases By ID
+	*Post Customers
+	*Post Customers Auth
+	*Post Customers By IDAddresses
+	*Post Customers By IDAuth
+	*Post Customers By IDPassword Reset
+	*Post Customers By IDPayment Instruments
+	*Post Customers By IDProduct Lists
+	*Post Customers By IDProduct Lists By IDItems
+	*Post Customers By IDProduct Lists By IDItems By IDPurchases
+	*Post Customers password Reset
+	*Put Customers By IDpassword
 * Orders
-	Delete Orders By IDNotes By ID
-	Delete Orders By IDPayment Instruments By ID
-	Get Orders By ID
-	Get Orders By IDNotes
-	Get Orders By IDPayment Methods
-	Patch Orders By ID
-	Patch Orders By IDpayment Instruments By ID
-	Post Orders
-	Post Orders By IDNotes
-	Post Orders By IDPayment Instruments
-	Put Orders By ID
+	*Delete Orders By IDNotes By ID
+	*Delete Orders By IDPayment Instruments By ID
+	*Get Orders By ID
+	*Get Orders By IDNotes
+	*Get Orders By IDPayment Methods
+	*Patch Orders By ID
+	*Patch Orders By IDpayment Instruments By ID
+	*Post Orders
+	*Post Orders By IDNotes
+	*Post Orders By IDPayment Instruments
+	*Put Orders By ID
 * Product Search
-	Get Product Search
-	Get Product Search Availability
-	Get Product Search Images
-	Get Product Search Prices
-	Get Product Search Represented Products
-	Get Product Search Variations
+	*Get Product Search
+	*Get Product Search Availability
+	*Get Product Search Images
+	*Get Product Search Prices
+	*Get Product Search Represented Products
+	*Get Product Search Variations
 * Promotions
-	Get Promotions
-	Get Promotions By ID
-	Get Promotions By IDs
+	*Get Promotions
+	*Get Promotions By ID
+	*Get Promotions By IDs
 * Site
-	Get Site
+	*Get Site
 * Order Search
-	Post Order Search
+	*Post Order Search
 * Sessions
-	Post Sessions
+	*Post Sessions
 * Search Suggestion
-	Get Search Suggestion
+	*Get Search Suggestion
 * Stores
-	Get Stores
-	Get Stores By ID
-	Get Stores By IDs
+	*Get Stores
+	*Get Stores By ID
+	*Get Stores By IDs
 * Folders
-	Get Folders By ID
-	Get Folders By IDs
+	*Get Folders By ID
+	*Get Folders By IDs
 * Content
-	Get Content By ID
-	Get Content By IDs
+	*Get Content By ID
+	*Get Content By IDs
 * Content Search
-	Get Content Search
+	*Get Content Search
 * Baskets
-	Delete Baskets By ID
-	Delete Baskets By IDCoupons By ID
-	Delete Baskets By IDGift Certificate Items By ID
-	Delete Baskets By IDItems By ID
-	Delete Baskets By IDNotes By ID
-	Delete Baskets By IDPayment Instruments By ID
-	Delete Baskets By IDPrice Adjustments By ID
-	Delete Baskets By IDShipments By ID
-	Get Baskets By ID
-	Get Baskets By IDApproaching Discounts
-	Get Baskets By IDNotes
-	Get Baskets By IDPayment Methods
-	Get Baskets By IDShipments By IDShipping Methods
-	Patch Baskets By ID
-	Patch Baskets By IDGift Certificate Items By ID
-	Patch Baskets By IDitems By ID
-	Patch Baskets By IDpayment Instruments By ID
-	Patch Baskets By IDprice Adjustments By ID
-	Patch Baskets By IDshipments By ID
-	Post Baskets
-	Post Baskets By IDCoupons
-	Post Baskets By IDCift Certificate Items
-	Post Baskets By IDItems
-	Post Baskets By IDNotes
-	Post Baskets By IDPayment Instruments
-	Post Baskets By IDPrice Adjustments
-	Post Baskets By IDShipments
-	Post Baskets Reference
-	Put Baskets By IDagent
-	Put Baskets By IDbilling Address
-	Put Baskets By IDcustomer
-	Put Baskets By IDshipments By IDshipping Address
-	Put Baskets By IDshipments By IDshipping Method
-	Put Baskets By IDstorefront
+	*Delete Baskets By ID
+	*Delete Baskets By IDCoupons By ID
+	*Delete Baskets By IDGift Certificate Items By ID
+	*Delete Baskets By IDItems By ID
+	*Delete Baskets By IDNotes By ID
+	*Delete Baskets By IDPayment Instruments By ID
+	*Delete Baskets By IDPrice Adjustments By ID
+	*Delete Baskets By IDShipments By ID
+	*Get Baskets By ID
+	*Get Baskets By IDApproaching Discounts
+	*Get Baskets By IDNotes
+	*Get Baskets By IDPayment Methods
+	*Get Baskets By IDShipments By IDShipping Methods
+	*Patch Baskets By ID
+	*Patch Baskets By IDGift Certificate Items By ID
+	*Patch Baskets By IDitems By ID
+	*Patch Baskets By IDpayment Instruments By ID
+	*Patch Baskets By IDprice Adjustments By ID
+	*Patch Baskets By IDshipments By ID
+	*Post Baskets
+	*Post Baskets By IDCoupons
+	*Post Baskets By IDCift Certificate Items
+	*Post Baskets By IDItems
+	*Post Baskets By IDNotes
+	*Post Baskets By IDPayment Instruments
+	*Post Baskets By IDPrice Adjustments
+	*Post Baskets By IDShipments
+	*Post Baskets Reference
+	*Put Baskets By IDagent
+	*Put Baskets By IDbilling Address
+	*Put Baskets By IDcustomer
+	*Put Baskets By IDshipments By IDshipping Address
+	*Put Baskets By IDshipments By IDshipping Method
+	*Put Baskets By IDstorefront
 
 === Version 1.0.0 - Fixed in This Release
 First version.
