@@ -42,9 +42,9 @@ The Shop API Connector is compatible with these software versions:
 	*Get Categories By ID
 	*Get Categories By IDs
 * Customers
-	*Delete Customers Auth
-	*Delete Customers By IDAddresses By ID
-	*Delete Customers By IDPayment Instruments By ID
+	.Delete Customers Auth
+	.Delete Customers By IDAddresses By ID
+	.Delete Customers By IDPayment Instruments By ID
 	*Delete Customers By IDProduct Lists By ID
 	*Delete Customers By IDProduct Lists By IDItems By ID
 	*Get Customers By ID
