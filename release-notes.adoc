@@ -160,7 +160,7 @@ First version.
 
 == See Also
 * https://www.mulesoft.com/legal/versioning-back-support-policy#anypoint-connectors[Anypoint Connectors Support Policy]
-* https://github.com/Apisero-Connectors/shop-api-connector-doc/blob/master/doc/user-manual.adoc[​User Manual]
+* https://github.com/Apisero-Connectors/shop-api-connector-doc/blob/master/user-manual.adoc[​User Manual]
 * https://forums.mulesoft.com[MuleSoft Forum]
 * https://support.mulesoft.com[Contact MuleSoft Support]
  
