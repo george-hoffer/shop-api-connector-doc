@@ -38,9 +38,11 @@ The Shop API Connector is compatible with these software versions:
 	* Get Products By IDShipping Methods
 	* Get Products By IDVariations
 	* Get Products By IDs
+	
 === Categories
 	* Get Categories By ID
 	* Get Categories By IDs
+	
 === Customers
 	* Delete Customers Auth
 	* Delete Customers By IDAddresses By ID
@@ -76,6 +78,7 @@ The Shop API Connector is compatible with these software versions:
 	* Post Customers By IDProduct Lists By IDItems By IDPurchases
 	* Post Customers password Reset
 	* Put Customers By IDpassword
+	
 === Orders
 	* Delete Orders By IDNotes By ID
 	* Delete Orders By IDPayment Instruments By ID
@@ -88,6 +91,7 @@ The Shop API Connector is compatible with these software versions:
 	* Post Orders By IDNotes
 	* Post Orders By IDPayment Instruments
 	* Put Orders By ID
+	
 === Product Search
 	* Get Product Search
 	* Get Product Search Availability
@@ -95,30 +99,40 @@ The Shop API Connector is compatible with these software versions:
 	* Get Product Search Prices
 	* Get Product Search Represented Products
 	* Get Product Search Variations
+	
 === Promotions
 	* Get Promotions
 	* Get Promotions By ID
 	* Get Promotions By IDs
+	
 === Site
 	* Get Site
+	
 === Order Search
 	* Post Order Search
+	
 === Sessions
 	* Post Sessions
+	
 === Search Suggestion
 	* Get Search Suggestion
+	
 === Stores
 	* Get Stores
 	* Get Stores By ID
 	* Get Stores By IDs
+	
 === Folders
 	* Get Folders By ID
 	* Get Folders By IDs
+	
 === Content
 	* Get Content By ID
 	* Get Content By IDs
+	
 === Content Search
 	* Get Content Search
+	
 === Baskets
 	* Delete Baskets By ID
 	* Delete Baskets By IDCoupons By ID
@@ -154,18 +168,23 @@ The Shop API Connector is compatible with these software versions:
 	* Put Baskets By IDshipments By IDshipping Address
 	* Put Baskets By IDshipments By IDshipping Method
 	* Put Baskets By IDstorefront
+	
 === Ai Resource
 	* Track Activity
 	* Get Ai Product Recommendations By ID
+	
 === Custom Objects
 	* Get Custom Objects By IDBy ID
+	
 === Price Adjustment Limits
 	* Get Price Adjustment Limits
+	
 === Product Lists 
 	* Get Product Lists
 	* Get Product Lists By ID
 	* Get Product Lists By IDItems
 	* Get Product Lists By IDItems By ID
+	
 === Gift Certificate 
 	* Post Gift Certificate
 
