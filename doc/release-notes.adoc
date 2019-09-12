@@ -25,7 +25,7 @@ The Shop API Connector is compatible with these software versions:
 * Shop API connector is compatible with Mule 4
 
 * Product 
-	*Get Products By ID
+	* Get Products By ID
 	*Get Products By IDAvailability
 	*Get Products By IDBundled Products
 	*Get Products By IDImages
