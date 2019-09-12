@@ -9,7 +9,7 @@ Shop API Connector provides Mule users a quick and easy way to integrate with Co
 == Version 1.0.0 - September 2019
 This release of Shop API Connector is compatibile with Mule 4 and it is not compatible with Mule 3 versions.
 
-=== Version 1.0.0 - Compatibility
+== Version 1.0.0 - Compatibility
 The Shop API Connector is compatible with these software versions:
 
 [%header%autowidth.spread]
@@ -20,7 +20,7 @@ The Shop API Connector is compatible with these software versions:
 |JDK |1.8.x
 |===
 
-=== Version 1.0.0 - Features
+== Version 1.0.0 - Features
 
 === Shop API connector is compatible with Mule 4
 
