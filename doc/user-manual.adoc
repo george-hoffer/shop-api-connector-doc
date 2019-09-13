@@ -24,6 +24,11 @@ The CCC exposes the following key capabilities to the clients:
 . Folders
 . Content
 . Content Search
+. Ai Resource
+. CustomObjects
+. PriceAdjustmentLimits
+. ProductLists
+. Gift Certificate
 
 == About shop-api OCC Connector
 
@@ -237,6 +242,11 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
     </flow>
 </mule>
 ```
+== Note 
+
+For Accessing any operation in shop-api connector which uses JWT Authentication, the user needs to use "Post Customer Auth" opearation and get the access token and pass it to the connector Operation as a custom header.
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/PostCustomerAuthUse.png[]
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/CustomHeader.png[]
 
 == See Also
 * https://github.com/Apisero-Connectors/shop-api-connector-doc/blob/master/doc/release-notes.adoc[​Metrc Connector Release Notes]
