@@ -206,7 +206,7 @@ image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/
 image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/demo-get-promotions/getPromotionsListnerpath.png[]
 * Select *'Get Promotions'* operation from shop-api connector, drag & drop it into canvas. Click on Get Promotions operation.
 
-image::https://github.com/Apisero-Connectors/Connector-doc/blob/master/doc/images/demo-get-promotions/getPromotionsParametersWithoutValue.png[]
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/demo-get-promotions/getPromotionsParametersWithoutValue.png[]
 * Select Client Id Conf from drop down which was already configured previously in global elements, or if required new configuration can be added by clicking green plus (+) symbol.
 
 image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/demo-get-promotions/ClientIdConfigGlobalElement.png[]
@@ -245,7 +245,9 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 == Note 
 
 For Accessing any operation in shop-api connector which uses JWT Authentication, the user needs to use "Post Customer Auth" opearation and get the access token and pass it to the connector Operation as a custom header.
+
 image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/PostCustomerAuthUse.png[]
+
 image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/CustomHeader.png[]
 
 == See Also
