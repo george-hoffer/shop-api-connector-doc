@@ -168,11 +168,7 @@ The Shop API Connector is compatible with these software versions:
 	* Put Baskets By IDshipments By IDshipping Address
 	* Put Baskets By IDshipments By IDshipping Method
 	* Put Baskets By IDstorefront
-	
-=== Ai Resource
-	* Track Activity
-	* Get Ai Product Recommendations By ID
-	
+		
 === Custom Objects
 	* Get Custom Objects By IDBy ID
 	
@@ -187,6 +183,10 @@ The Shop API Connector is compatible with these software versions:
 	
 === Gift Certificate 
 	* Post Gift Certificate
+
+=== Ai Resource
+
+	* Get Ai Product Recommendations By ID : Its a beta feature and it's not functional in connector.
 
 === Version 1.0.0 - Fixed in This Release
 First version.
