@@ -1,0 +1,58 @@
+= Shop API Connector Release Notes
+
+September 2019
+
+_MuleSoft Certified_
+
+Shop API Connector provides Mule users a quick and easy way to integrate with Commerce Cloud Shop API end points.
+
+== 1.0.0 
+=== September 2019
+This release of Shop API Connector is compatibile with Mule 4 and it is not compatible with Mule 3 versions.
+
+== Compatibility
+The Shop API Connector is compatible with these software versions:
+
+[%header%autowidth.spread]
+|===
+|Software |Version
+|Anypoint Studio |7 and later
+|Mule |4 and later
+|JDK |1.8.x
+|===
+
+== Features
+
+=== Shop API connector provides access to Commerce Cloud Shop APIs for these workflows:
+
+* Products
+* Categories
+* Customers
+* Sessions
+* Baskets
+* Product Search
+* Orders
+* Order Search
+* Promotions
+* Search Suggestion
+* Site
+* Stores
+* Folders
+* Content
+* Content Search
+* Ai Resource ( Get Ai Product Recommendations By ID : Its a beta feature and it's not functional in connector.)
+* CustomObjects
+* PriceAdjustmentLimits
+* ProductLists
+* Gift Certificate
+
+
+== Fixed in This Release
+First version.
+
+== See Also
+* https://www.mulesoft.com/legal/versioning-back-support-policy#anypoint-connectors[Anypoint Connectors Support Policy]
+* https://github.com/Apisero-Connectors/shop-api-connector-doc/blob/master/doc/user-manual.adoc[​User Manual]
+* https://forums.mulesoft.com[MuleSoft Forum]
+* https://support.mulesoft.com[Contact MuleSoft Support]
+ 
