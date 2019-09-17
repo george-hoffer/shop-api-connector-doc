@@ -8711,6 +8711,7 @@ Submits an order with a given order number, based on a prepared basket. The only
 | blocking |Boolean |If false, the reconnection strategy runs in
 a separate, non-blocking thread. |true |
 |===
+
 [[reconnect-forever]]
 === Reconnect Forever
 [%header%autowidth.spread]
