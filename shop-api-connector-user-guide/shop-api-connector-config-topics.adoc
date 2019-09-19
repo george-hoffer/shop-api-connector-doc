@@ -1,0 +1,11 @@
+= Shop API Connector Additional Configuration Information - Mule 4
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:imagesdir: ../../assets/images/
+// Add transition
+== Next
+After you complete \<a summary of config topics\>,
+you can try the Shop API Connector xref:shop-api/shop-api-connector-examples.adoc[Examples].
+== See Also
+* https://forums.mulesoft.com[MuleSoft Forum]

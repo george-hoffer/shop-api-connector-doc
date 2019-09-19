@@ -1,0 +1,50 @@
+= Shop API Connector Connector - Get Started - Mule 4
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:imagesdir: ../../assets/images/
+Support Category: Select
+Shop API Connector Connector Version Major.Minor.Patch
+// The Anypoint Connector for Shop API Connector provides ...
+== About Connectors
+Anypoint connectors are Mule runtime engine extensions that enable you to
+connect
+to APIs and resources on external systems, such as Salesforce, Shop API Connector, ServiceNow,
+and Twitter.
+== Prerequisites
+Before creating an app, you must have access to the Shop API Connector target resource and
+Anypoint Platform. You also need understand how to create a Mule app using
+Design Center or Anypoint Studio.
+// If your connector has other prerequisites, list them here.
+== Audience
+* Starting user -- To create your Mule app,
+see xref:shop-api/shop-api-connector-design-center.adoc[Design Center Configuration]
+or xref:shop-api/shop-api-connector-studio.adoc[Studio Configuration]. The
+xref:shop-api/shop-api-connector-config-topics.adoc[Additional Configuration Information]
+topic helps extend your understanding of the Shop API Connector connector. The
+xref:shop-api/shop-api-connector-examples.adoc[Examples] topic provides one or more use
+cases for using the connector.
+* Power user - Read the xref:shop-api/shop-api-connector-xml-maven.adoc[XML and Maven
+Support],
+xref:shop-api/shop-api-connector-config-topics.adoc[Additional Configuration Information],
+and xref:shop-api/shop-api-connector-examples.adoc[Examples] topics.
+== Common Use Cases For the Connector
+// List common use cases for the Shop API Connector Connector and provide
+// a link to the xref:shop-api/shop-api-connector-examples.adoc[Examples] use cases.
+== Learn Using Exchange Templates and Examples
+https://www.mulesoft.com/exchange/[Anypoint Exchange] provides templates
+you can use as a starting point for your app, as well as examples that
+illustrate a complete solution.
+// If available for this connector, list up to 10 Exchange templates and
+examples.
+// Use the Integration Pattern categories (broadcast, migration, bidirectional
+sync, aggregation).
+== Next Step
+After you have met the prerequisites and experimented with templates and
+examples, you are ready to create an app with
+xref:shop-api/shop-api-connector-design-center.adoc[Design Center] or
+xref:shop-api/shop-api-connector-studio.adoc[Anypoint Studio].
+== See Also
+* https://www.mulesoft.com/exchange/?search=shop-api&type=connector[Anypoint
+Exchange]
+* https://forums.mulesoft.com[MuleSoft Forum]
