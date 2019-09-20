@@ -2,12 +2,13 @@
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
-:imagesdir: ../../assets/images/
-// Add transition
+:imagesdir: ../../doc/images/
+
 To configure a connector in Anypoint Studio:
 . Install the connector.
 . Configure the connector.
 . Configure an input source for the connector.
+
 == Install the Connector Using Exchange
 . In Studio, create a Mule Project.
 . Click the Exchange *(X)* icon in the upper left of the Studio task bar.
@@ -16,6 +17,7 @@ password.
 . In Exchange, search for Shop API Connector.
 . Select <connector>, click *Add to project*.
 . Follow the prompts to install the Shop API Connector Connector.
+
 == Install the Connector in Studio
 . In Studio, create a Mule Project.
 . In the Mule Palette, click *(X) Search in Exchange*.
@@ -23,17 +25,25 @@ password.
 . Click the Shop API Connector Connector name in *Available modules*.
 . Click *Add*.
 . Click *Finish*.
+
 == Configure the Connector
-// List Global Elements Properties info here
+
+* Shop Connector Conf client-id
+* Shop Connector Conf Basic-JWT
+* Shop Connector Conf Auth2.0
+
 == Configure an Input Source
 Configure an input source for the connector such as an operation for
-the Shop API Connector connector, *HTTP Listener*, or *Scheduler*.
+the Shop API Connector, *HTTP Listener*, or *Scheduler*.
 You can put the following operations for the connector in
 the *Source* area of the Studio canvas.
-// List of operations that can be an input source (from Design Center)
+*HTTP Listener*
+
 == Next Step
-After configuring the Shop API Connector Connector for use in Studio, see the
-xref:shop-api/shop-api-connector-config-topics.adoc[Additional Configuration Information]
+
+After configuring the Shop API Connector for use in Studio, see the
+xref: shop-api-connector-config-topics.adoc[Additional Configuration Information]
 topic for more configuration steps.
+
 == See Also
 * https://forums.mulesoft.com[MuleSoft Forum]
