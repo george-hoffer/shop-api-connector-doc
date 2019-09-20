@@ -41,9 +41,7 @@ the *Source* area of the Studio canvas.
 
 == Next Step
 
-After configuring the Shop API Connector for use in Studio, see the
-xref: shop-api-connector-config-topics.adoc[Additional Configuration Information]
-topic for more configuration steps.
+After configuring the Shop API Connector for use in Studio, see the xref: shop-api-connector-config-topics.adoc[Additional Configuration Information] topic for more configuration steps.
 
 == See Also
 * https://forums.mulesoft.com[MuleSoft Forum]
