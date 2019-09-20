@@ -8,7 +8,7 @@ endif::[]
 * In the Global Mule Configuration Elements screen, click *Create*.
 * In the Choose Global Type wizard, collapse connector configuration and select *'Shop Connector Conf Client_id'* and click OK.
 
-image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/clientIdConfiguration/ClientIdConfigGlobalElement.png[]
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/clientIdConfiguration/shop-api-connector-clientIdConfigGlobalElement.png[]
 * The configuration parameters to configure is
 
 +
@@ -23,10 +23,10 @@ image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/
 * Credentials can be directly entered into the global configuration properties, or reference from a configuration file that contains these values.
   Here we are adding credentials to application properties file and reference it using placeholders.
 
-image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/clientIdConfiguration/ClientIdConfiguration.png[]
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/clientIdConfiguration/shop-api-connector-clientIdConfiguration.png[]
 * Make a *Test Connection...* to check that the configuration is correct.
 
-image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/clientIdConfiguration/ClientIdConfigTestConnection.png[]
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/clientIdConfiguration/shop-api-connector-clientIdConfigTestConnection.png[]
 
 * On success, configuration is ready to use!
 
@@ -46,7 +46,7 @@ image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/
 * Go back to *Anypoint Studio*. In Mule Application, click on *Global Elements* and click *Create* button
 * Collapse connector configuration, select *'Shop Connector Conf Basic-JWT'* and click Ok. You should see as below screen
 
-image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/BasicJwtConfiguration/BasicJwtGlobalConfig.png[]
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/BasicJwtConfiguration/shop-api-connector-basicJwtGlobalConfig.png[]
 * The configuration parameters to configure is
 
 +
@@ -61,10 +61,10 @@ image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/
 
 * Reference the *Base Uri*, *User name* and *Password* from application properties file.
 
-image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/BasicJwtConfiguration/BasicJwtConfiguration.png[]
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/BasicJwtConfiguration/shop-api-connector-basicJwtConfiguration.png[]
 * Make a *Test Connection...* to check that the configuration is correct.
 
-image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/BasicJwtConfiguration/BasicJwtTestConnection.png[]
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/BasicJwtConfiguration/shop-api-connector-basicJwtTestConnection.png[]
 * On success, configuration is ready to use!
 * Customer, Customer Managers configuration should look like below in Configuration XML:
 +
@@ -80,7 +80,7 @@ image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/
 * Go back to *Anypoint Studio*. In Mule Application, click on *Global Elements* and click *Create* button
 * Collapse connector configuration, select *'Shop Connector Conf Auth2.0'* and click Ok. You should see as below screen
 
-image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/OAuth2Configuration/OAuth2ConfigGlobalElement.png[]
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/OAuth2Configuration/shop-api-connector-oAuth2ConfigGlobalElement.png[]
 * The configuration parameters to configure is
 
 +
@@ -96,10 +96,10 @@ image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/
 
 * Reference the *Base Uri*, *Client Id* and *Client Secret* from application properties file.
 
-image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/OAuth2Configuration/OAuth2Configuration.png[]
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/OAuth2Configuration/shop-api-connector-oAuth2Configuration.png[]
 * Make a *Test Connection...* to check that the configuration is correct.
 
-image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/OAuth2Configuration/OAuth2TestConnection.png[]
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/OAuth2Configuration/shop-api-connector-oAuth2TestConnection.png[]
 * On success, configuration is ready to use!
 * Customer, Customer Managers configuration should look like below in Configuration XML:
 +
