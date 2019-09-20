@@ -2,7 +2,7 @@
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
-:imagesdir: ../../assets/images/
+:imagesdir: ../../doc/images/
 Support Category: Select
 Shop API Connector Connector Version Major.Minor.Patch
 // The Anypoint Connector for Shop API Connector provides ...
@@ -86,7 +86,9 @@ After you have met the prerequisites and experimented with templates and
 examples, you are ready to create an app with
 xref:shop-api/shop-api-connector-design-center.adoc[Design Center] or
 xref:shop-api/shop-api-connector-studio.adoc[Anypoint Studio].
+
 == See Also
+
 * https://www.mulesoft.com/exchange/?search=shop-api&type=connector[Anypoint
 Exchange]
 * https://forums.mulesoft.com[MuleSoft Forum]

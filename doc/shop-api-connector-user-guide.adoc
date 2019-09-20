@@ -30,7 +30,7 @@ The CCC exposes the following key capabilities to the clients:
 . ProductLists
 . Gift Certificate
 
-== About shop-api OCC Connector
+== About shop-api Connector
 
 Shop-api Anypoint Connector provides Mule users a quick and easy way to integrate with Commerce Cloud OCCAPI.
 
