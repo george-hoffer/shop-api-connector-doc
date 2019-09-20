@@ -2,10 +2,62 @@
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
-:imagesdir: ../../assets/images/
-// Add text to introduce the example section and say what one finds
-// here and why it is helpful or necessary info.
-// Put Examples here -- You may need to obtain these from the
-// code repo /demo folder.
+:imagesdir: ../../doc/images/
+
+== ​To Create a Mule Project in Anypoint Studio 7
+The shop-api connector is an operation-based connector, which means that when you add the connector to your flow, you need to configure a specific operation the connector is intended to perform. Below is the "Get Promotions" operation for better understanding
+
+* Create new Mule Application in Studio and configure *HTTP Listener* to port 8080.
+
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/demo-get-promotions/HttpListneronfig.png[]
+* Add "/getPromotions" path to test the flow.
+
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/demo-get-promotions/getPromotionsListnerpath.png[]
+* Select *'Get Promotions'* operation from shop-api connector, drag & drop it into canvas. Click on Get Promotions operation.
+
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/demo-get-promotions/getPromotionsParametersWithoutValue.png[]
+* Select Client Id Conf from drop down which was already configured previously in global elements, or if required new configuration can be added by clicking green plus (+) symbol.
+
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/demo-get-promotions/ClientIdConfigGlobalElement.png[]
+* Make sure to test your connection, if you have add new connection details.
+* Enter user details for *Get Promotions* operation and save.
+
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/demo-get-promotions/getPromotionsParametersWithValue.png[]
+
+* Save the Mule project.
+* Complete flow looks as below.
+
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/demo-get-promotions/getPromitionsFlow.png[]
+* Run the project as a Mule Application by right-clicking the project name in the Package Explorer, selecting Run As > Mule Application.
+* Open Postman and check the response after entering the URL *http://localhost:8080/getPromotions*. You should see the cart details with same user.
+
+
+=== To Create a Mule Project Using XML
+* Create new Mule Application
+* Click on Configuration XML tab at the base of the canvas.
+* Copy below code and paste it.
+* Below code is for Get Promotions operation.
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:shop="http://www.mulesoft.org/schema/mule/shop"
+    xmlns="http://www.mulesoft.org/schema/mule/core"
+    xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/shop http://www.mulesoft.org/schema/mule/shop/current/mule-shop.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+    <flow name="getPromotionsFlow" doc:id="328e69b1-ee7d-40a6-b4d8-950ea073b53d" >
+        <http:listener doc:name="8081/getPromotions" doc:id="e6eb8069-7b6d-42b9-971b-09ef8049d9f2" config-ref="HTTP_Listener_config" path="/getPromotions"/>
+        <shop:get-promotions doc:name="Get Promotions" doc:id="6f35ec10-b8f4-44a6-b1b4-ed13bd94e727" config-ref="Client_Id" campaignId="#[attributes.queryParams.campaign_id]"/>
+    </flow>
+</mule>
+```
+== Note 
+
+For Accessing any operation in shop-api connector which uses JWT Authentication, the user needs to use "Post Customer Auth" opearation and get the access token and pass it to the connector Operation as a custom header.
+
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/PostCustomerAuthUse.png[]
+
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/CustomHeader.png[]4
+
 == See Also
 * https://forums.mulesoft.com[MuleSoft Forum]
