@@ -50,7 +50,7 @@ engine translates the `RELEASE` dependency keyword to the current version.
     <groupId>com.mulesoft.connectors</groupId>
     <artifactId>shop-api</artifactId>
     <version>1.0.0-alpha</version>
-<classifier>mule-plugin</classifier>
+	<classifier>mule-plugin</classifier>
 </dependency>
 ----
 To obtain the most up-to-date `pom.xml` file information, access the
