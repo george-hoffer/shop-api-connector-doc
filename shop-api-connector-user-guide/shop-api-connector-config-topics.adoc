@@ -114,7 +114,7 @@ image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/
             <shop:oauth-client-credentials clientId="${shop.combinedClientId}" clientSecret="${shop.clientSecret}" tokenUrl="${shop.tokenUrl}?grant_type="${shop.BMUserGrantType}"&amp;client_id=${shop.clientId}"/>
        </shop:oauth2-application-connection>
    </shop:config>
-
+```
 == Next
 After you complete \<a summary of config topics\>,
 you can try the Shop API Connector xref:shop-api/shop-api-connector-examples.adoc[Examples].
