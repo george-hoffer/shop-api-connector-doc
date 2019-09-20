@@ -32,7 +32,7 @@ connector; otherwise, you can use HTTP or Scheduler.
 // important and required fields and their values in a table.
 
 +
-[%header,cols=30s,55a,15a]
+[%header%autowidth.spread]
 
 |===
 |Field |Description |Required?
@@ -59,7 +59,7 @@ Design Center automatically saves all changes.
 // Because each operation has different fields, list the fields
 // that are common to each operation and describe them.
 +
-[%header,cols=30s,55a,15a]
+[%header%autowidth.spread]
 
 |===
 |Field |Description |Required? 
@@ -72,7 +72,7 @@ Design Center automatically saves all changes.
 . Complete these fields for Auth 2 Application Connection Provider:
 
 +
-[%header,cols=30s,55a,15a]
+[%header%autowidth.spread]
 
 |===
 |Field |Description |Required?  
