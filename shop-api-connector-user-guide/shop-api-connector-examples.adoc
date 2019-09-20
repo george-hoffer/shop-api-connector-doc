@@ -9,25 +9,25 @@ The shop-api connector is an operation-based connector, which means that when yo
 
 * Create new Mule Application in Studio and configure *HTTP Listener* to port 8080.
 
-image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/demo-get-promotions/HttpListneronfig.png[]
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/demo-get-promotions/shop-api-connector-httpListneronfig.png[]
 * Add "/getPromotions" path to test the flow.
 
-image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/demo-get-promotions/getPromotionsListnerpath.png[]
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/demo-get-promotions/shop-api-connector-getPromotionsListnerpath.png[]
 * Select *'Get Promotions'* operation from shop-api connector, drag & drop it into canvas. Click on Get Promotions operation.
 
-image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/demo-get-promotions/getPromotionsParametersWithoutValue.png[]
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/demo-get-promotions/shop-api-connector-getPromotionsParametersWithoutValue.png[]
 * Select Client Id Conf from drop down which was already configured previously in global elements, or if required new configuration can be added by clicking green plus (+) symbol.
 
-image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/demo-get-promotions/ClientIdConfigGlobalElement.png[]
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/demo-get-promotions/shop-api-connector-clientIdConfigGlobalElement.png[]
 * Make sure to test your connection, if you have add new connection details.
 * Enter user details for *Get Promotions* operation and save.
 
-image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/demo-get-promotions/getPromotionsParametersWithValue.png[]
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/demo-get-promotions/shop-api-connector-getPromotionsParametersWithValue.png[]
 
 * Save the Mule project.
 * Complete flow looks as below.
 
-image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/demo-get-promotions/getPromitionsFlow.png[]
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/demo-get-promotions/shop-api-connector-getPromitionsFlow.png[]
 * Run the project as a Mule Application by right-clicking the project name in the Package Explorer, selecting Run As > Mule Application.
 * Open Postman and check the response after entering the URL *http://localhost:8080/getPromotions*. You should see the cart details with same user.
 
