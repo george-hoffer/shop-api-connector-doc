@@ -67,12 +67,13 @@ topic helps extend your understanding of the Shop API Connector connector. The
 xref:shop-api/shop-api-connector-examples.adoc[Examples] topic provides one or more use
 cases for using the connector.
 * Power user - Read the xref:shop-api/shop-api-connector-xml-maven.adoc[XML and Maven
-Support],
-xref:shop-api/shop-api-connector-config-topics.adoc[Additional Configuration Information],
+Support], xref:shop-api/shop-api-connector-config-topics.adoc[Additional Configuration Information], 
 and xref:shop-api/shop-api-connector-examples.adoc[Examples] topics.
+
 == Common Use Cases For the Connector
 // List common use cases for the Shop API Connector Connector and provide
 // a link to the xref:shop-api/shop-api-connector-examples.adoc[Examples] use cases.
+
 == Learn Using Exchange Templates and Examples
 https://www.mulesoft.com/exchange/[Anypoint Exchange] provides templates
 you can use as a starting point for your app, as well as examples that
