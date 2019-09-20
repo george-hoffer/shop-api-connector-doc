@@ -63,5 +63,7 @@ Design Center automatically saves all changes.
 |===
 +
 . Click the *Test* button to test the connection.
+
 == See Also
+
 * https://forums.mulesoft.com[MuleSoft Forum]
