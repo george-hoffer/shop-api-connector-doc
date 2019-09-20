@@ -81,7 +81,9 @@ illustrate a complete solution.
 examples.
 // Use the Integration Pattern categories (broadcast, migration, bidirectional
 sync, aggregation).
+
 == Next Step
+
 After you have met the prerequisites and experimented with templates and
 examples, you are ready to create an app with
 xref:shop-api/shop-api-connector-design-center.adoc[Design Center] or
