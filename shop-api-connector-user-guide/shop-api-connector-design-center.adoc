@@ -14,7 +14,7 @@ To create an app in Design Center:
 * Configure the input source (trigger) for your app.
 * Add the connector as a component to process the input for the app.
 For information on Design Center field values, see
-the * https://github.com/Apisero-Connectors/shop-api-connector-doc/blob/master/shop-api-connector-reference.adoc[Shop API Connector Reference]
+the https://github.com/Apisero-Connectors/shop-api-connector-doc/blob/master/shop-api-connector-reference.adoc[Shop API Connector Reference]
 
 == Configure the Input Source Trigger
 
