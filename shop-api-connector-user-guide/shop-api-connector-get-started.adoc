@@ -71,7 +71,7 @@ Support], xref:shop-api/shop-api-connector-config-topics.adoc[Additional Configu
 and xref:shop-api/shop-api-connector-examples.adoc[Examples] topics.
 
 == Common Use Cases For the Connector
-Please check the Examples link for the simple use case.
+Please check the xref:shop-api-connector-examples.adoc[Examples] link for the simple use case.
 a link to the xref:shop-api/shop-api-connector-examples.adoc[Examples] use cases.
 
 == Learn Using Exchange Templates and Examples
