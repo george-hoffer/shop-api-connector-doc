@@ -71,9 +71,9 @@ Support], xref:shop-api/shop-api-connector-config-topics.adoc[Additional Configu
 and xref:shop-api/shop-api-connector-examples.adoc[Examples] topics.
 
 == Common Use Cases For the Connector
+Please check the Examples link for the simple use case.
+a link to the xref:shop-api/shop-api-connector-examples.adoc[Examples] use cases.
 
- Please check the https://github.com/Apisero-Connectors/shop-api-connector-doc/blob/master/shop-api-connector-user-guide/shop-api-connector-get-started.adoc[Examples] for the simple use cases
- 
 == Learn Using Exchange Templates and Examples
 https://www.mulesoft.com/exchange/[Anypoint Exchange] provides templates
 you can use as a starting point for your app, as well as examples that
