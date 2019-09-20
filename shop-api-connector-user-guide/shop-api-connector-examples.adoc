@@ -55,9 +55,9 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 
 For Accessing any operation in shop-api connector which uses JWT Authentication, the user needs to use "Post Customer Auth" opearation and get the access token and pass it to the connector Operation as a custom header.
 
-image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/PostCustomerAuthUse.png[]
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/shop-api-connector-postCustomerAuthUse.png[]
 
-image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/CustomHeader.png[]4
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/shop-api-connector-customHeader.png[]
 
 == See Also
 * https://forums.mulesoft.com[MuleSoft Forum]
