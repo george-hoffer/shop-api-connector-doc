@@ -36,8 +36,10 @@ connector; otherwise, you can use HTTP or Scheduler.
 
 |===
 |Field |Description |Required?
-| | |Yes
-
+|Protocol|Protocol selected for the HTTP connector, it can be HTTP or HTTPS (secure).|Yes
+|Host|IP address where your Mule application listens for requests.|Yes
+|Port|Port address where your Mule application listens for requests.|Yes
+|Base Path|Path where your Mule application listens for requests.|Yes
 |===
 +
 
@@ -49,8 +51,8 @@ Design Center automatically saves all changes.
 . Click *+* next to the trigger card.
 . In *Select a component*, search for the Shop API Connector Connector.
 . Select the connector name.
-. Select an operation for the connector.
-. Complete these fields:
+. Select an operation for the connector and add the Configurations.
+. Complete these fields for Client_Id Connection Provider:
 
 +
 // List the important and required fields and their values in a table.
@@ -60,8 +62,26 @@ Design Center automatically saves all changes.
 [%header,cols=30s,55a,15a]
 
 |===
-|Field |Description |Required?
-| | |Yes
+|Field |Description |Required? 
+|Base URI|URL to access API|Yes
+|Client Id|client id for authentication|Yes
+|===
++
+. Click the *Test* button to test the connection.
+
+. Complete these fields for Auth 2 Application Connection Provider:
+
++
+[%header,cols=30s,55a,15a]
+
+|===
+|Field |Description |Required?  
+|Base URI|URL to access API|Yes
+|Username|Username of commerce cloud account|Yes
+|Password|Password of commerce cloud account|Yes
+|Token URI|URL to access token|Yes
+|Client Id|Client Id of commerce cloud account|Yes
+|Client Secret|Client Secret of commerce cloud account|Yes
 |===
 +
 . Click the *Test* button to test the connection.
