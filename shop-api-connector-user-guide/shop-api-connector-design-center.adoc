@@ -3,6 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../../doc/images/
+
 Design Center enables you to create apps visually. To use Design Center,
 work with your Anypoint Platform administrator to ensure that you have
 a xref:access-management::environments.adoc#to-create-a-new-environment[Design
@@ -13,8 +14,7 @@ To create an app in Design Center:
 * Configure the input source (trigger) for your app.
 * Add the connector as a component to process the input for the app.
 For information on Design Center field values, see
-the xref:shop-api-connector-reference.adoc[Shop API Connector Reference].
-// Ensure that the connector reference xref and title are correct.
+the xref:shop-api-connector-doc/shop-api-connector-reference.adoc[Shop API Connector Reference].
 
 == Configure the Input Source Trigger
 
