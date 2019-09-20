@@ -115,6 +115,7 @@ image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/
        </shop:oauth2-application-connection>
    </shop:config>
 ```
+
 == Next
 
 After you complete \<a summary of config topics\>,
