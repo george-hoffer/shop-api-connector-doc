@@ -4,10 +4,10 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../../doc/images/
 
-To configure a connector in Anypoint Studio:
-. Install the connector.
-. Configure the connector.
-. Configure an input source for the connector.
+To configure a connector in Anypoint Studio: 
+. Install the connector
+. Configure the connector
+. Configure an input source for the connector
 
 == Install the Connector Using Exchange
 . In Studio, create a Mule Project.
@@ -15,8 +15,8 @@ To configure a connector in Anypoint Studio:
 . In Exchange, click *Login* and supply your Anypoint Platform username and
 password.
 . In Exchange, search for Shop API Connector.
-. Select <connector>, click *Add to project*.
-. Follow the prompts to install the Shop API Connector Connector.
+. Select Shop API Connector, click *Add to project*.
+. Follow the prompts to install the Shop API Connector.
 
 == Install the Connector in Studio
 . In Studio, create a Mule Project.

@@ -1,10 +1,10 @@
-= Shop API Connector Connector - Get Started - Mule 4
+= Shop API Connector - Get Started - Mule 4
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../../doc/images/
 Support Category: Select
-Shop API Connector Connector Version Major.Minor.Patch
+Shop API Connector Version Major.Minor.Patch
 // The Anypoint Connector for Shop API Connector provides ...
 == About Connectors
 Anypoint connectors are Mule runtime engine extensions that enable you to
@@ -13,6 +13,7 @@ to APIs and resources on external systems, such as Salesforce, Shop API Connecto
 and Twitter.
 
 == Prerequisites
+
 Before creating an app, you must have access to the Shop API Connector target resource and
 Anypoint Platform. You also need understand how to create a Mule app using
 Design Center or Anypoint Studio.
@@ -20,7 +21,7 @@ Design Center or Anypoint Studio.
 This document assumes that you are familiar with Mule, Anypoint Connectors,
 Anypoint Studio Essentials, Mule flows, and Mule Global Elements.
 
-To use shop-api connector, you need
+To use Shop API Connector, you need
 
 * Anypoint Studio version 7.
 * shop-api.
@@ -35,35 +36,13 @@ To use shop-api connector, you need
 |Anypoint Studio | 7 and later
 |=======
 
-== What's New in this Connector
-
-* Shop-api connector 1.0.0 is now compatible with Mule 4 and supports dynamic fields and not compatible with mule 3.
-
-== To Install this Connector in Anypoint Studio 7
-You can use shop-api connector in Anypoint Studio by adding it as a dependency in your Mule application.
-
-. Open your Mule project in Anypoint Studio.
-. Add the connector as a dependency in the pom.xml file:
-
-```
-<dependency>
-    <groupId>com.mulesoft.connectors</groupId>
-    <artifactId>shop-api</artifactId>
-    <version>1.0.0-alpha</version>
-    <classifier>mule-plugin</classifier>
-</dependency>
-```
-
-When Studio has an update, a message displays in the lower right corner, which
-you can click to install the update. After updating, update Maven pom.xml file dependencies to the new version.
-
 
 == Audience
 * Starting user -- To create your Mule app,
 see xref:shop-api/shop-api-connector-design-center.adoc[Design Center Configuration]
 or xref:shop-api/shop-api-connector-studio.adoc[Studio Configuration]. The
 xref:shop-api/shop-api-connector-config-topics.adoc[Additional Configuration Information]
-topic helps extend your understanding of the Shop API Connector connector. The
+topic helps extend your understanding of the Shop API Connector. The
 xref:shop-api/shop-api-connector-examples.adoc[Examples] topic provides one or more use
 cases for using the connector.
 * Power user - Read the xref:shop-api/shop-api-connector-xml-maven.adoc[XML and Maven
@@ -73,14 +52,6 @@ and xref:shop-api/shop-api-connector-examples.adoc[Examples] topics.
 == Common Use Cases For the Connector
 Please check the xref:shop-api-connector-examples.adoc[Examples] link for the simple use case.
 
-== Learn Using Exchange Templates and Examples
-https://www.mulesoft.com/exchange/[Anypoint Exchange] provides templates
-you can use as a starting point for your app, as well as examples that
-illustrate a complete solution.
-// If available for this connector, list up to 10 Exchange templates and
-examples.
-// Use the Integration Pattern categories (broadcast, migration, bidirectional
-sync, aggregation).
 
 == Next Step
 
