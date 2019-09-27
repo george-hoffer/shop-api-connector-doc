@@ -5,6 +5,7 @@ endif::[]
 :imagesdir: ../../doc/images/
 
 To configure a connector in Anypoint Studio: 
+
 . Install the connector
 . Configure the connector
 . Configure an input source for the connector
