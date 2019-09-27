@@ -4,14 +4,14 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../images/shop-connector-example
 
-== ​Use case for creating a custoemr after submitting an order in Anypoint Studio 7
-The Shop API Connector is an Operation Based Connector, which means that when you add the connector to your flow, you need to configure a specific operation the connector is intended to perform. Below is the use case for "Creating Customer after Submitting an Order" operation for better understanding.
+=== ​Use case for creating a custoemr after submitting an order in Anypoint Studio 7
+The Shop API Connector is an Operation Based Connector, which means that when you add the connector to your flow, you need to configure a specific operation the connector is intended to perform. Below is the use case for *Creating Customer after Submitting an Order* operation for better understanding.
 
-In this use case we are explaining the use of Shop API Connector for creating a basket as a guest and registering the guest after completion of post order. Here is the detailed information of each step for your reference.
+In this use case we are explaining the scenario how a Guest user will login into Shop API and creating a basket with products and shopping details. After successfull submition of order we will register the guest user as a customer. Here is the detailed information of each step for your reference.
 
 * Create new Mule Application in Studio and configure *HTTP Listener* to port 8081.
 
-image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/imagesdir/shop-connector-http-listener-config.jpg[]
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/:imagesdir:/shop-connector-http-listener-config.jpg[]
 
 * Add "/getPromotions" path to test the flow.
 
