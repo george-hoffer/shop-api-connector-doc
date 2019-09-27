@@ -50,6 +50,14 @@ you can click to install the update. After updating, update Maven pom.xml file d
 * Shop Connector Conf Basic-JWT
 * Shop Connector Conf Auth2.0
 
+
+== Configure an Input Source
+Configure an input source for the connector such as an operation for
+the Shop API Connector, *HTTP Listener*, or *Scheduler*.
+You can put the following operations for the connector in
+the *Source* area of the Studio canvas.
+*HTTP Listener*
+
 === To Configure the Connector Using Client Id Connection Provider
 * After adding connector dependency to Mule project, click on *Global Elements* tab at the base of the canvas.
 * In the Global Mule Configuration Elements screen, click *Create*.
@@ -162,13 +170,6 @@ image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/
        </shop:oauth2-application-connection>
    </shop:config>
 ```
-
-== Configure an Input Source
-Configure an input source for the connector such as an operation for
-the Shop API Connector, *HTTP Listener*, or *Scheduler*.
-You can put the following operations for the connector in
-the *Source* area of the Studio canvas.
-*HTTP Listener*
 
 == See Also
 * https://forums.mulesoft.com[MuleSoft Forum]
