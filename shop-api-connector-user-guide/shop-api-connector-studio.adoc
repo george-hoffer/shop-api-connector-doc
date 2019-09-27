@@ -27,7 +27,7 @@ password.
 . Click *Add*.
 . Click *Finish*.
 
- Also you can use Shop Api connector in Anypoint Studio by adding it as a dependency in your Mule application.
+== Also you can use Shop Api connector in Anypoint Studio by adding it as a dependency in your Mule application.
 
 . Open your Mule project in Anypoint Studio.
 . Add the connector as a dependency in the pom.xml file:
@@ -169,10 +169,6 @@ the Shop API Connector, *HTTP Listener*, or *Scheduler*.
 You can put the following operations for the connector in
 the *Source* area of the Studio canvas.
 *HTTP Listener*
-
-== Next Step
-
-After configuring the Shop API Connector for use in Studio, see the xref:shop-api-connector-config-topics.adoc[Additional Configuration Information] topic for more configuration steps.
 
 == See Also
 * https://forums.mulesoft.com[MuleSoft Forum]
