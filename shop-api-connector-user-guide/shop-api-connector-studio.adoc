@@ -6,9 +6,9 @@ endif::[]
 
 To configure a connector in Anypoint Studio: 
 
-. Install the connector
-. Configure the connector
-. Configure an input source for the connector
+. Install the connector.
+. Configure the connector.
+. Configure an input source for the connector.
 
 == Install the Connector Using Exchange
 . In Studio, create a Mule Project.
@@ -27,11 +27,141 @@ password.
 . Click *Add*.
 . Click *Finish*.
 
+ Also you can use Shop Api connector in Anypoint Studio by adding it as a dependency in your Mule application.
+
+. Open your Mule project in Anypoint Studio.
+. Add the connector as a dependency in the pom.xml file:
+
+```
+<dependency>
+    <groupId>com.mulesoft.connectors</groupId>
+    <artifactId>shop-api</artifactId>
+    <version>1.0.0-alpha</version>
+    <classifier>mule-plugin</classifier>
+</dependency>
+```
+
+When Studio has an update, a message displays in the lower right corner, which
+you can click to install the update. After updating, update Maven pom.xml file dependencies to the new version.
+
 == Configure the Connector
 
 * Shop Connector Conf client-id
 * Shop Connector Conf Basic-JWT
 * Shop Connector Conf Auth2.0
+
+=== To Configure the Connector Using Client Id Connection Provider
+* After adding connector dependency to Mule project, click on *Global Elements* tab at the base of the canvas.
+* In the Global Mule Configuration Elements screen, click *Create*.
+* In the Choose Global Type wizard, collapse connector configuration and select *'Shop Connector Conf Client_id'* and click OK.
+
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/clientIdConfiguration/shop-api-connector-clientIdConfigGlobalElement.png[]
+* The configuration parameters to configure is
+
++
+[options="header",width="50%"]
+|============
+|Field Name   |Value
+|Base Uri     |https://shop-apibsseuuri
+|X dw client id |Enter Client ID
+|============
++
+
+* Credentials can be directly entered into the global configuration properties, or reference from a configuration file that contains these values.
+  Here we are adding credentials to application properties file and reference it using placeholders.
+
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/clientIdConfiguration/shop-api-connector-clientIdConfiguration.png[]
+* Make a *Test Connection...* to check that the configuration is correct.
+
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/clientIdConfiguration/shop-api-connector-clientIdConfigTestConnection.png[]
+
+* On success, configuration is ready to use!
+
+* Client Id Connection Provider configuration should look like below in Configuration XML:
++
+```xml
+   <shop:config name="Client_Id" doc:name="Shop Connector Config" doc:id="a27b230a-9f5a-411a-9219-d0002751ba3d" >
+       <shop:client-id-connection baseUri="${shop.address}" xDwClientId="${shop.clientId}" />
+   </shop:config>
+```
+
+* *Note* For client id and client secret needs to reach shop-api back office.
+
+
+=== To Configure the Connector Using Customers Auth Connection Provider configuration
+
+* Go back to *Anypoint Studio*. In Mule Application, click on *Global Elements* and click *Create* button
+* Collapse connector configuration, select *'Shop Connector Conf Basic-JWT'* and click Ok. You should see as below screen
+
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/BasicJwtConfiguration/shop-api-connector-basicJwtGlobalConfig.png[]
+* The configuration parameters to configure is
+
++
+[options="header",width="50%"]
+|============
+|Field Name   |Value
+|Base Uri    |https://shop-apibsseuuri
+|username |Enter username
+|password |Enter password
+|============
++
+
+* Reference the *Base Uri*, *User name* and *Password* from application properties file.
+
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/BasicJwtConfiguration/shop-api-connector-basicJwtConfiguration.png[]
+* Make a *Test Connection...* to check that the configuration is correct.
+
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/BasicJwtConfiguration/shop-api-connector-basicJwtTestConnection.png[]
+* On success, configuration is ready to use!
+* Customer, Customer Managers configuration should look like below in Configuration XML:
++
+```xml
+   <shop:config name="Basic-JWT" doc:name="Shop Connector Config" doc:id="2fb7dd23-b683-4e45-8d2e-f06f66949f98" >
+       <shop:customers-auth-connection username="${shop.username}" password="${shop.password}" baseUri="${shop.address}" />
+   </shop:config>
+```
+
+
+=== To Configure the Connector Using Customers OAuth2 Application Connection Provider configuration
+
+* Go back to *Anypoint Studio*. In Mule Application, click on *Global Elements* and click *Create* button
+* Collapse connector configuration, select *'Shop Connector Conf Auth2.0'* and click Ok. You should see as below screen
+
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/OAuth2Configuration/shop-api-connector-oAuth2ConfigGlobalElement.png[]
+* The configuration parameters to configure is
+
++
+[options="header",width="50%"]
+|============
+|Field Name   |Value
+|Base Uri    |https://shop-apibsseuuri
+|Client Id |Enter Client Id
+|Client Secret |Enter Client Secret
+|Token url | Enter Token Url
+|============
++
+
+* Reference the *Base Uri*, *Client Id* and *Client Secret* from application properties file.
+
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/OAuth2Configuration/shop-api-connector-oAuth2Configuration.png[]
+* Make a *Test Connection...* to check that the configuration is correct.
+
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/OAuth2Configuration/shop-api-connector-oAuth2TestConnection.png[]
+* On success, configuration is ready to use!
+* Customer, Customer Managers configuration should look like below in Configuration XML:
++
+```xml
+   <shop:config name="Auth2.0" doc:name="Shop Connector Config" doc:id="8e475e37-7570-4b6e-993a-a92ae4606170" >
+       <shop:oauth2-application-connection baseUri="${shop.address}" >
+           <shop:default-headers >
+            </shop:default-headers>
+            <shop:default-query-params >
+                <shop:default-query-param key="client_id" value="${shop.clientId}" />
+            </shop:default-query-params>
+            <shop:oauth-client-credentials clientId="${shop.combinedClientId}" clientSecret="${shop.clientSecret}" tokenUrl="${shop.tokenUrl}?grant_type="${shop.BMUserGrantType}"&amp;client_id=${shop.clientId}"/>
+       </shop:oauth2-application-connection>
+   </shop:config>
+```
 
 == Configure an Input Source
 Configure an input source for the connector such as an operation for
