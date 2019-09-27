@@ -2,14 +2,17 @@
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
-:imagesdir: ../../doc/images/
+:imagesdir: ../images/shop-connector-example
 
-== ​To Create a Mule Project in Anypoint Studio 7
-The shop-api connector is an operation-based connector, which means that when you add the connector to your flow, you need to configure a specific operation the connector is intended to perform. Below is the "Get Promotions" operation for better understanding
+== ​Use case for creating a custoemr after submitting an order in Anypoint Studio 7
+The Shop API Connector is an Operation Based Connector, which means that when you add the connector to your flow, you need to configure a specific operation the connector is intended to perform. Below is the use case for "Creating Customer after Submitting an Order" operation for better understanding.
 
-* Create new Mule Application in Studio and configure *HTTP Listener* to port 8080.
+In this use case we are explaining the use of Shop API Connector for creating a basket as a guest and registering the guest after completion of post order. Here is the detailed information of each step for your reference.
 
-image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/demo-get-promotions/shop-api-connector-httpListneronfig.png[]
+* Create new Mule Application in Studio and configure *HTTP Listener* to port 8081.
+
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/imagesdir/shop-connector-http-listener-config.jpg[]
+
 * Add "/getPromotions" path to test the flow.
 
 image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/demo-get-promotions/shop-api-connector-getPromotionsListnerpath.png[]
@@ -45,9 +48,9 @@ image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/
     xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/shop http://www.mulesoft.org/schema/mule/shop/current/mule-shop.xsd
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
-    <flow name="getPromotionsFlow" doc:id="328e69b1-ee7d-40a6-b4d8-950ea073b53d" >
-        <http:listener doc:name="8081/getPromotions" doc:id="e6eb8069-7b6d-42b9-971b-09ef8049d9f2" config-ref="HTTP_Listener_config" path="/getPromotions"/>
-        <shop:get-promotions doc:name="Get Promotions" doc:id="6f35ec10-b8f4-44a6-b1b4-ed13bd94e727" config-ref="Client_Id" campaignId="#[attributes.queryParams.campaign_id]"/>
+    <flow name="getPromotionsFlow">
+        <http:listener doc:name="8081/getPromotions" config-ref="HTTP_Listener_config" path="/getPromotions"/>
+        <shop:get-promotions doc:name="Get Promotions" config-ref="Client_Id" campaignId="#[attributes.queryParams.campaign_id]"/>
     </flow>
 </mule>
 ```
