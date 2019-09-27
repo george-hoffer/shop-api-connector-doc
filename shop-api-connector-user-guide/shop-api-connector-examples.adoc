@@ -2,62 +2,169 @@
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
-:imagesdir: ../../doc/images/
+:imagesdir: ../doc/images/shop-connector-example
 
-== ​To Create a Mule Project in Anypoint Studio 7
-The shop-api connector is an operation-based connector, which means that when you add the connector to your flow, you need to configure a specific operation the connector is intended to perform. Below is the "Get Promotions" operation for better understanding
+=== ​Use case for creating a custoemr after submitting an order in Anypoint Studio 7
+The Shop API Connector is an Operation Based Connector, which means that when you add the connector to your flow, you need to configure a specific operation the connector is intended to perform. Below is the use case for *Creating Customer after Submitting an Order* operation for better understanding.
 
-* Create new Mule Application in Studio and configure *HTTP Listener* to port 8080.
+In this use case we are explaining the scenario how a Guest user will login into Shop API and creating a basket with products and shopping details. After successfull submition of order we will register the guest user as a customer. Here is the detailed information of each step for your reference.
 
-image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/demo-get-promotions/shop-api-connector-httpListneronfig.png[]
-* Add "/getPromotions" path to test the flow.
+* Create new Mule Application in Studio and configure *HTTP Listener* to port 8081 and path as "/registrationPostCheckout".
 
-image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/demo-get-promotions/shop-api-connector-getPromotionsListnerpath.png[]
-* Select *'Get Promotions'* operation from shop-api connector, drag & drop it into canvas. Click on Get Promotions operation.
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/shop-connector-example/shop-connector-http-listener-config.jpg[]
 
-image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/demo-get-promotions/shop-api-connector-getPromotionsParametersWithoutValue.png[]
-* Select Client Id Conf from drop down which was already configured previously in global elements, or if required new configuration can be added by clicking green plus (+) symbol.
+* Add *'Variable, Post Basket, Post Order and Post Customer'* operations into the flow.
+
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/shop-connector-example/shop-connector-post-checkout-flow.jpg[]
+
+* Pass the the required body for *'Post Basket'* operation from postman and save it into *'Variable'*.
+
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/shop-connector-example/shop-connector-basket-body-variable.jpg[]
+
+* Sample payload for *Post Basket* Operation is specified below
+
+```xml
+{	
+	"billing_address": {
+        "_type": "order_address",
+        "address1": "Parvati",
+        "address2": "Swargate",
+        "city": "Pune",
+        "country_code": "IN",
+        "first_name": "User",
+        "full_name": "User -1",
+        "id": "a26b936e00a8e27190ee5248c3",
+        "last_name": "1",
+        "phone": "123456789",
+        "postal_code": "411001",
+        "post_box": "PUNE",
+        "second_name": "C.",
+        "state_code": "MH"
+    },
+    "product_items" : [{
+  "product_id": "609717716671M",
+  "quantity": 1,
+  "shipment_id": "me"
+}],
+"payment_instruments":[
+	{
+		"payment_method_id": "PayPal"
+	}],
+	"shipments":[
+		{
+		"shipping_address":	{
+	"address1": "Parvati",
+	"address2": "Swargate",
+	"city": "Pune",
+	"country_code": "IN",
+	"first_name": "User-1",
+	"last_name": "1",
+	"phone": "123456789",
+	"post_box": "PUNE",
+	"postal_code": "411001",
+	"second_name": "C.",
+	"state_code": "MH"
+},
+	"shipping_method":{
+  "id": "003"
+}
+		}]
+
+}
+```
+
+* Select *Customer Auth Connection Provider* configuration from Shop API Connector and configure it by passing required values, or if required new configuration can be added by clicking green plus (+) symbol.
 
 image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/demo-get-promotions/shop-api-connector-clientIdConfigGlobalElement.png[]
-* Make sure to test your connection, if you have add new connection details.
-* Enter user details for *Get Promotions* operation and save.
 
-image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/demo-get-promotions/shop-api-connector-getPromotionsParametersWithValue.png[]
+* Make sure to test your connection, if you have add new connection details.
+* Pass the required fields for *Post Basket* operation and save the configuration.
+
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/shop-connector-example/shop-connector-post-basket-config.jpg[]
+
+* Pass the required fields for *Post Order* operation and save the configuration.
+
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/shop-connector-example/shop-connector-post-order-config.jpg[]
+
+* Pass the required body for *Post Customers* operation and save the configuration.
+
+image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/shop-connector-example/shop-connector-post-customer.jpg[]
 
 * Save the Mule project.
-* Complete flow looks as below.
-
-image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/demo-get-promotions/shop-api-connector-getPromitionsFlow.png[]
 * Run the project as a Mule Application by right-clicking the project name in the Package Explorer, selecting Run As > Mule Application.
-* Open Postman and check the response after entering the URL *http://localhost:8080/getPromotions*. You should see the cart details with same user.
+* Open Postman and check the response after entering the URL *http://localhost:8081/registrationPostCheckout*.
 
 
 === To Create a Mule Project Using XML
 * Create new Mule Application
 * Click on Configuration XML tab at the base of the canvas.
 * Copy below code and paste it.
-* Below code is for Get Promotions operation.
+* Below code is for the above scenario.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:shop="http://www.mulesoft.org/schema/mule/shop"
-    xmlns="http://www.mulesoft.org/schema/mule/core"
-    xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
-http://www.mulesoft.org/schema/mule/shop http://www.mulesoft.org/schema/mule/shop/current/mule-shop.xsd
-http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
-    <flow name="getPromotionsFlow" doc:id="328e69b1-ee7d-40a6-b4d8-950ea073b53d" >
-        <http:listener doc:name="8081/getPromotions" doc:id="e6eb8069-7b6d-42b9-971b-09ef8049d9f2" config-ref="HTTP_Listener_config" path="/getPromotions"/>
-        <shop:get-promotions doc:name="Get Promotions" doc:id="6f35ec10-b8f4-44a6-b1b4-ed13bd94e727" config-ref="Client_Id" campaignId="#[attributes.queryParams.campaign_id]"/>
-    </flow>
+
+<mule xmlns:shop="http://www.mulesoft.org/schema/mule/shop"
+	xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/shop http://www.mulesoft.org/schema/mule/shop/current/mule-shop.xsd">
+	<shop:shop-jwt-and-oauth2-configuration-config name="Shop_Connector_Guest_JWT_Token" doc:name="Shop Connector Shop jwt and oauth 2 configuration" >
+		<shop:customers-auth-connection username="User098" password="Mr@56@7W67" baseUri="https://student28-training-eu06-dw.demandware.net/s/RefArch/dw/shop/v19_5" />
+	</shop:shop-jwt-and-oauth2-configuration-config>
+	<flow name="registrationPostCheckoutFlow">
+		<http:listener doc:name="8081/registrationPostCheckout" config-ref="HTTP_Listener_config" path="/registrationPostCheckout">
+		<http:error-response statusCode="#[error.errorMessage.attributes.statusCode]">
+               <http:body ><![CDATA[#[output application/json
+---
+error.errorMessage.payload]]]></http:body>
+           </http:error-response>
+           </http:listener>
+		<set-variable doc:name="basket" variableName="basket" value="#[payload]"/>
+		<shop:create-baskets doc:name="Post Baskets" config-ref="Shop_Connector_Guest_JWT_Token">
+			<shop:content ><![CDATA[#[vars.basket]]]></shop:content>
+			<shop:custom-headers><![CDATA[#[output application/java
+---
+{
+	"Authorization" : vars.guestToken
+}]]]></shop:custom-headers>
+		</shop:create-baskets>
+		<shop:create-orders doc:name="Post Orders" config-ref="Shop_Connector_Guest_JWT_Token">
+			<shop:content ><![CDATA[#[output application/json
+---
+{
+	basket_id:payload.basket_id
+}]]]></shop:content>
+			<shop:custom-headers ><![CDATA[#[output application/java
+---
+{
+	"Authorization" : vars.guestToken
+}]]]></shop:custom-headers>
+		</shop:create-orders>
+		<shop:create-customers doc:name="Post Customers" config-ref="Shop_Connector_Guest_JWT_Token">
+			<shop:content ><![CDATA[#[output application/json
+---
+{
+  "customer": {
+    "email": "UseCase@gmail.com",
+    "first_name": "USE",
+    "last_name": "CASE",
+    "login": "useCase" ++ (randomInt(999) as String)
+  },
+  "password": "useCase@123"
+}]]]></shop:content>
+			<shop:custom-headers ><![CDATA[#[output application/java
+---
+{
+	"Authorization" : vars.guestToken
+}]]]></shop:custom-headers>
+		</shop:create-customers>
+	</flow>
 </mule>
+
 ```
-== Note 
-
-For Accessing any operation in shop-api connector which uses JWT Authentication, the user needs to use "Post Customer Auth" opearation and get the access token and pass it to the connector Operation as a custom header.
-
-image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/shop-api-connector-postCustomerAuthUse.png[]
-
-image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/shop-api-connector-customHeader.png[]
 
 == See Also
 * https://forums.mulesoft.com[MuleSoft Forum]
