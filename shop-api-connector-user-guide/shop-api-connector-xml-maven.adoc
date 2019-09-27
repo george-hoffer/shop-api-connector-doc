@@ -49,7 +49,7 @@ engine translates the `RELEASE` dependency keyword to the current version.
 <dependency>
     <groupId>com.mulesoft.connectors</groupId>
     <artifactId>shop-api</artifactId>
-    <version>1.0.0-alpha</version>
+    <version>RELEASE</version>
 	<classifier>mule-plugin</classifier>
 </dependency>
 ----
