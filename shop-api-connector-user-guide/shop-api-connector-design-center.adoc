@@ -25,11 +25,9 @@ the https://github.com/Apisero-Connectors/shop-api-connector-doc/blob/master/sho
 . Specify a value for *Project name*, and click *Create*.
 . Click *Go straight to canvas* to exit from *Let's get started*.
 . Click the trigger card.
-. If you are using your connector as an input source trigger, search for the
-connector; otherwise, you can use HTTP or Scheduler.
+. Shop Api Connector does not work as a Trigger, So use the HTTP Connector as the trigger.
 . Complete these fields:
-// If <connector> has one or more source operations, list the
-// important and required fields and their values in a table.
+
 
 +
 [%header%autowidth.spread]
