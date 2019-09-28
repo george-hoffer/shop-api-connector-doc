@@ -182,7 +182,6 @@ This Connector Version major#.minor#
 |===
 
 ==== Associated Operations
-* <<CreateCustomersPasswordReset>> {nbsp}
 * <<GetCategoriesById>> {nbsp}
 * <<GetCategoriesIds>> {nbsp}
 * <<GetContentById>> {nbsp}
@@ -220,6 +219,7 @@ This Connector Version major#.minor#
 * <<GetStores>> {nbsp}
 * <<GetStoresById>> {nbsp}
 * <<GetStoresIds>> {nbsp}
+* <<CreateCustomersPasswordReset>> {nbsp}
 * <<Unauthorize>> {nbsp}
 
 
@@ -305,8 +305,8 @@ This Connector Version major#.minor#
 
 ==== Associated Operations
 * <<CreateBasketsReference>> {nbsp}
-* <<CreateSessions>> {nbsp}
 * <<UpdateCustomersPasswordByCustomerId>> {nbsp}
+* <<CreateSessions>> {nbsp}
 
 
 ---
@@ -440,22 +440,6 @@ This Connector Version major#.minor#
 |===
 
 ==== Associated Operations
-* <<CreateBaskets>> {nbsp}
-* <<CreateBasketsCouponsByBasketId>> {nbsp}
-* <<CreateBasketsGiftCertificateItemsByBasketId>> {nbsp}
-* <<CreateBasketsItemsByBasketId>> {nbsp}
-* <<CreateBasketsPaymentInstrumentsByBasketId>> {nbsp}
-* <<CreateBasketsShipmentsByBasketId>> {nbsp}
-* <<CreateCustomers>> {nbsp}
-* <<CreateCustomersAddressesByCustomerId>> {nbsp}
-* <<CreateCustomersPasswordResetByCustomerId>> {nbsp}
-* <<CreateCustomersPaymentInstrumentsByCustomerId>> {nbsp}
-* <<CreateCustomersProductListsByCustomerId>> {nbsp}
-* <<CreateCustomersProductListsItemsByCustomerIdListId>> {nbsp}
-* <<CreateCustomersProductListsItemsPurchasesByCustomerIdListIdItemId>> {nbsp}
-* <<CreateGiftCertificate>> {nbsp}
-* <<CreateOrders>> {nbsp}
-* <<CreateOrdersPaymentInstrumentsByOrderNo>> {nbsp}
 * <<DeleteBasketsByBasketId>> {nbsp}
 * <<DeleteBasketsCouponsByBasketIdCouponItemId>> {nbsp}
 * <<DeleteBasketsGiftCertificateItemsByBasketIdGiftCertificateItemId>> {nbsp}
@@ -502,6 +486,22 @@ This Connector Version major#.minor#
 * <<PatchCustomersProductListsItemsPurchasesByCustomerIdListIdItemIdPurchaseId>> {nbsp}
 * <<PatchOrdersByOrderNo>> {nbsp}
 * <<PatchOrdersPaymentInstrumentsByOrderNoPaymentInstrumentId>> {nbsp}
+* <<CreateBaskets>> {nbsp}
+* <<CreateBasketsCouponsByBasketId>> {nbsp}
+* <<CreateBasketsGiftCertificateItemsByBasketId>> {nbsp}
+* <<CreateBasketsItemsByBasketId>> {nbsp}
+* <<CreateBasketsPaymentInstrumentsByBasketId>> {nbsp}
+* <<CreateBasketsShipmentsByBasketId>> {nbsp}
+* <<CreateCustomers>> {nbsp}
+* <<CreateCustomersAddressesByCustomerId>> {nbsp}
+* <<CreateCustomersPasswordResetByCustomerId>> {nbsp}
+* <<CreateCustomersPaymentInstrumentsByCustomerId>> {nbsp}
+* <<CreateCustomersProductListsByCustomerId>> {nbsp}
+* <<CreateCustomersProductListsItemsByCustomerIdListId>> {nbsp}
+* <<CreateCustomersProductListsItemsPurchasesByCustomerIdListIdItemId>> {nbsp}
+* <<CreateGiftCertificate>> {nbsp}
+* <<CreateOrders>> {nbsp}
+* <<CreateOrdersPaymentInstrumentsByOrderNo>> {nbsp}
 * <<UpdateBasketsAgentByBasketId>> {nbsp}
 * <<UpdateBasketsBillingAddressByBasketId>> {nbsp}
 * <<UpdateBasketsCustomerByBasketId>> {nbsp}
