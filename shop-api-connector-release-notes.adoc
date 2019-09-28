@@ -25,27 +25,26 @@ The Shop API Connector is compatible with these software versions:
 
 Shop API connector provides access to Commerce Cloud Shop APIs for these workflows:
 
-* Products
-* Categories
-* Customers
-* Sessions
+* Ai Resource ( Get Ai Product Recommendations By ID : Its a beta feature and it's not functional in connector.)
 * Baskets
-* Product Search
-* Orders
-* Order Search
-* Promotions
-* Search Suggestion
-* Site
-* Stores
-* Folders
+* Categories
 * Content
 * Content Search
-* Ai Resource ( Get Ai Product Recommendations By ID : Its a beta feature and it's not functional in connector.)
 * CustomObjects
-* PriceAdjustmentLimits
-* ProductLists
+* Customers
+* Folders
 * Gift Certificate
-
+* Order Search
+* Orders
+* PriceAdjustmentLimits
+* Product Search
+* ProductLists
+* Products
+* Promotions
+* Search Suggestion
+* Sessions
+* Site
+* Stores
 
 == Fixed in This Release
 First version.
