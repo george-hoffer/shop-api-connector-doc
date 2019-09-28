@@ -9,7 +9,7 @@ Shop API Connector Version Major.Minor.Patch
 == About Connectors
 Anypoint connectors are Mule runtime engine extensions that enable you to
 connect to APIs and resources on external systems, such as Salesforce, Shop API Connector, ServiceNow,
-and Twitter. It acts as an middleware between to Systems.
+and Twitter.
 
 The Open Commerce API (OCAPI) enables you to access resources using HTTP requests and HTTP responses. Each resource is addressed by its unique URL, which includes the API version. Data is transported using request or header parameters, or within the request body as a JSON document with a defined structure. 
 
