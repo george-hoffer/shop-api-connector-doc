@@ -50,7 +50,7 @@ Design Center automatically saves all changes.
 . In *Select a component*, search for the Shop API Connector Connector.
 . Select the connector name.
 . Select an operation for the connector and add the Configurations.
-. Complete these fields for Client_Id Connection Provider:
+* Complete these fields for Client_Id Connection Provider:
 
 +
 // List the important and required fields and their values in a table.
@@ -67,7 +67,7 @@ Design Center automatically saves all changes.
 +
 . Click the *Test* button to test the connection.
 
-. Complete these fields for Auth 2 Application Connection Provider:
+* Complete these fields for Auth 2 Application Connection Provider:
 
 +
 [%header%autowidth.spread]
@@ -83,7 +83,7 @@ Design Center automatically saves all changes.
 |===
 +
 
-. Complete these fields for Customer Auth Connection Provider:
+* Complete these fields for Customer Auth Connection Provider:
 
 +
 [%header%autowidth.spread]
@@ -93,9 +93,8 @@ Design Center automatically saves all changes.
 |Base URI|URL to access API|Yes
 |Username|Username of commerce cloud account|Yes
 |Password|Password of commerce cloud account|Yes
-|Token URI|URL to access token|Yes
 |Client Id|Client Id of commerce cloud account|Yes
-|Client Secret|Client Secret of commerce cloud account|Yes
+|Type|Customer Type(Guest or Credentials)|Yes
 |===
 +
 
