@@ -25,7 +25,7 @@ the https://github.com/Apisero-Connectors/shop-api-connector-doc/blob/master/sho
 . Specify a value for *Project name*, and click *Create*.
 . Click *Go straight to canvas* to exit from *Let's get started*.
 . Click the trigger card.
-. Shop Api Connector does not work as a Trigger, So use the HTTP Connector as the trigger.
+. Shop API Connector does not work as a Trigger, So use the HTTP Connector as the trigger.
 . Complete these fields:
 
 
@@ -82,6 +82,23 @@ Design Center automatically saves all changes.
 |Client Secret|Client Secret of commerce cloud account|Yes
 |===
 +
+
+. Complete these fields for Customer Auth Connection Provider:
+
++
+[%header%autowidth.spread]
+
+|===
+|Field |Description |Required?  
+|Base URI|URL to access API|Yes
+|Username|Username of commerce cloud account|Yes
+|Password|Password of commerce cloud account|Yes
+|Token URI|URL to access token|Yes
+|Client Id|Client Id of commerce cloud account|Yes
+|Client Secret|Client Secret of commerce cloud account|Yes
+|===
++
+
 . Click the *Test* button to test the connection.
 
 == See Also
