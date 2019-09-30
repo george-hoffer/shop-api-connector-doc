@@ -45,14 +45,15 @@ for a Mule app. When you code a Mule app manually, include this XML snippet in
 your `pom.xml` file to enable access to the connector. The Mule runtime
 engine translates the `RELEASE` dependency keyword to the current version.
 [source,xml,linenums]
-----
+```
 <dependency>
     <groupId>com.mulesoft.connectors</groupId>
     <artifactId>shop-api</artifactId>
     <version>RELEASE</version>
-	<classifier>mule-plugin</classifier>
+    <classifier>mule-plugin</classifier>
 </dependency>
-----
+```
+
 To obtain the most up-to-date `pom.xml` file information, access the
 connector in https://www.mulesoft.com/exchange/[Anypoint Exchange]
 

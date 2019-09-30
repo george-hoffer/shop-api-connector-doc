@@ -5,6 +5,8 @@ endif::[]
 Support Version: Select
 This Connector Version major#.minor#
 
+The Shop API Connector is an Operation Based Connector, which means that when you add the connector to your flow, you need to configure a specific operation the connector is intended to perform. Shop API Connector will support 3 different types of configuration and the details are given below.
+
 == Shop Client_Id, JWT and OAuth2 Configurations
 
 ==== Parameters
