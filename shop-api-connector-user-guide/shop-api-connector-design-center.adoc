@@ -47,7 +47,7 @@ Design Center automatically saves all changes.
 == Configure the Target Component
 
 . Click *+* next to the trigger card.
-. In *Select a component*, search for the Shop API Connector Connector.
+. In *Select a component*, search for the Shop API Connector.
 . Select the connector name.
 . Select an operation for the connector and add the Configurations.
 * Complete these fields for Client_Id Connection Provider:
