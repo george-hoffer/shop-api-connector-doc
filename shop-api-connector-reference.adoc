@@ -7,8 +7,6 @@ This Connector Version major#.minor#
 
 == Configurations
 ---
-[[Config]]
-=== Config
 
 ==== Parameters
 
@@ -41,7 +39,7 @@ This Connector Version major#.minor#
 
 ====== Parameters
 
-[%header%autowidth.spread]
+[cols="20%,20%,40%,10%,10%"]
 |===
 | Name | Type | Description | Default Value | Required
 | Default Headers a| Array of <<DefaultHeader>> |  |  | {nbsp}
@@ -87,7 +85,6 @@ This Connector Version major#.minor#
 ====== Parameters
 
 [%header%autowidth.spread]
-[cols="20%,20%,40%,10%,10%"]
 |===
 | Name | Type | Description | Default Value | Required
 | Default Headers a| Array of <<DefaultHeader>> |  |  | {nbsp}
