@@ -6,7 +6,6 @@ Support Version: Select
 This Connector Version major#.minor#
 
 == Configurations
----
 
 ==== Parameters
 
@@ -36,10 +35,9 @@ This Connector Version major#.minor#
 [[ShopConfiguration_ClientId]]
 ===== Client Id Connection Provider
 
-
 ====== Parameters
 
-[cols="20%,20%,40%,10%,10%"]
+[%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
 | Default Headers a| Array of <<DefaultHeader>> |  |  | {nbsp}
