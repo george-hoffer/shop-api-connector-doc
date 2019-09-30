@@ -7,6 +7,7 @@ This Connector Version major#.minor#
 
 The Shop API Connector is an Operation Based Connector, which means that when you add the connector to your flow, you need to configure a specific operation the connector is intended to perform. Shop API Connector will support 3 different types of configuration and the details are given below.
 
+[[ShopConfiguration]]
 == Shop Client_Id, JWT and OAuth2 Configurations
 
 ==== Parameters
@@ -956,10 +957,10 @@ Provides keyword and refinement search functionality for content assets. The sea
 | Name | Type | Description | Default Value | Required
 | Configuration | String | The name of the configuration to use. | | *x*{nbsp}
 | count a| Number |  The maximum number of instances per request. Default value is 25. |  | {nbsp}
-| refine a| Array of String |  Parameter that represents a refinement attribute/value(s) pair. Refinement attribute id and value(s) are separated by '='. Multiple values are supported by a sub-set of refinement attributes and can be provided by separating them using a pipe (URL encoded = "|"). Value ranges can be specified like this: refine=foo=(100..500) Multiple refine parameters can be provided by adding an underscore in combination with an integer counter right behind the parameter name and a counter range 1..9. I.e. refine_1=c_refinementType=type1|type2|type3. The following system refinement attribute ids are supported: fdid: Allows to refine per single content folder id. Multiple folder ids are not supported. |  | {nbsp}
+| refine a| Array of String |  Parameter that represents a refinement attribute/value(s) pair. Allows to refine per single content folder id. Multiple folder ids are not supported. |  | {nbsp}
 | locale a| String |  The locale context. |  | {nbsp}
 | q a| String |  The query phrase to search for. |  | {nbsp}
-| sort a| Array of String |  Parameter that represents a sorting attribute/value(s) pair. Sorting attribute id and value are separated by '='. The value describes the sort direction. Possible values are 'asc' and 'desc', for ascending or descending sort direction. I.e. sort=c_myAttribute=desc. Precondition: You have to select your sorting attributes in Business Manager &gt; YourSite &gt; Search Indexes &gt; Content Index &gt; Sorting Attributes. |  | {nbsp}
+| sort a| Array of String |  Parameter that represents a sorting attribute/value(s) pair. Sorting attribute id and value are separated by '='. The value describes the sort direction. Possible values are 'asc' and 'desc', for ascending or descending sort direction. |  | {nbsp}
 | Initial Offset a| Number |  the initial offset to apply on the first request |  0 | {nbsp}
 | Output Mime Type a| String |  The mime type of the payload that this operation outputs. |  | {nbsp}
 | Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | {nbsp}
@@ -1432,7 +1433,7 @@ Provides keyword and refinement search functionality for products. Only returns 
 | Name | Type | Description | Default Value | Required
 | Configuration | String | The name of the configuration to use. | | *x*{nbsp}
 | count a| Number |  The maximum number of instances per request. Default value is 25. |  | {nbsp}
-| refine a| Array of String |  Parameter that represents a refinement attribute/value(s) pair. Refinement attribute id and value(s) are separated by '='. Multiple values are supported by a sub-set of refinement attributes and can be provided by separating them using a pipe (URL encoded = "|"). Value ranges can be specified like this: refine=price=(100..500) Multiple refine parameters can be provided by adding an underscore in combination with an integer counter right behind the parameter name and a counter range 1..9. I.e. refine_1=c_refinementColor=red|green|blue. The following system refinement attribute ids are supported: cgid: Allows to refine per single category id. Multiple category ids are not supported. price: Allows to refine per single price range. Multiple price ranges are not supported. pmid: Allows to refine per promotion id(s). htypes: Allow to refine by including only the provided hit types. Accepted types are 'product', 'master', 'set', 'bundle', 'slicing_group' (deprecated), 'variation_group'. orderable_only: Unavailable products will be excluded from the search results if true is set. Multiple refinement values are not supported. |  | {nbsp}
+| refine a| Array of String |  Parameter that represents a refinement attribute/value(s) pair. htypes: Allow to refine by including only the provided hit types. Accepted types are 'product', 'master', 'set', 'bundle', 'slicing_group' (deprecated), 'variation_group'. orderable_only: Unavailable products will be excluded from the search results if true is set. Multiple refinement values are not supported. |  | {nbsp}
 | locale a| String |  The locale context. |  | {nbsp}
 | expand a| Array of String |  The expand parameter. A comma separated list with the allowed values (availability, images, prices, represented_products, variations) |  | {nbsp}
 | q a| String |  The query phrase to search for. |  | {nbsp}
@@ -1505,7 +1506,7 @@ Provides keyword and refinement search functionality for products. Only returns 
 | Name | Type | Description | Default Value | Required
 | Configuration | String | The name of the configuration to use. | | *x*{nbsp}
 | count a| Number |  The maximum number of instances per request. Default value is 25. |  | {nbsp}
-| refine a| Array of String |  Parameter that represents a refinement attribute/value(s) pair. Refinement attribute id and value(s) are separated by '='. Multiple values are supported by a sub-set of refinement attributes and can be provided by separating them using a pipe (URL encoded = "|"). Value ranges can be specified like this: refine=price=(100..500) Multiple refine parameters can be provided by adding an underscore in combination with an integer counter right behind the parameter name and a counter range 1..9. I.e. refine_1=c_refinementColor=red|green|blue. The following system refinement attribute ids are supported: cgid: Allows to refine per single category id. Multiple category ids are not supported. price: Allows to refine per single price range. Multiple price ranges are not supported. pmid: Allows to refine per promotion id(s). orderable_only: Unavailable products will be excluded from the search results if true is set. Multiple refinement values are not supported. |  | {nbsp}
+| refine a| Array of String |  Parameter that represents a refinement attribute/value(s) pair. The following system refinement attribute ids are supported: cgid: Allows to refine per single category id. Multiple category ids are not supported. price: Allows to refine per single price range. Multiple price ranges are not supported. pmid: Allows to refine per promotion id(s). orderable_only: Unavailable products will be excluded from the search results if true is set. Multiple refinement values are not supported. |  | {nbsp}
 | locale a| String |  The locale context. |  | {nbsp}
 | q a| String |  The query phrase to search for. |  | {nbsp}
 | sort a| String |  The id of the sorting option to sort the search hits. |  | {nbsp}
@@ -1576,7 +1577,7 @@ Provides keyword and refinement search functionality for products. Only returns 
 | Name | Type | Description | Default Value | Required
 | Configuration | String | The name of the configuration to use. | | *x*{nbsp}
 | count a| Number |  The maximum number of instances per request. Default value is 25. |  | {nbsp}
-| refine a| Array of String |  Parameter that represents a refinement attribute/value(s) pair. Refinement attribute id and value(s) are separated by '='. Multiple values are supported by a sub-set of refinement attributes and can be provided by separating them using a pipe (URL encoded = "|"). Value ranges can be specified like this: refine=price=(100..500) Multiple refine parameters can be provided by adding an underscore in combination with an integer counter right behind the parameter name and a counter range 1..9. I.e. refine_1=c_refinementColor=red|green|blue. The following system refinement attribute ids are supported: cgid: Allows to refine per single category id. Multiple category ids are not supported. price: Allows to refine per single price range. Multiple price ranges are not supported. pmid: Allows to refine per promotion id(s). orderable_only: Unavailable products will be excluded from the search results if true is set. Multiple refinement values are not supported. |  | {nbsp}
+| refine a| Array of String |  Parameter that represents a refinement attribute/value(s) pair. The following system refinement attribute ids are supported: cgid: Allows to refine per single category id. Multiple category ids are not supported. price: Allows to refine per single price range. Multiple price ranges are not supported. pmid: Allows to refine per promotion id(s). orderable_only: Unavailable products will be excluded from the search results if true is set. Multiple refinement values are not supported. |  | {nbsp}
 | locale a| String |  The locale context. |  | {nbsp}
 | q a| String |  The query phrase to search for. |  | {nbsp}
 | sort a| String |  The id of the sorting option to sort the search hits. |  | {nbsp}
@@ -1647,7 +1648,7 @@ Provides keyword and refinement search functionality for products. Only returns 
 | Name | Type | Description | Default Value | Required
 | Configuration | String | The name of the configuration to use. | | *x*{nbsp}
 | count a| Number |  The maximum number of instances per request. Default value is 25. |  | {nbsp}
-| refine a| Array of String |  Parameter that represents a refinement attribute/value(s) pair. Refinement attribute id and value(s) are separated by '='. Multiple values are supported by a sub-set of refinement attributes and can be provided by separating them using a pipe (URL encoded = "|"). Value ranges can be specified like this: refine=price=(100..500) Multiple refine parameters can be provided by adding an underscore in combination with an integer counter right behind the parameter name and a counter range 1..9. I.e. refine_1=c_refinementColor=red|green|blue. The following system refinement attribute ids are supported: cgid: Allows to refine per single category id. Multiple category ids are not supported. price: Allows to refine per single price range. Multiple price ranges are not supported. pmid: Allows to refine per promotion id(s). orderable_only: Unavailable products will be excluded from the search results if true is set. Multiple refinement values are not supported. |  | {nbsp}
+| refine a| Array of String |  Parameter that represents a refinement attribute/value(s) pair. The following system refinement attribute ids are supported: cgid: Allows to refine per single category id. Multiple category ids are not supported. price: Allows to refine per single price range. Multiple price ranges are not supported. pmid: Allows to refine per promotion id(s). orderable_only: Unavailable products will be excluded from the search results if true is set. Multiple refinement values are not supported. |  | {nbsp}
 | locale a| String |  The locale context. |  | {nbsp}
 | q a| String |  The query phrase to search for. |  | {nbsp}
 | currency a| String |  The currency mnemonic specified for price. |  | {nbsp}
@@ -1719,7 +1720,7 @@ Provides keyword and refinement search functionality for products. Only returns 
 | Name | Type | Description | Default Value | Required
 | Configuration | String | The name of the configuration to use. | | *x*{nbsp}
 | count a| Number |  The maximum number of instances per request. Default value is 25. |  | {nbsp}
-| refine a| Array of String |  Parameter that represents a refinement attribute/value(s) pair. Refinement attribute id and value(s) are separated by '='. Multiple values are supported by a sub-set of refinement attributes and can be provided by separating them using a pipe (URL encoded = "|"). Value ranges can be specified like this: refine=price=(100..500) Multiple refine parameters can be provided by adding an underscore in combination with an integer counter right behind the parameter name and a counter range 1..9. I.e. refine_1=c_refinementColor=red|green|blue. The following system refinement attribute ids are supported: cgid: Allows to refine per single category id. Multiple category ids are not supported. price: Allows to refine per single price range. Multiple price ranges are not supported. pmid: Allows to refine per promotion id(s). orderable_only: Unavailable products will be excluded from the search results if true is set. Multiple refinement values are not supported. |  | {nbsp}
+| refine a| Array of String |  Parameter that represents a refinement attribute/value(s) pair. The following system refinement attribute ids are supported: cgid: Allows to refine per single category id. Multiple category ids are not supported. price: Allows to refine per single price range. Multiple price ranges are not supported. pmid: Allows to refine per promotion id(s). orderable_only: Unavailable products will be excluded from the search results if true is set. Multiple refinement values are not supported. |  | {nbsp}
 | locale a| String |  The locale context. |  | {nbsp}
 | q a| String |  The query phrase to search for. |  | {nbsp}
 | sort a| String |  The id of the sorting option to sort the search hits. |  | {nbsp}
@@ -1790,7 +1791,7 @@ Provides keyword and refinement search functionality for products. Only returns 
 | Name | Type | Description | Default Value | Required
 | Configuration | String | The name of the configuration to use. | | *x*{nbsp}
 | count a| Number |  The maximum number of instances per request. Default value is 25. |  | {nbsp}
-| refine a| Array of String |  Parameter that represents a refinement attribute/value(s) pair. Refinement attribute id and value(s) are separated by '='. Multiple values are supported by a sub-set of refinement attributes and can be provided by separating them using a pipe (URL encoded = "|"). Value ranges can be specified like this: refine=price=(100..500) Multiple refine parameters can be provided by adding an underscore in combination with an integer counter right behind the parameter name and a counter range 1..9. I.e. refine_1=c_refinementColor=red|green|blue. The following system refinement attribute ids are supported: cgid: Allows to refine per single category id. Multiple category ids are not supported. price: Allows to refine per single price range. Multiple price ranges are not supported. pmid: Allows to refine per promotion id(s). orderable_only: Unavailable products will be excluded from the search results if true is set. Multiple refinement values are not supported. |  | {nbsp}
+| refine a| Array of String |  Parameter that represents a refinement attribute/value(s) pair. The following system refinement attribute ids are supported: cgid: Allows to refine per single category id. Multiple category ids are not supported. price: Allows to refine per single price range. Multiple price ranges are not supported. pmid: Allows to refine per promotion id(s). orderable_only: Unavailable products will be excluded from the search results if true is set. Multiple refinement values are not supported. |  | {nbsp}
 | locale a| String |  The locale context. |  | {nbsp}
 | q a| String |  The query phrase to search for. |  | {nbsp}
 | sort a| String |  The id of the sorting option to sort the search hits. |  | {nbsp}
@@ -8992,7 +8993,7 @@ Submits an order with a given order number, based on a prepared basket. The only
 a separate, non-blocking thread. |true |
 |===
 
-[[reconnect-forever]]
+[[reconnectForever]]
 === Reconnect Forever
 
 [%header%autowidth.spread]
