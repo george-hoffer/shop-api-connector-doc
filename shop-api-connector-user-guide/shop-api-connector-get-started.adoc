@@ -6,16 +6,15 @@ endif::[]
 Support Category: Select
 Shop API Connector Version Major.Minor.Patch
 // The Anypoint Connector for Shop API Connector provides ...
-== About Connectors
-Anypoint connectors are Mule runtime engine extensions that enable you to
-connect to APIs and resources on external systems, such as Salesforce, Shop API Connector, ServiceNow,
-and Twitter.
+== About Shop API Connector
+
+The Shop API Connector is an Operation Based Connector, which means that when you add the connector to your flow, you need to configure a specific operation the connector is intended to perform. 
+
+The Shop API Connector enables the user to access the OCAPI by using certain configurations and access the data, update the data and delete the data if required.
 
 The Open Commerce API (OCAPI) enables you to access resources using HTTP requests and HTTP responses. Each resource is addressed by its unique URL, which includes the API version. Data is transported using request or header parameters, or within the request body as a JSON document with a defined structure. 
 
 OCAPI is divided into different APIs: the Shop API allows a client to interact with the system as a shop customer or as an agent shopping on behalf of a customer, the Data API gives Create, Read, Update and Delete access to system resources, and the Meta API is used to retrieve a formal description of the Open Commerce API, including custom attributes.
-
-The Shop API Connector enables the user to access the OCAPI by using certain configurations and access the data, manipulate the data and delete the data if required.
 
 == Prerequisites
 
