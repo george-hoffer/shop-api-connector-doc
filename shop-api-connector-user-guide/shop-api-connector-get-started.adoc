@@ -58,8 +58,8 @@ Please check the xref:shop-api-connector-examples.adoc[Examples] link for the si
 
 After you have met the prerequisites and experimented with templates and
 examples, you are ready to create an app with
-xref:shop-api/shop-api-connector-design-center.adoc[Design Center] or
-xref:shop-api/shop-api-connector-studio.adoc[Anypoint Studio].
+xref:shop-api-connector-design-center.adoc[Design Center] or
+xref:shop-api-connector-studio.adoc[Anypoint Studio].
 
 == See Also
 
