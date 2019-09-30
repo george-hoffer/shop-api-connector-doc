@@ -8994,7 +8994,7 @@ a separate, non-blocking thread. |true |
 |===
 
 [[reconnectForever]]
-=== Reconnect Forever
+=== ReconnectForever
 
 [%header%autowidth.spread]
 |===
