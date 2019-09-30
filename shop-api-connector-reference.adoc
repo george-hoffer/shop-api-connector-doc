@@ -5,7 +5,7 @@ endif::[]
 Support Version: Select
 This Connector Version major#.minor#
 
-== Configurations
+== Shop Client_Id, JWT and OAuth2 Configurations
 
 ==== Parameters
 
@@ -284,7 +284,7 @@ This Connector Version major#.minor#
 | Response Buffer Size a| Number |  The space in bytes for the buffer where the HTTP response will be stored. |  -1 | {nbsp}
 | Username a| String |  The username to authenticate the requests |  | {nbsp}
 | Password a| String |  The password to authenticate the requests |  | {nbsp}
-| Base Uri a| String |  Parameter base URI, each instance/tenant gets its own |  demo-ocapi.demandware.net/s/-/dw/shop/v19_5 | {nbsp}
+| Base Uri a| String |  Parameter base URI, each instance/tenant gets its own | default base URI | {nbsp}
 | Client Id a| String |  client_id |  | *x*{nbsp}
 | Type a| Enumeration, one of:
 
@@ -371,7 +371,7 @@ This Connector Version major#.minor#
 | Response Buffer Size a| Number |  The space in bytes for the buffer where the HTTP response will be stored. |  -1 | {nbsp}
 | Username a| String |  The username to authenticate the requests |  | {nbsp}
 | Password a| String |  The password to authenticate the requests |  | {nbsp}
-| Base Uri a| String |  Parameter base URI, each instance/tenant gets its own |  demo-ocapi.demandware.net/s/-/dw/shop/v19_5 | {nbsp}
+| Base Uri a| String |  Parameter base URI, each instance/tenant gets its own |  default base URI | {nbsp}
 | Client Id a| String |  client_id |  | *x*{nbsp}
 | Type a| Enumeration, one of:
 
@@ -420,7 +420,7 @@ This Connector Version major#.minor#
 | Proxy Config a| <<Proxy>> |  Reusable configuration element for outbound connections through a proxy |  | {nbsp}
 | Stream Response a| Boolean |  Whether or not received responses should be streamed |  false | {nbsp}
 | Response Buffer Size a| Number |  The space in bytes for the buffer where the HTTP response will be stored. |  -1 | {nbsp}
-| Base Uri a| String |  Parameter base URI, each instance/tenant gets its own |  demo-ocapi.demandware.net/s/-/dw/shop/v19_5 | {nbsp}
+| Base Uri a| String |  Parameter base URI, each instance/tenant gets its own |  default base URI | {nbsp}
 | Protocol a| Enumeration, one of:
 
 ** HTTP
@@ -429,7 +429,7 @@ This Connector Version major#.minor#
 | Reconnection a| <<Reconnection>> |  When the application is deployed, a connectivity test is performed on all connectors. If set to true, deployment will fail if the test doesn't pass after exhausting the associated reconnection strategy |  | {nbsp}
 | Client Id a| String |  The OAuth client id as registered with the service provider |  | *x*{nbsp}
 | Client Secret a| String |  The OAuth client secret as registered with the service provider |  | *x*{nbsp}
-| Token Url a| String |  The service provider's token endpoint URL |  https://account.demandware.com:443/dw/oauth2/access_token | {nbsp}
+| Token Url a| String |  The service provider's token endpoint URL |  default token URL | {nbsp}
 | Scopes a| String |  The OAuth scopes to be requested during the dance. If not provided, it will default to those in the annotation |  | {nbsp}
 | Object Store a| String |  A reference to the object store that should be used to store each resource owner id's data. If not specified, runtime will automatically provision the default one. |  | {nbsp}
 |===
@@ -568,7 +568,7 @@ This Connector Version major#.minor#
 | Proxy Config a| <<Proxy>> |  Reusable configuration element for outbound connections through a proxy |  | {nbsp}
 | Stream Response a| Boolean |  Whether or not received responses should be streamed |  false | {nbsp}
 | Response Buffer Size a| Number |  The space in bytes for the buffer where the HTTP response will be stored. |  -1 | {nbsp}
-| Base Uri a| String |  Parameter base URI, each instance/tenant gets its own |  demo-ocapi.demandware.net/s/-/dw/shop/v19_5 | {nbsp}
+| Base Uri a| String |  Parameter base URI, each instance/tenant gets its own |  default base URI | {nbsp}
 | Protocol a| Enumeration, one of:
 
 ** HTTP
@@ -577,7 +577,7 @@ This Connector Version major#.minor#
 | Reconnection a| <<Reconnection>> |  When the application is deployed, a connectivity test is performed on all connectors. If set to true, deployment will fail if the test doesn't pass after exhausting the associated reconnection strategy |  | {nbsp}
 | Client Id a| String |  The OAuth client id as registered with the service provider |  | *x*{nbsp}
 | Client Secret a| String |  The OAuth client secret as registered with the service provider |  | *x*{nbsp}
-| Token Url a| String |  The service provider's token endpoint URL |  https://account.demandware.com:443/dw/oauth2/access_token | {nbsp}
+| Token Url a| String |  The service provider's token endpoint URL |  default token URL | {nbsp}
 | Scopes a| String |  The OAuth scopes to be requested during the dance. If not provided, it will default to those in the annotation |  | {nbsp}
 | Object Store a| String |  A reference to the object store that should be used to store each resource owner id's data. If not specified, runtime will automatically provision the default one. |  | {nbsp}
 |===
