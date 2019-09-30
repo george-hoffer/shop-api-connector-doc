@@ -43,15 +43,12 @@ To use Shop API Connector, you need
 
 == Audience
 * Starting user -- To create your Mule app,
-see xref:shop-api/shop-api-connector-design-center.adoc[Design Center Configuration]
-or xref:shop-api/shop-api-connector-studio.adoc[Studio Configuration]. The
-xref:shop-api/shop-api-connector-config-topics.adoc[Additional Configuration Information]
-topic helps extend your understanding of the Shop API Connector. The
-xref:shop-api/shop-api-connector-examples.adoc[Examples] topic provides one or more use
+see xref:shop-api-connector-design-center.adoc[Design Center Configuration]
+or xref:shop-api-connector-studio.adoc[Studio Configuration].The
+xref:shop-api-connector-examples.adoc[Examples] topic provides one or more use
 cases for using the connector.
-* Power user - Read the xref:shop-api/shop-api-connector-xml-maven.adoc[XML and Maven
-Support], xref:shop-api/shop-api-connector-config-topics.adoc[Additional Configuration Information], 
-and xref:shop-api/shop-api-connector-examples.adoc[Examples] topics.
+* Power user - Read the xref:shop-api-connector-xml-maven.adoc[XML and Maven
+Support], and xref:shop-api-connector-examples.adoc[Examples] topics.
 
 == Common Use Cases For the Connector
 Please check the xref:shop-api-connector-examples.adoc[Examples] link for the simple use case.
