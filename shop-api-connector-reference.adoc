@@ -4284,9 +4284,13 @@ This operation makes an HTTP POST request to the /customers/{customer_id}/produc
 Adds a purchase to an item in the customer's product list.   
 
 Considered values from the request body are:   
+
 . Purchaser_name: name of the purchaser, mandatory. This is the full name of the purchaser of this product list item. 
+
 . Quantity: amount purchased, mandatory. This is the quantity of the items purchased from the product list.   
+
 . Custom properties in the form c_: the custom property must correspond to a custom attribute () defined for ProductListItemPurchase. The value of this property must be valid for the type of custom attribute defined for ProductListItemPurchase.    
+
 This operation makes an HTTP POST request to the /customers/{customer_id}/product_lists/{list_id}/items/{item_id}/purchases endpoint
 
 
@@ -4422,7 +4426,11 @@ Action to retrieve an existing gift certificate. This operation makes an HTTP PO
 `<shop:create-orders>`
 
 
-Submits an order based on a prepared basket. Note: If the basket has been submitted using Order Center (considered by it's client id) the channel type will be set to "Call Center". In case another channel type was set by a script before submitting the basket, the channel type will be reset to "Call Center" and a warning will be logged. The only considered value from the request body is basket_id. This operation makes an HTTP POST request to the /orders endpoint
+Submits an order based on a prepared basket. 
+
+Note: If the basket has been submitted using Order Center (considered by it's client id) the channel type will be set to "Call Center". In case another channel type was set by a script before submitting the basket, the channel type will be reset to "Call Center" and a warning will be logged. The only considered value from the request body is basket_id. 
+
+This operation makes an HTTP POST request to the /orders endpoint
 
 
 === Parameters
@@ -4488,7 +4496,11 @@ Submits an order based on a prepared basket. Note: If the basket has been submit
 `<shop:create-orders-payment-instruments-by-order-no>`
 
 
-Adds a payment instrument to an order. It is possible either to supply the full payment information or only a customer payment instrument id and amount. In case the customer payment instrument id was set all the other properties (except amount) are ignored and the payment data is resolved from the stored customer payment information. An attempt is made to authorize the order by passing it to the authorize or authorizeCreditCard hook. Details: The payment instrument is added with the provided details or the details from the customer payment instrument. The payment method must be applicable for the order see GET /baskets/{basket_id}/payment_methods, if the payment method is 'CREDIT_CARD' a payment_card must be specified in the request. The default implementation places the order if the order status is CREATED and the authorization amount equals or exceeds the order total. Placing the order (equivalent to calling dw.order.OrderMgr.placeOrder(order : Order) in the scripting API) results in the order being changed to status NEW and prepared for export. This operation makes an HTTP POST request to the /orders/{order_no}/payment_instruments endpoint
+Adds a payment instrument to an order. It is possible either to supply the full payment information or only a customer payment instrument id and amount. In case the customer payment instrument id was set all the other properties (except amount) are ignored and the payment data is resolved from the stored customer payment information. An attempt is made to authorize the order by passing it to the authorize or authorizeCreditCard hook. Details: The payment instrument is added with the provided details or the details from the customer payment instrument. 
+
+The payment method must be applicable for the order see GET /baskets/{basket_id}/payment_methods, if the payment method is 'CREDIT_CARD' a payment_card must be specified in the request. 
+
+The default implementation places the order if the order status is CREATED and the authorization amount equals or exceeds the order total. Placing the order (equivalent to calling dw.order.OrderMgr.placeOrder(order : Order) in the scripting API) results in the order being changed to status NEW and prepared for export. This operation makes an HTTP POST request to the /orders/{order_no}/payment_instruments endpoint
 
 
 === Parameters
@@ -6963,7 +6975,19 @@ Updates a gift certificate item of an existing basket. This operation makes an H
 `<shop:patch-baskets-items-by-basket-id-item-id>`
 
 
-Updates an item in a basket. The following values in the request body are considered by the server: product_id: a valid product id. The purpose of this value is to exchange a variation of a variation product. shipment_id: a valid shipment id. The purpose of this value is to move a product item to another shipment. quantity: a number between 0 and 999. The purpose of this value is to change quantity of the product item. If quantity is 0, the product item is removed. option_items/option_value_id: a valid option value id. The purpose of this value is to exchange an option value for an option item of an option product. This is only possible if the product item is an option product. This operation makes an HTTP PATCH request to the /baskets/{basket_id}/items/{item_id} endpoint
+Updates an item in a basket. 
+
+The following values in the request body are considered by the server: 
+
+ . Product_id: a valid product id. The purpose of this value is to exchange a variation of a variation product. 
+ 
+ . Shipment_id: a valid shipment id. The purpose of this value is to move a product item to another shipment. 
+ 
+ . Quantity: a number between 0 and 999. The purpose of this value is to change quantity of the product item. If quantity is 0, the product item is removed. 
+ 
+ . Option_items/option_value_id: a valid option value id. The purpose of this value is to exchange an option value for an option item of an option product. This is only possible if the product item is an option product. 
+ 
+ This operation makes an HTTP PATCH request to the /baskets/{basket_id}/items/{item_id} endpoint
 
 
 === Parameters
@@ -7031,7 +7055,9 @@ Updates an item in a basket. The following values in the request body are consid
 `<shop:patch-baskets-payment-instruments-by-basket-id-payment-instrument-id>`
 
 
-Updates a payment instrument of a basket. Payment instruments are usually authorized after order creation, for example in a custom hook. The default payment authorization process executes an authorization when a payment instrument is added to an order or updated. See POST /orders/{order_no}/payment_instruments and PATCH /orders/{order_no}/payment_instruments/{payment_instrument_id} This operation makes an HTTP PATCH request to the /baskets/{basket_id}/payment_instruments/{payment_instrument_id} endpoint
+Updates a payment instrument of a basket. Payment instruments are usually authorized after order creation, for example in a custom hook. The default payment authorization process executes an authorization when a payment instrument is added to an order or updated. See POST /orders/{order_no}/payment_instruments and PATCH /orders/{order_no}/payment_instruments/{payment_instrument_id} 
+
+This operation makes an HTTP PATCH request to the /baskets/{basket_id}/payment_instruments/{payment_instrument_id} endpoint
 
 
 === Parameters
@@ -7099,7 +7125,9 @@ Updates a payment instrument of a basket. Payment instruments are usually author
 `<shop:patch-baskets-shipments-by-basket-id-shipment-id>`
 
 
-Updates a shipment for a basket. The shipment is initialized with values provided in the body document and can be updated with further data API calls. Considered from the body are the following properties if specified the id the shipping address the shipping method gift boolean flag gift message custom properties This operation makes an HTTP PATCH request to the /baskets/{basket_id}/shipments/{shipment_id} endpoint
+Updates a shipment for a basket. The shipment is initialized with values provided in the body document and can be updated with further data API calls. Considered from the body are the following properties if specified the id the shipping address the shipping method gift boolean flag gift message custom properties. 
+
+This operation makes an HTTP PATCH request to the /baskets/{basket_id}/shipments/{shipment_id} endpoint
 
 
 === Parameters
@@ -7370,7 +7398,19 @@ Changes a product list. Changeable properties are the name, description and if t
 `<shop:patch-customers-product-lists-items-by-customer-id-list-id-item-id>`
 
 
-Updates an item of a customer's product list. Considered values from the request body are: priority: This is the priority of the customer's product list item. public: This is the flag whether the customer's product list item is public. quantity: used for product item type only. This is the quantity of the customer's product list item. custom properties in the form c_: the custom property must correspond to a custom attribute () defined for ProductListItem. The value of this property must be valid for the type of custom attribute defined for ProductListItem. This operation makes an HTTP PATCH request to the /customers/{customer_id}/product_lists/{list_id}/items/{item_id} endpoint
+Updates an item of a customer's product list. 
+
+Considered values from the request body are: 
+
+. Priority: This is the priority of the customer's product list item. 
+
+. Public: This is the flag whether the customer's product list item is public. 
+
+. Quantity: used for product item type only. This is the quantity of the customer's product list item. 
+
+. Custom properties in the form c_: the custom property must correspond to a custom attribute () defined for ProductListItem. The value of this property must be valid for the type of custom attribute defined for ProductListItem. 
+
+This operation makes an HTTP PATCH request to the /customers/{customer_id}/product_lists/{list_id}/items/{item_id} endpoint
 
 
 === Parameters
@@ -7576,7 +7616,11 @@ Update an order. Considered fields for update are status (same status transition
 `<shop:patch-orders-payment-instruments-by-order-no-payment-instrument-id>`
 
 
-Updates a payment instrument of an order and passes the order and updated payment instrument to the correct payment authorizeCreditcard or authorize hook. Details: The payment instrument is updated with the provided details. The payment method must be applicable for the order see GET /baskets/{basket_id}/payment_methods, if the payment method is 'CREDIT_CARD' a payment_card must be specified in the request. The default implementation places the order if the order status is CREATED and the authorization amount equals or exceeds the order total. Placing the order (equivalent to calling dw.order.OrderMgr.placeOrder(order : Order) in the scripting API) results in the order being changed to status NEW and prepared for export. This operation makes an HTTP PATCH request to the /orders/{order_no}/payment_instruments/{payment_instrument_id} endpoint
+Updates a payment instrument of an order and passes the order and updated payment instrument to the correct payment authorizeCreditcard or authorize hook. Details: The payment instrument is updated with the provided details. The payment method must be applicable for the order see GET /baskets/{basket_id}/payment_methods, if the payment method is 'CREDIT_CARD' a payment_card must be specified in the request. 
+
+The default implementation places the order if the order status is CREATED and the authorization amount equals or exceeds the order total. Placing the order (equivalent to calling dw.order.OrderMgr.placeOrder(order : Order) in the scripting API) results in the order being changed to status NEW and prepared for export. 
+
+This operation makes an HTTP PATCH request to the /orders/{order_no}/payment_instruments/{payment_instrument_id} endpoint
 
 
 === Parameters
@@ -8120,7 +8164,11 @@ Adds a custom manual price adjustment to the basket. This operation makes an HTT
 `<shop:create-customers-auth-by-customer-id>`
 
 
-Obtains a new agent on behalf token for a registered customer. Token is returned as a HTTP Authorization:Bearer response header entry. A token is created and returned to the client whenever an agent with Create_Order_On_Behalf_Of permission calls the resource for a registered customer. The token is returned in the response header as Authorization: Bearer --token--. The client has to include the token in the request header as Authorization: Bearer --token-- in any follow up request, the agent will do on behalf of the customer. About the order on behalf token The token contains 3 sections: the header section (specifies token type and algorithm used) the payload section (contains customer information, client id, issue and expiration time) finally the signature section records the token signature. A token nearing its expiration time should be exchanged for a new one by calling this resource once more. This operation makes an HTTP POST request to the /customers/{customer_id}/auth endpoint
+Obtains a new agent on behalf token for a registered customer. Token is returned as a HTTP Authorization:Bearer response header entry. A token is created and returned to the client whenever an agent with Create_Order_On_Behalf_Of permission calls the resource for a registered customer. The token is returned in the response header as Authorization: Bearer --token--. 
+
+The client has to include the token in the request header as Authorization: Bearer --token-- in any follow up request, the agent will do on behalf of the customer. About the order on behalf token The token contains 3 sections: the header section (specifies token type and algorithm used) the payload section (contains customer information, client id, issue and expiration time) finally the signature section records the token signature. A token nearing its expiration time should be exchanged for a new one by calling this resource once more. 
+
+This operation makes an HTTP POST request to the /customers/{customer_id}/auth endpoint
 
 
 === Parameters
@@ -8186,7 +8234,93 @@ Obtains a new agent on behalf token for a registered customer. Token is returned
 `<shop:create-order-search>`
 
 
-Searches for orders. The query attribute specifies a complex query that can be used to narrow down the search. Note that search fields are mandatory now and no default ones are supported. As the old order search version, the new one always uses Search Service too and the for that reason Order Incremental Indexing should be enabled. Otherwise HTTP 500 response will occur. The supported search fields are: affiliate_partner_i_d affiliate_partner_name business_type channel_type confirmation_status (String) created_by creation_date currency_code customer_email customer_name customer_no export_after export_status (String) external_order_no external_order_status global_party_id last_modified order_no original_order_no payment_status (String) replaced_order_no replacement_order_no shipping_status (String) status (String) total_gross_price total_net_price order.has_holds coupon_line_items.coupon_code coupon_line_items.coupon_id holds.type invoices.status order_items.status payment_instruments.credit_card_type payment_instruments.payment_method_id product_items.product_id return_cases.return_case_number shipments.shipping_method_id shipping_orders.shipping_order_number The sort order of the retrieved orders could be specified by the "sorts" parameter. It is a list of objects presenting field name and sort direction ("asc" or "desc"). Custom attributes could be used as search fields and as sort fields too. A prefix "c_" has to be added to them. This operation makes an HTTP POST request to the /order_search endpoint
+Searches for orders. The query attribute specifies a complex query that can be used to narrow down the search. Note that search fields are mandatory now and no default ones are supported. As the old order search version, the new one always uses Search Service too and the for that reason Order Incremental Indexing should be enabled. Otherwise HTTP 500 response will occur. 
+
+The supported search fields are: 
+
+. Aaffiliate_partner_i_d 
+
+. Affiliate_partner_name 
+
+. Business_type 
+
+. Channel_type 
+
+. Confirmation_status (String) 
+
+. Created_by 
+
+. Creation_date 
+
+. Currency_code
+
+. Customer_email 
+
+. Customer_name 
+
+. Customer_no 
+
+. Export_after 
+
+. Export_status (String) 
+
+. External_order_no 
+
+. External_order_status 
+
+. Global_party_id 
+
+. Last_modified 
+
+. Order_no 
+
+. Original_order_no 
+
+. Payment_status (String) 
+
+. Replaced_order_no 
+
+. Replacement_order_no 
+
+. Shipping_status (String) 
+
+. Status (String) 
+
+. Total_gross_price 
+
+. Total_net_price 
+
+. Order.has_holds 
+
+. Coupon_line_items 
+
+. Coupon_code 
+
+. Coupon_line_items
+
+. Coupon_id holds
+
+. Type invoices
+
+. Status order_items
+
+. Status payment_instruments
+
+. Credit_card_type 
+
+. Payment_instruments : Payment_method_id 
+
+. Product_items : Product_id 
+
+. Return_cases : Return_case_number
+
+. Shipments : Shipping_method_id 
+
+. shipping_orders: shipping_order_number 
+
+The sort order of the retrieved orders could be specified by the "sorts" parameter. It is a list of objects presenting field name and sort direction ("asc" or "desc"). Custom attributes could be used as search fields and as sort fields too. A prefix "c_" has to be added to them. 
+
+This operation makes an HTTP POST request to the /order_search endpoint
 
 
 === Parameters
@@ -8652,7 +8786,9 @@ Retrieves notes for an order. This operation makes an HTTP GET request to the /o
 `<shop:get-price-adjustment-limits>`
 
 
-Returns a list of price adjustment limits for the authenticated user and the site defined in the URL. At least one of the following functional permissions must be assigned to the user to be able to access it: Adjust_Item_Price or Adjust_Shipping_Price or Adjust_Order_Price. This operation makes an HTTP GET request to the /price_adjustment_limits endpoint
+Returns a list of price adjustment limits for the authenticated user and the site defined in the URL. At least one of the following functional permissions must be assigned to the user to be able to access it: Adjust_Item_Price or Adjust_Shipping_Price or Adjust_Order_Price. 
+
+This operation makes an HTTP GET request to the /price_adjustment_limits endpoint
 
 
 === Parameters
@@ -8717,7 +8853,21 @@ Returns a list of price adjustment limits for the authenticated user and the sit
 `<shop:patch-baskets-price-adjustments-by-basket-id-price-adjustment-id>`
 
 
-Updates a custom manual price adjustment on the basket. Only the following PATH values are considered for the update: discount, item_text, reason_code and custom properties; all other attributes are ignored. The discount type of a price adjustment cannot be updated and therefore, the value of the existing type must be passed. For an adjustment of type PERCENTAGE, the 'percentage' attribute is mandatory. For adjustments of type AMOUNT and FIXED_PRICE, the 'amount' attribute is mandatory. This operation makes an HTTP PATCH request to the /baskets/{basket_id}/price_adjustments/{price_adjustment_id} endpoint
+Updates a custom manual price adjustment on the basket. 
+
+Only the following PATH values are considered for the update: 
+
+. Discount 
+
+. Item_text
+
+. Reason_code
+
+. Custom properties
+
+All other attributes are ignored. The discount type of a price adjustment cannot be updated and therefore, the value of the existing type must be passed. For an adjustment of type PERCENTAGE, the 'percentage' attribute is mandatory. For adjustments of type AMOUNT and FIXED_PRICE, the 'amount' attribute is mandatory. 
+
+This operation makes an HTTP PATCH request to the /baskets/{basket_id}/price_adjustments/{price_adjustment_id} endpoint
 
 
 === Parameters
@@ -8852,7 +9002,9 @@ Marks a basket as storefront basket. This operation makes an HTTP PUT request to
 `<shop:update-orders-by-order-no>`
 
 
-Submits an order with a given order number, based on a prepared basket. The only considered value from the request body is basket_id. This resource is available for OAuth authentication and requires no user i.e. it supports server-server communication with client grant authentication and no user is specified. This operation makes an HTTP PUT request to the /orders/{order_no} endpoint
+Submits an order with a given order number, based on a prepared basket. The only considered value from the request body is basket_id. This resource is available for OAuth authentication and requires no user i.e. it supports server-server communication with client grant authentication and no user is specified. 
+
+This operation makes an HTTP PUT request to the /orders/{order_no} endpoint
 
 
 === Parameters
