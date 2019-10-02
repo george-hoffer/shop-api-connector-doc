@@ -303,8 +303,8 @@ The Shop API Connector is an Operation Based Connector, which means that when yo
 
 ==== Associated Operations
 * <<CreateBasketsReference>> {nbsp}
-* <<UpdateCustomersPasswordByCustomerId>> {nbsp}
 * <<CreateSessions>> {nbsp}
+* <<UpdateCustomersPasswordByCustomerId>> {nbsp}
 
 
 ---
@@ -586,11 +586,6 @@ The Shop API Connector is an Operation Based Connector, which means that when yo
 |===
 
 ==== Associated Operations
-* <<CreateBasketsNotesByBasketId>> {nbsp}
-* <<CreateBasketsPriceAdjustmentsByBasketId>> {nbsp}
-* <<CreateCustomersAuthByCustomerId>> {nbsp}
-* <<CreateOrderSearch>> {nbsp}
-* <<CreateOrdersNotesByOrderNo>> {nbsp}
 * <<DeleteBasketsNotesByBasketIdNoteId>> {nbsp}
 * <<DeleteBasketsPriceAdjustmentsByBasketIdPriceAdjustmentId>> {nbsp}
 * <<DeleteOrdersNotesByOrderNoNoteId>> {nbsp}
@@ -598,11 +593,14 @@ The Shop API Connector is an Operation Based Connector, which means that when yo
 * <<GetOrdersNotesByOrderNo>> {nbsp}
 * <<GetPriceAdjustmentLimits>> {nbsp}
 * <<PatchBasketsPriceAdjustmentsByBasketIdPriceAdjustmentId>> {nbsp}
+* <<CreateBasketsNotesByBasketId>> {nbsp}
+* <<CreateBasketsPriceAdjustmentsByBasketId>> {nbsp}
+* <<CreateCustomersAuthByCustomerId>> {nbsp}
+* <<CreateOrderSearch>> {nbsp}
+* <<CreateOrdersNotesByOrderNo>> {nbsp}
 * <<UpdateBasketsAgentByBasketId>> {nbsp}
 * <<UpdateBasketsStorefrontByBasketId>> {nbsp}
 * <<UpdateOrdersByOrderNo>> {nbsp}
-
-
 
 == Operations
 
@@ -3433,7 +3431,20 @@ Updates the customer's password. This operation makes an HTTP PUT request to the
 `<shop:create-baskets>`
 
 
-Creates a new basket. The created basket is initialized with default values. Data provided in the body document will be populated into the created basket. It can be updated with further Shop API calls. Considered values from the request body are: customer information: PUT /baskets/{basket_id}/customer billing address: PUT /baskets/{basket_id}/billing_address shipments including shipping address and shipping method: POST /baskets/{basket_id}/shipments product items: POST /baskets/{basket_id}/items coupon items: POST /baskets/{basket_id}/coupons gift certificate items: POST /baskets/{basket_id}/gift_certificates payment method and card type: POST /baskets/{basket_id}/payment_instruments custom properties: PATCH /baskets/{basket_id} Related resource means with which resource you can specify the same data after the basket creation. Identify the basket using the basket_id property, which should be integrated into the path of an update request, for example a POST to /baskets/{basket_id}/items. The resource supports JWT or OAuth tokens for authentication: A customer must provide a JWT, which specifies exactly one customer (it may be a guest or a registered customer). In this case the resource creates a basket for this customer. An agent must provide an OAuth token. The agent can use this resource to create a basket for a new created guest customer, and can later update the customer if desired. The number of baskets which can be created per customer is limited. When a basket is created it is said to be open. It remains open until either an order is created from it using a POST to resource /orders or it is deleted using a DELETE to resource /baskets/{basket_id}. The number of open baskets allowed depends on the authentication method used: When using JWT each customer can have just one open basket When using OAuth each customer can have up to 4 open baskets (this is a quota setting which can be updated by support) This operation makes an HTTP POST request to the /baskets endpoint
+Creates a new basket. The created basket is initialized with default values. Data provided in the body document will be populated into the created basket. It can be updated with further Shop API calls. 
+Considered values from the request body are: 
+. customer information: PUT /baskets/{basket_id}/customer 
+. billing address: PUT /baskets/{basket_id}/billing_address 
+. shipments including shipping address and shipping method: POST /baskets/{basket_id}/shipments 
+. product items: POST /baskets/{basket_id}/items 
+. coupon items: POST /baskets/{basket_id}/coupons 
+. gift certificate items: POST /baskets/{basket_id}/gift_certificates 
+. payment method and card type: POST /baskets/{basket_id}/payment_instruments 
+. custom properties: PATCH /baskets/{basket_id} 
+
+Related resource means with which resource you can specify the same data after the basket creation. Identify the basket using the basket_id property, which should be integrated into the path of an update request, for example a POST to /baskets/{basket_id}/items. The resource supports JWT or OAuth tokens for authentication: A customer must provide a JWT, which specifies exactly one customer (it may be a guest or a registered customer). In this case the resource creates a basket for this customer. 
+
+An agent must provide an OAuth token. The agent can use this resource to create a basket for a new created guest customer, and can later update the customer if desired. The number of baskets which can be created per customer is limited. When a basket is created it is said to be open. It remains open until either an order is created from it using a POST to resource /orders or it is deleted using a DELETE to resource /baskets/{basket_id}. The number of open baskets allowed depends on the authentication method used: When using JWT each customer can have just one open basket When using OAuth each customer can have up to 4 open baskets (this is a quota setting which can be updated by support) This operation makes an HTTP POST request to the /baskets endpoint
 
 
 === Parameters
