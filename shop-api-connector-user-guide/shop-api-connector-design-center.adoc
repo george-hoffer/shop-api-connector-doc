@@ -3,6 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../../doc/images/
+:y: &#10003;
 
 Design Center enables you to create apps visually. To use the Design Center,
 work with your Anypoint Platform administrator to ensure that you have
@@ -34,10 +35,10 @@ the https://github.com/Apisero-Connectors/shop-api-connector-doc/blob/master/sho
 
 |===
 |Field |Description |Required?
-|Protocol|Protocol selected for the HTTP connector, it can be HTTP or HTTPS (secure).|Yes
-|Host|IP address where your Mule application listens for requests.|Yes
-|Port|Port address where your Mule application listens for requests.|Yes
-|Base Path|Path where your Mule application listens for requests.|Yes
+|*Protocol*|Protocol selected for the HTTP connector, it can be HTTP or HTTPS (secure).| {y}
+|*Host*|IP address where your Mule application listens for requests.| {y}
+|*Port*|Port address where your Mule application listens for requests.| {y}
+|*Base Path*|Path where your Mule application listens for requests.| {y}
 |===
 +
 
@@ -60,9 +61,9 @@ Design Center automatically saves all changes.
 [%header%autowidth.spread]
 
 |===
-|Field |Description |Required? 
-|Base URI|URL to access API|Yes
-|Client Id|client id for authentication|Yes
+|*Field* |Description |Required? 
+|*Base URI*|URL to access API| {y}
+|*Client Id*|client id for authentication| {y}
 |===
 +
 . Click the *Test* button to test the connection.
@@ -74,12 +75,12 @@ Design Center automatically saves all changes.
 
 |===
 |Field |Description |Required?  
-|Base URI|URL to access API|Yes
-|Username|Username of commerce cloud account|Yes
-|Password|Password of commerce cloud account|Yes
-|Token URI|URL to access token|Yes
-|Client Id|Client Id of commerce cloud account|Yes
-|Client Secret|Client Secret of commerce cloud account|Yes
+|*Base URI*|URL to access API| {y}
+|*Username*|Username of commerce cloud account| {y}
+|*Password*|Password of commerce cloud account| {y}
+|*Token URI*|URL to access token| {y}
+|*Client Id*|Client Id of commerce cloud account| {y}
+|*Client Secret*|Client Secret of commerce cloud account| {y}
 |===
 +
 
@@ -90,11 +91,11 @@ Design Center automatically saves all changes.
 
 |===
 |Field |Description |Required?  
-|Base URI|URL to access API|Yes
-|Username|Username of commerce cloud account|Yes
-|Password|Password of commerce cloud account|Yes
-|Client Id|Client Id of commerce cloud account|Yes
-|Type|Customer Type(Guest or Credentials)|Yes
+|*Base URI*|URL to access API| {y}
+|*Username*|Username of commerce cloud account| {y}
+|*Password*|Password of commerce cloud account| {y}
+|*Client Id*|Client Id of commerce cloud account| {y}
+|*Type*|Customer Type(Guest or Credentials)| {y}
 |===
 +
 
