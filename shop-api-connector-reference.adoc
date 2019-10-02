@@ -3435,14 +3435,14 @@ Creates a new basket. The created basket is initialized with default values. Dat
 
 Considered values from the request body are: 
 
-. customer information: PUT /baskets/{basket_id}/customer 
-. billing address: PUT /baskets/{basket_id}/billing_address 
-. shipments including shipping address and shipping method: POST /baskets/{basket_id}/shipments 
-. product items: POST /baskets/{basket_id}/items 
-. coupon items: POST /baskets/{basket_id}/coupons 
-. gift certificate items: POST /baskets/{basket_id}/gift_certificates 
-. payment method and card type: POST /baskets/{basket_id}/payment_instruments 
-. custom properties: PATCH /baskets/{basket_id} 
+. Customer information: PUT /baskets/{basket_id}/customer 
+. Billing address: PUT /baskets/{basket_id}/billing_address 
+. Shipments including shipping address and shipping method: POST /baskets/{basket_id}/shipments 
+. Product items: POST /baskets/{basket_id}/items 
+. Coupon items: POST /baskets/{basket_id}/coupons 
+. Gift certificate items: POST /baskets/{basket_id}/gift_certificates 
+. Payment method and card type: POST /baskets/{basket_id}/payment_instruments 
+. Custom properties: PATCH /baskets/{basket_id} 
 
 Related resource means with which resource you can specify the same data after the basket creation. Identify the basket using the basket_id property, which should be integrated into the path of an update request, for example a POST to /baskets/{basket_id}/items. The resource supports JWT or OAuth tokens for authentication: A customer must provide a JWT, which specifies exactly one customer (it may be a guest or a registered customer). In this case the resource creates a basket for this customer. 
 

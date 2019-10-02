@@ -57,33 +57,36 @@ You can put the following operations for the connector in
 the Source area of the Studio canvas.
 
 === To Configure the Connector Using Client Id Connection Provider
-1 After adding connector dependency to Mule project, click on Global Elements tab at the base of the canvas.
-2 In the Global Mule Configuration Elements screen, click Create.
-3 In the Choose Global Type wizard, collapse connector configuration and select  Client Id Connection Provider and click OK.
+1. After adding connector dependency to Mule project, click on Global Elements tab at the base of the canvas.
+
+2. In the Global Mule Configuration Elements screen, click Create.
+
+3. In the Choose Global Type wizard, collapse connector configuration and select  Client Id Connection Provider and click OK.
 
 image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/clientIdConfiguration/shop-api-connector-clientIdConfiguration.png[]
-4 The configuration parameters to configure is
 
-+
+
+4. The configuration parameters to configure is
+
 [options="header",width="50%"]
 |============
 |Field Name   |Value
 |Base Uri     |Shop api base uri
 |X dw client id |Enter Client ID
 |============
-+
 
-5 Credentials can be directly entered into the global configuration properties, or reference from a configuration file that contains these values.
+
+5. Credentials can be directly entered into the global configuration properties, or reference from a configuration file that contains these values.
   Here we are adding credentials to application properties file and reference it using placeholders.
 
-6 Make a Test Connection... to check that the configuration is correct.
+6. Make a Test Connection... to check that the configuration is correct.
 
 image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/clientIdConfiguration/shop-api-connector-clientIdConfigTestConnection.png[]
 
-7 On success, configuration is ready to use!
+7. On success, configuration is ready to use!
 
-8 Client Id Connection Provider configuration should look like below in Configuration XML:
-+
+8. Client Id Connection Provider configuration should look like below in Configuration XML:
+
 ```xml
    <shop:config name="Client_Id" doc:name="Shop Connector Config">
        <shop:client-id-connection baseUri="${shop.address}" xDwClientId="${shop.clientId}" />
@@ -92,13 +95,15 @@ image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/
 
 === To Configure the Connector Using Customers Auth Connection Provider configuration
 
-1 Go back to Anypoint Studio. In Mule Application, click on Global Elements and click Create button
-2 Collapse connector configuration, select Customers Auth Connection Provider and click Ok. You should see as below screen
+1. Go back to Anypoint Studio. In Mule Application, click on Global Elements and click Create button
+
+2. Collapse connector configuration, select Customers Auth Connection Provider and click Ok. You should see as below screen
 
 image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/customersAuthConfiguration/shop-connector-customers-auth-config.jpg[]
-3 The configuration parameters to configure is
 
-+
+3. The configuration parameters to configure is
+
+
 [options="header",width="40%,60%"]
 |============
 |Field Name   |Value
@@ -108,29 +113,33 @@ image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/
 | Client Id |  client_id 
 | Type | Credentials or Guest
 |============
-+
 
-4 Reference the Base Uri, User name, Password and Client Id from application properties file.
-5 Make a Test Connection to check that the configuration is correct.
-6 On success, configuration is ready to use!
-7 Customers auth configuration should look like below in Configuration XML:
-+
+
+4. Reference the Base Uri, User name, Password and Client Id from application properties file.
+
+5. Make a Test Connection to check that the configuration is correct.
+
+6. On success, configuration is ready to use!
+
+7. Customers auth configuration should look like below in Configuration XML:
+
+
 ```xml
    <shop:shop-configuration-config name="cuatomers_auth" doc:name="Shop Connector Shop configuration" >
 		<shop:customers-auth-connection username="${shop.username}" password="${shop.password}" baseUri="${shop.baseuri}" clientId="${shop.clientId}" type="CREDENTIALS" />
 	</shop:shop-configuration-config>
 ```
 
-
 === To Configure the Connector Using OAuth2 Application Connection Provider configuration
 
-1 Go back to Anypoint Studio. In Mule Application, click on Global Elements and click Create button
-2 Collapse connector configuration, select Shop Connector Conf Auth2.0 and click Ok. You should see as below screen
+1. Go back to Anypoint Studio. In Mule Application, click on Global Elements and click Create button
+
+2. Collapse connector configuration, select Shop Connector Conf Auth2.0 and click Ok. You should see as below screen
 
 image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/OAuth2Configuration/shop-api-connector-oAuth2Configuration.png[]
-3 The configuration parameters to configure is
 
-+
+3. The configuration parameters to configure is
+
 [options="header",width="50%"]
 |============
 |Field Name   |Value
@@ -139,15 +148,19 @@ image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/
 |Client Secret |Enter Client Secret
 |Token url | Enter Token Url
 |============
-+
 
-4 Reference the Base Uri, Client Id and Client Secret from application properties file.
-5 Make a Test Connection... to check that the configuration is correct.
+
+4. Reference the Base Uri, Client Id and Client Secret from application properties file.
+
+5. Make a Test Connection... to check that the configuration is correct.
 
 image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/OAuth2Configuration/shop-api-connector-oAuth2TestConnection.png[]
-6 On success, configuration is ready to use!
-7 Customer, Customer Managers configuration should look like below in Configuration XML:
-+
+
+6. On success, configuration is ready to use!
+
+7. Customer, Customer Managers configuration should look like below in Configuration XML:
+
+
 ```xml
    <shop:config name="Auth2.0" doc:name="Shop Connector Config" >
        <shop:oauth2-application-connection baseUri="${shop.address}" >
