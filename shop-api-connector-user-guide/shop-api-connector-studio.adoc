@@ -57,21 +57,23 @@ You can put the following operations for the connector in
 the Source area of the Studio canvas.
 
 === To Configure the Connector Using Client Id Connection Provider
-1 After adding connector dependency to Mule project, click on Global Elements tab at the base of the canvas.
-2 In the Global Mule Configuration Elements screen, click Create.
-3 In the Choose Global Type wizard, collapse connector configuration and select  Client Id Connection Provider and click OK.
+1. After adding connector dependency to Mule project, click on Global Elements tab at the base of the canvas.
+
+2. In the Global Mule Configuration Elements screen, click Create.
+
+3. In the Choose Global Type wizard, collapse connector configuration and select  Client Id Connection Provider and click OK.
 
 image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/clientIdConfiguration/shop-api-connector-clientIdConfiguration.png[]
-4 The configuration parameters to configure is
 
-+
+4. The configuration parameters to configure is
+
 [options="header",width="50%"]
 |============
 |Field Name   |Value
 |Base Uri     |Shop api base uri
 |X dw client id |Enter Client ID
 |============
-+
+
 
 5 Credentials can be directly entered into the global configuration properties, or reference from a configuration file that contains these values.
   Here we are adding credentials to application properties file and reference it using placeholders.
@@ -83,7 +85,7 @@ image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/
 7 On success, configuration is ready to use!
 
 8 Client Id Connection Provider configuration should look like below in Configuration XML:
-+
+
 ```xml
    <shop:config name="Client_Id" doc:name="Shop Connector Config">
        <shop:client-id-connection baseUri="${shop.address}" xDwClientId="${shop.clientId}" />
