@@ -3722,8 +3722,8 @@ Adds a payment instrument to a basket. Payment instruments are usually authorize
 
 See  
  
-.POST /orders/{order_no}/payment_instruments
-.PATCH /orders/{order_no}/payment_instruments/{payment_instrument_id} 
+. POST /orders/{order_no}/payment_instruments
+. PATCH /orders/{order_no}/payment_instruments/{payment_instrument_id} 
 
 NOTE: If CREDIT_CARD is selected as the payment_method_id, it is mandatory to provide the property card_type. This operation makes an HTTP POST request to the /baskets/{basket_id}/payment_instruments endpoint
 
@@ -4204,9 +4204,9 @@ Creates a customer product list. This operation makes an HTTP POST request to th
 
 Adds an item to the customer's product list. 
 
-Considered values from the request body are: type: 
+Considered values from the request body are: 
 
-. A valid type, mandatory. This is the type of the item to be added to the customer's product list.  
+. Type: A valid type, mandatory. This is the type of the item to be added to the customer's product list.  
 . Priority: This is the priority of the item to be added to the customer's product list.  
 . Public: This is the flag whether the item to be added to the customer's product list is public.  
 . Product_id: a valid product id, used for product item type only. This is the id (sku) of the product related to the item to be added to the customer's product list. It is mandatory for product item type and it must be a valid product id, otherwise ProductListProductIdMissingException or ProductListProductNotFoundException will be thrown.    
