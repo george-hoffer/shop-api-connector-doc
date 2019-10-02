@@ -4,11 +4,11 @@ September 2019
 
 _Support Category: Select_
 
-Shop API Connector provides Mule users a quick and easy way to integrate with Commerce Cloud Shop API end points.
+Shop API Connector provides Mule users with a quick and easy way to integrate with Commerce Cloud Shop API endpoints.
 
 == 1.0.0 
 September 2019
-This release of Shop API Connector is compatibile with Mule 4 and it is not compatible with Mule 3 versions.
+This release of Shop API Connector is compatible with Mule 4 and it is not compatible with Mule 3 versions.
 
 == Compatibility
 The Shop API Connector is compatible with these software versions:
@@ -25,7 +25,7 @@ The Shop API Connector is compatible with these software versions:
 
 Shop API connector provides access to Commerce Cloud Shop APIs for these workflows:
 
-* Ai Resource ( Get Ai Product Recommendations By ID : Its a beta feature and it's not functional in connector.)
+* Ai Resource ( Get Ai Product Recommendations By ID: Its a beta feature and it's not functional in the connector.)
 * Baskets
 * Categories
 * Content

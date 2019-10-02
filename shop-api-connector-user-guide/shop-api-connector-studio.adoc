@@ -12,7 +12,7 @@ To configure a connector in Anypoint Studio:
 
 == Install the Connector Using Exchange
 . In Studio, create a Mule Project.
-. Click the Exchange (X) icon in the upper left of the Studio task bar.
+. Click the Exchange (X) icon in the upper left of the Studio taskbar.
 . In Exchange, click Login and supply your Anypoint Platform username and password.
 . In Exchange, search for Shop API Connector.
 . Select Shop API Connector, click Add to project.
@@ -57,7 +57,7 @@ You can put the following operations for the connector in
 the Source area of the Studio canvas.
 
 === To Configure the Connector Using Client Id Connection Provider
-. After adding connector dependency to Mule project, click on Global Elements tab at the base of the canvas.
+. After adding connector dependency to the Mule project, click on the Global Elements tab at the base of the canvas.
 
 . In the Global Mule Configuration Elements screen, click Create.
 
@@ -76,15 +76,15 @@ image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/
 |============
 
 [start = 5]
-. Credentials can be directly entered into the global configuration properties, or reference from a configuration file that contains these values.
-  Here we are adding credentials to application properties file and reference it using placeholders.
+. Credentials can be directly entered into the global configuration properties or reference from a configuration file that contains these values.
+  Here we are adding credentials to the application properties file and reference it using placeholders.
 
 . Make a Test Connection... to check that the configuration is correct.
 
 image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/clientIdConfiguration/shop-api-connector-clientIdConfigTestConnection.png[]
 
 [start = 7]
-. On success, configuration is ready to use!
+. On success, the configuration is ready to use!
 
 . Client Id Connection Provider configuration should look like below in Configuration XML:
 
@@ -117,11 +117,11 @@ image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/
 |============
 
 [start = 4]
-. Reference the Base Uri, User name, Password and Client Id from application properties file.
+. Reference the Base Uri, User name, Password and Client Id from the application properties file.
 
 . Make a Test Connection to check that the configuration is correct.
 
-. On success, configuration is ready to use!
+. On success, the configuration is ready to use!
 
 . Customers auth configuration should look like below in Configuration XML:
 
@@ -153,14 +153,14 @@ image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/
 |============
 
 [start = 4]
-. Reference the Base Uri, Client Id and Client Secret from application properties file.
+. Reference the Base Uri, Client Id and Client Secret from the application properties file.
 
 . Make a Test Connection... to check that the configuration is correct.
 
 image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/OAuth2Configuration/shop-api-connector-oAuth2TestConnection.png[]
 
 [start = 6]
-. On success, configuration is ready to use!
+. On success, the configuration is ready to use!
 
 . Customer, Customer Managers configuration should look like below in Configuration XML:
 

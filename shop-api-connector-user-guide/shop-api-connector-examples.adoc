@@ -4,22 +4,22 @@ include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../doc/images/shop-connector-example
 
-=== ​Use case for creating a custoemr after submitting an order in Anypoint Studio 7
-The Shop API Connector is an Operation Based Connector, which means that when you add the connector to your flow, you need to configure a specific operation the connector is intended to perform. Shop API Connector will support 3 different types of configuration and here in this example we are using the Customer Auth Connection Provider configuration. Below is the use case for Creating Customer after Submitting an Order for better understanding.
+=== ​Use case for creating a customer after submitting an order in Anypoint Studio 7
+The Shop API Connector is an Operation Based Connector, which means that when you add the connector to your flow, you need to configure a specific operation the connector is intended to perform. Shop API Connector will support 3 different types of configuration and here in this example, we are using the Customer Auth Connection Provider configuration. Below is the use case for Creating Customer after Submitting an Order for better understanding.
 
-In this use case we are explaining the scenario how a guest user will login into Shop API and submit a basket with products and shopping details. After successfull submition of order we will register the guest user as a customer. Here is the detailed information of each step for your reference.
+In this use case, we are explaining the scenario of how a guest user will log in into Shop API and submit a basket with products and shopping details. After the successful submission of an order, we will register the guest user as a customer. Here is the detailed information of each step for your reference.
 
-. Create new Mule Application in Studio and configure HTTP Listener to port 8081 and path as "/registrationPostCheckout".
+. Create a new Mule Application in Studio and configure HTTP Listener to port 8081 and path as "/registrationPostCheckout".
 
 image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/shop-connector-example/shop-connector-http-listener-config.jpg[]
 
 [start = 2]
-. Add Variable, Post Basket, Post Order and Post Customer operations into the flow.
+. Add Variable, Post Basket, Post Order, and Post Customer operations into the flow.
 
 image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/shop-connector-example/shop-connector-post-checkout-flow.jpg[]
 
 [start = 3]
-. Pass the the required body for Post Basket operation from postman and save it into Variable.
+. Pass the required body for Post Basket operation from the postman and save it into Variable.
 
 image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/shop-connector-example/shop-connector-basket-body-variable.jpg[]
 
@@ -77,12 +77,12 @@ image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/
 ```
 
 [start = 5]
-. Select Customer Auth Connection Provider configuration from Shop API Connector and configure it by passing required values, or if required new configuration can be added by clicking green plus (+) symbol.
+. Select Customer Auth Connection Provider configuration from Shop API Connector and configure it by passing required values, or if the required new configuration can be added by clicking a green plus (+) symbol.
 
 image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/doc/images/shop-connector-example/shop-connector-customer-configuration.jpg[]
 
 [start = 6]
-. Make sure to test your connection, if you have add new connection details.
+. Make sure to test your connection, if you have added new connection details.
 
 . Pass the required fields for Post Basket operation and save the configuration.
 
@@ -101,17 +101,17 @@ image::https://github.com/Apisero-Connectors/shop-api-Connector-doc/blob/master/
 [start = 10]
 . Save the Mule project.
 
-. Run the project as a Mule Application by right-clicking the project name in the Package Explorer, selecting Run As > Mule Application.
+. Run the project as a Mule Application by right-clicking the project name in the Package Explorer, select Run As > Mule Application.
 
 . Open Postman and check the response after entering the URL http://localhost:8081/registrationPostCheckout.
 
-. You can get a successfull message with new Customer and Placed Order.
+. You can get a successful message with a new Customer and Placed Order.
 
 === To Create a Mule Project Using XML
 . Create new Mule Application
-. Click on Configuration XML tab at the base of the canvas.
+. Click on the Configuration XML tab at the base of the canvas.
 . Copy below code and paste it.
-. Below code is for the above scenario.
+. The below code is for the above scenario.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

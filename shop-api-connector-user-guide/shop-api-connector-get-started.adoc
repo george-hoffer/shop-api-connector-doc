@@ -19,7 +19,7 @@ OCAPI is divided into different APIs: the Shop API allows a client to interact w
 == Prerequisites
 
 Before creating an app, you must have access to the Shop API Connector target resource and
-Anypoint Platform. You also need understand how to create a Mule app using
+Anypoint Platform. You also need to understand how to create a Mule app using
 Design Center or Anypoint Studio.
 
 This document assumes that you are familiar with Mule, Anypoint Connectors,
@@ -29,7 +29,7 @@ To use Shop API Connector, you need
 
 * Anypoint Studio version 7.
 * shop-api.
-* Credentials to access to Commerce cloud shop api back-office.
+* Credentials to access to Commerce cloud shop API back-office.
 
 === Mule Compatibility
 
