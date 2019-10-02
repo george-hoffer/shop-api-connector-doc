@@ -2,6 +2,7 @@
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
+:y: &#10003;
 Support Version: Select
 This Connector Version major#.minor#
 
@@ -15,11 +16,11 @@ The Shop API Connector is an Operation Based Connector, which means that when yo
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-|Name | String | The name for this configuration. Connectors reference the configuration with this name. | | *x*{nbsp}
+|Name | String | The name for this configuration. Connectors reference the configuration with this name. | | *{y}*{nbsp}
 | Connection a| * <<ShopConfiguration_ClientId, Client Id Connection Provider>> {nbsp}
 * <<ShopConfiguration_CustomersAuth, Customers Auth Connection Provider>> {nbsp}
 * <<ShopConfiguration_Oauth2Application, Oauth2 Application Connection Provider>> {nbsp}
- | The connection types that can be provided to this configuration. | | *x*{nbsp}
+ | The connection types that can be provided to this configuration. | | *{y}*{nbsp}
 | Response Timeout a| Number |  The timeout for request to the remote service. |  1 | {nbsp}
 | Response Timeout Unit a| Enumeration, one of:
 
@@ -30,7 +31,7 @@ The Shop API Connector is an Operation Based Connector, which means that when yo
 ** MINUTES
 ** HOURS
 ** DAYS |  A time unit which qualifies the Response Timeout} |  MINUTES | {nbsp}
-| Name a| String |  The identifier of this element used to reference it in other components |  | *x*{nbsp}
+| Name a| String |  The identifier of this element used to reference it in other components |  | *{y}*{nbsp}
 | Expiration Policy a| <<ExpirationPolicy>> |  Configures the minimum amount of time that a dynamic configuration instance can remain idle before the runtime considers it eligible for expiration. This does not mean that the platform will expire the instance at the exact moment that it becomes eligible. The runtime will actually purge the instances when it sees it fit. |  | {nbsp}
 |===
 
@@ -117,11 +118,11 @@ The Shop API Connector is an Operation Based Connector, which means that when yo
 | Username a| String |  The username to authenticate the requests |  | {nbsp}
 | Password a| String |  The password to authenticate the requests |  | {nbsp}
 | Base Uri a| String |  Parameter base URI, each instance/tenant gets its own |  default base URI | {nbsp}
-| Client Id a| String |  client_id |  | *x*{nbsp}
+| Client Id a| String |  client_id |  | *{y}*{nbsp}
 | Type a| Enumeration, one of:
 
 ** CREDENTIALS
-** GUEST |  Customer type: registered customer or guest customer |  | *x*{nbsp}
+** GUEST |  Customer type: registered customer or guest customer |  | *{y}*{nbsp}
 | Protocol a| Enumeration, one of:
 
 ** HTTP
@@ -172,8 +173,8 @@ The Shop API Connector is an Operation Based Connector, which means that when yo
 ** HTTPS |  Protocol to use for communication. Valid values are HTTP and HTTPS |  HTTP | {nbsp}
 | TLS Configuration a| <<Tls>> |  |  | {nbsp}
 | Reconnection a| <<Reconnection>> |  When the application is deployed, a connectivity test is performed on all connectors. If set to true, deployment will fail if the test doesn't pass after exhausting the associated reconnection strategy |  | {nbsp}
-| Client Id a| String |  The OAuth client id as registered with the service provider |  | *x*{nbsp}
-| Client Secret a| String |  The OAuth client secret as registered with the service provider |  | *x*{nbsp}
+| Client Id a| String |  The OAuth client id as registered with the service provider |  | *{y}*{nbsp}
+| Client Secret a| String |  The OAuth client secret as registered with the service provider |  | *{y}*{nbsp}
 | Token Url a| String |  The service provider's token endpoint URL |  default token URL | {nbsp}
 | Scopes a| String |  The OAuth scopes to be requested during the dance. If not provided, it will default to those in the annotation |  | {nbsp}
 | Object Store a| String |  A reference to the object store that should be used to store each resource owner id's data. If not specified, runtime will automatically provision the default one. |  | {nbsp}
@@ -231,9 +232,9 @@ The Shop API Connector is an Operation Based Connector, which means that when yo
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-|Name | String | The name for this configuration. Connectors reference the configuration with this name. | | *x*{nbsp}
+|Name | String | The name for this configuration. Connectors reference the configuration with this name. | | *{y}*{nbsp}
 | Connection a| <<ShopCustomerAuthConfiguration_CustomersAuth, Customers Auth Connection Provider>>
- | The connection types that can be provided to this configuration. | | *x*{nbsp}
+ | The connection types that can be provided to this configuration. | | *{y}*{nbsp}
 | Response Timeout a| Number |  The timeout for request to the remote service. |  1 | {nbsp}
 | Response Timeout Unit a| Enumeration, one of:
 
@@ -244,7 +245,7 @@ The Shop API Connector is an Operation Based Connector, which means that when yo
 ** MINUTES
 ** HOURS
 ** DAYS |  A time unit which qualifies the Response Timeout} |  MINUTES | {nbsp}
-| Name a| String |  The identifier of this element used to reference it in other components |  | *x*{nbsp}
+| Name a| String |  The identifier of this element used to reference it in other components |  | *{y}*{nbsp}
 | Expiration Policy a| <<ExpirationPolicy>> |  Configures the minimum amount of time that a dynamic configuration instance can remain idle before the runtime considers it eligible for expiration. This does not mean that the platform will expire the instance at the exact moment that it becomes eligible. The runtime will actually purge the instances when it sees it fit. |  | {nbsp}
 |===
 
@@ -288,11 +289,11 @@ The Shop API Connector is an Operation Based Connector, which means that when yo
 | Username a| String |  The username to authenticate the requests |  | {nbsp}
 | Password a| String |  The password to authenticate the requests |  | {nbsp}
 | Base Uri a| String |  Parameter base URI, each instance/tenant gets its own | default base URI | {nbsp}
-| Client Id a| String |  client_id |  | *x*{nbsp}
+| Client Id a| String |  client_id |  | *{y}*{nbsp}
 | Type a| Enumeration, one of:
 
 ** CREDENTIALS
-** GUEST |  Customer type: registered customer or guest customer |  | *x*{nbsp}
+** GUEST |  Customer type: registered customer or guest customer |  | *{y}*{nbsp}
 | Protocol a| Enumeration, one of:
 
 ** HTTP
@@ -317,10 +318,10 @@ The Shop API Connector is an Operation Based Connector, which means that when yo
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-|Name | String | The name for this configuration. Connectors reference the configuration with this name. | | *x*{nbsp}
+|Name | String | The name for this configuration. Connectors reference the configuration with this name. | | *{y}*{nbsp}
 | Connection a| * <<ShopJwtAndOauth2Configuration_CustomersAuth, Customers Auth Connection Provider>> {nbsp}
 * <<ShopJwtAndOauth2Configuration_Oauth2Application, Oauth2 Application Connection Provider>> {nbsp}
- | The connection types that can be provided to this configuration. | | *x*{nbsp}
+ | The connection types that can be provided to this configuration. | | *{y}*{nbsp}
 | Response Timeout a| Number |  The timeout for request to the remote service. |  1 | {nbsp}
 | Response Timeout Unit a| Enumeration, one of:
 
@@ -331,7 +332,7 @@ The Shop API Connector is an Operation Based Connector, which means that when yo
 ** MINUTES
 ** HOURS
 ** DAYS |  A time unit which qualifies the Response Timeout} |  MINUTES | {nbsp}
-| Name a| String |  The identifier of this element used to reference it in other components |  | *x*{nbsp}
+| Name a| String |  The identifier of this element used to reference it in other components |  | *{y}*{nbsp}
 | Expiration Policy a| <<ExpirationPolicy>> |  Configures the minimum amount of time that a dynamic configuration instance can remain idle before the runtime considers it eligible for expiration. This does not mean that the platform will expire the instance at the exact moment that it becomes eligible. The runtime will actually purge the instances when it sees it fit. |  | {nbsp}
 |===
 
@@ -375,11 +376,11 @@ The Shop API Connector is an Operation Based Connector, which means that when yo
 | Username a| String |  The username to authenticate the requests |  | {nbsp}
 | Password a| String |  The password to authenticate the requests |  | {nbsp}
 | Base Uri a| String |  Parameter base URI, each instance/tenant gets its own |  default base URI | {nbsp}
-| Client Id a| String |  client_id |  | *x*{nbsp}
+| Client Id a| String |  client_id |  | *{y}*{nbsp}
 | Type a| Enumeration, one of:
 
 ** CREDENTIALS
-** GUEST |  Customer type: registered customer or guest customer |  | *x*{nbsp}
+** GUEST |  Customer type: registered customer or guest customer |  | *{y}*{nbsp}
 | Protocol a| Enumeration, one of:
 
 ** HTTP
@@ -430,8 +431,8 @@ The Shop API Connector is an Operation Based Connector, which means that when yo
 ** HTTPS |  Protocol to use for communication. Valid values are HTTP and HTTPS |  HTTP | {nbsp}
 | TLS Configuration a| <<Tls>> |  |  | {nbsp}
 | Reconnection a| <<Reconnection>> |  When the application is deployed, a connectivity test is performed on all connectors. If set to true, deployment will fail if the test doesn't pass after exhausting the associated reconnection strategy |  | {nbsp}
-| Client Id a| String |  The OAuth client id as registered with the service provider |  | *x*{nbsp}
-| Client Secret a| String |  The OAuth client secret as registered with the service provider |  | *x*{nbsp}
+| Client Id a| String |  The OAuth client id as registered with the service provider |  | *{y}*{nbsp}
+| Client Secret a| String |  The OAuth client secret as registered with the service provider |  | *{y}*{nbsp}
 | Token Url a| String |  The service provider's token endpoint URL |  default token URL | {nbsp}
 | Scopes a| String |  The OAuth scopes to be requested during the dance. If not provided, it will default to those in the annotation |  | {nbsp}
 | Object Store a| String |  A reference to the object store that should be used to store each resource owner id's data. If not specified, runtime will automatically provision the default one. |  | {nbsp}
@@ -517,9 +518,9 @@ The Shop API Connector is an Operation Based Connector, which means that when yo
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-|Name | String | The name for this configuration. Connectors reference the configuration with this name. | | *x*{nbsp}
+|Name | String | The name for this configuration. Connectors reference the configuration with this name. | | *{y}*{nbsp}
 | Connection a| <<ShopOauth2Configuration_Oauth2Application, Oauth2 Application Connection Provider>>
- | The connection types that can be provided to this configuration. | | *x*{nbsp}
+ | The connection types that can be provided to this configuration. | | *{y}*{nbsp}
 | Response Timeout a| Number |  The timeout for request to the remote service. |  1 | {nbsp}
 | Response Timeout Unit a| Enumeration, one of:
 
@@ -530,7 +531,7 @@ The Shop API Connector is an Operation Based Connector, which means that when yo
 ** MINUTES
 ** HOURS
 ** DAYS |  A time unit which qualifies the Response Timeout} |  MINUTES | {nbsp}
-| Name a| String |  The identifier of this element used to reference it in other components |  | *x*{nbsp}
+| Name a| String |  The identifier of this element used to reference it in other components |  | *{y}*{nbsp}
 | Expiration Policy a| <<ExpirationPolicy>> |  Configures the minimum amount of time that a dynamic configuration instance can remain idle before the runtime considers it eligible for expiration. This does not mean that the platform will expire the instance at the exact moment that it becomes eligible. The runtime will actually purge the instances when it sees it fit. |  | {nbsp}
 |===
 
@@ -578,8 +579,8 @@ The Shop API Connector is an Operation Based Connector, which means that when yo
 ** HTTPS |  Protocol to use for communication. Valid values are HTTP and HTTPS |  HTTP | {nbsp}
 | TLS Configuration a| <<Tls>> |  |  | {nbsp}
 | Reconnection a| <<Reconnection>> |  When the application is deployed, a connectivity test is performed on all connectors. If set to true, deployment will fail if the test doesn't pass after exhausting the associated reconnection strategy |  | {nbsp}
-| Client Id a| String |  The OAuth client id as registered with the service provider |  | *x*{nbsp}
-| Client Secret a| String |  The OAuth client secret as registered with the service provider |  | *x*{nbsp}
+| Client Id a| String |  The OAuth client id as registered with the service provider |  | *{y}*{nbsp}
+| Client Secret a| String |  The OAuth client secret as registered with the service provider |  | *{y}*{nbsp}
 | Token Url a| String |  The service provider's token endpoint URL |  default token URL | {nbsp}
 | Scopes a| String |  The OAuth scopes to be requested during the dance. If not provided, it will default to those in the annotation |  | {nbsp}
 | Object Store a| String |  A reference to the object store that should be used to store each resource owner id's data. If not specified, runtime will automatically provision the default one. |  | {nbsp}
@@ -617,7 +618,7 @@ First the beforePOST hook is called. After that, the validation of the customer 
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
 | Content a| Binary |  the content to use |  #[payload] | {nbsp}
 | Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | {nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
@@ -683,8 +684,8 @@ When you use the URL template below, the server returns a category identified by
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| id a| String |  The id of the requested category. |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| id a| String |  The id of the requested category. |  | *{y}*{nbsp}
 | levels a| Number |  levels |  | {nbsp}
 | locale a| String |  locale |  | {nbsp}
 | Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | {nbsp}
@@ -751,8 +752,8 @@ Get Categories By IDs This operation makes an HTTP GET request to the /categorie
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| ids a| Array of String |  ids |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| ids a| Array of String |  ids |  | *{y}*{nbsp}
 | levels a| Number |  levels |  | {nbsp}
 | locale a| String |  locale |  | {nbsp}
 | Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | {nbsp}
@@ -819,8 +820,8 @@ To access a content asset, you construct a URL using the template shown below. T
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| id a| String |  The id of the requested content asset. |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| id a| String |  The id of the requested content asset. |  | *{y}*{nbsp}
 | locale a| String |  locale |  | {nbsp}
 | Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | {nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
@@ -886,8 +887,8 @@ Get Content By IDs This operation makes an HTTP GET request to the /content/({id
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| ids a| Array of String |  ids |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| ids a| Array of String |  ids |  | *{y}*{nbsp}
 | locale a| String |  locale |  | {nbsp}
 | Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | {nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
@@ -953,7 +954,7 @@ Provides keyword and refinement search functionality for content assets. The sea
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
 | count a| Number |  The maximum number of instances per request. Default value is 25. |  | {nbsp}
 | refine a| Array of String |  Parameter that represents a refinement attribute/value(s) pair. Allows to refine per single content folder id. Multiple folder ids are not supported. |  | {nbsp}
 | locale a| String |  The locale context. |  | {nbsp}
@@ -1023,8 +1024,8 @@ To access a content folder, you construct a URL using the template shown below. 
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| id a| String |  The id of the requested content folder. |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| id a| String |  The id of the requested content folder. |  | *{y}*{nbsp}
 | levels a| Number |  levels |  | {nbsp}
 | locale a| String |  locale |  | {nbsp}
 | Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | {nbsp}
@@ -1091,8 +1092,8 @@ Get Folders By IDs This operation makes an HTTP GET request to the /folders/({id
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| ids a| Array of String |  ids |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| ids a| Array of String |  ids |  | *{y}*{nbsp}
 | levels a| Number |  levels |  | {nbsp}
 | locale a| String |  locale |  | {nbsp}
 | Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | {nbsp}
@@ -1159,7 +1160,7 @@ Retrieves all public product lists as defined by the given search term (email, f
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
 | email a| String |  The email address of the customer, the product lists belong to. |  | {nbsp}
 | firstname a| String |  The first name of the customer, the product lists belong to. |  | {nbsp}
 | lastname a| String |  The last name of the customer, the product lists belong to. |  | {nbsp}
@@ -1227,8 +1228,8 @@ Retrieves a public product list by id. This operation makes an HTTP GET request 
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| List id a| String |  The id of the list. |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| List id a| String |  The id of the list. |  | *{y}*{nbsp}
 | expand a| Array of String |  expand |  | {nbsp}
 | Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | {nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
@@ -1294,8 +1295,8 @@ Retrieves the items of a public product list. This operation makes an HTTP GET r
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| List id a| String |  The id of the list. |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| List id a| String |  The id of the list. |  | *{y}*{nbsp}
 | expand a| Array of String |  expand |  | {nbsp}
 | Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | {nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
@@ -1361,9 +1362,9 @@ Retrieves an item from a public product list. This operation makes an HTTP GET r
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| List id a| String |  The id of the list. |  | *x*{nbsp}
-| Item id a| String |  The id of the item. |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| List id a| String |  The id of the list. |  | *{y}*{nbsp}
+| Item id a| String |  The id of the item. |  | *{y}*{nbsp}
 | expand a| Array of String |  expand |  | {nbsp}
 | Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | {nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
@@ -1429,7 +1430,7 @@ Provides keyword and refinement search functionality for products. Only return t
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
 | count a| Number |  The maximum number of instances per request. Default value is 25. |  | {nbsp}
 | refine a| Array of String |  Parameter that represents a refinement attribute/value(s) pair. htypes: Allow to refine by including only the provided hit types. Accepted types are 'product', 'master', 'set', 'bundle', 'slicing_group' (deprecated), 'variation_group'. orderable_only: Unavailable products will be excluded from the search results if true is set. Multiple refinement values are not supported. |  | {nbsp}
 | locale a| String |  The locale context. |  | {nbsp}
@@ -1502,7 +1503,7 @@ Provides keyword and refinement search functionality for products. Only return t
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
 | count a| Number |  The maximum number of instances per request. Default value is 25. |  | {nbsp}
 | refine a| Array of String |  Parameter that represents a refinement attribute/value(s) pair. The following system refinement attribute ids are supported: cgid: Allows to refine per single category id. Multiple category ids are not supported. price: Allows to refine per single price range. Multiple price ranges are not supported. pmid: Allows to refine per promotion id(s). orderable_only: Unavailable products will be excluded from the search results if true is set. Multiple refinement values are not supported. |  | {nbsp}
 | locale a| String |  The locale context. |  | {nbsp}
@@ -1573,7 +1574,7 @@ Provides keyword and refinement search functionality for products. Only returns 
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
 | count a| Number |  The maximum number of instances per request. Default value is 25. |  | {nbsp}
 | refine a| Array of String |  Parameter that represents a refinement attribute/value(s) pair. The following system refinement attribute ids are supported: cgid: Allows to refine per single category id. Multiple category ids are not supported. price: Allows to refine per single price range. Multiple price ranges are not supported. pmid: Allows to refine per promotion id(s). orderable_only: Unavailable products will be excluded from the search results if true is set. Multiple refinement values are not supported. |  | {nbsp}
 | locale a| String |  The locale context. |  | {nbsp}
@@ -1644,7 +1645,7 @@ Provides keyword and refinement search functionality for products. Only return t
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
 | count a| Number |  The maximum number of instances per request. Default value is 25. |  | {nbsp}
 | refine a| Array of String |  Parameter that represents a refinement attribute/value(s) pair. The following system refinement attribute ids are supported: cgid: Allows to refine per single category id. Multiple category ids are not supported. price: Allows to refine per single price range. Multiple price ranges are not supported. pmid: Allows to refine per promotion id(s). orderable_only: Unavailable products will be excluded from the search results if true is set. Multiple refinement values are not supported. |  | {nbsp}
 | locale a| String |  The locale context. |  | {nbsp}
@@ -1716,7 +1717,7 @@ Provides keyword and refinement search functionality for products. Only return t
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
 | count a| Number |  The maximum number of instances per request. Default value is 25. |  | {nbsp}
 | refine a| Array of String |  Parameter that represents a refinement attribute/value(s) pair. The following system refinement attribute ids are supported: cgid: Allows to refine per single category id. Multiple category ids are not supported. price: Allows to refine per single price range. Multiple price ranges are not supported. pmid: Allows to refine per promotion id(s). orderable_only: Unavailable products will be excluded from the search results if true is set. Multiple refinement values are not supported. |  | {nbsp}
 | locale a| String |  The locale context. |  | {nbsp}
@@ -1787,7 +1788,7 @@ Provides keyword and refinement search functionality for products. Only returns 
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
 | count a| Number |  The maximum number of instances per request. Default value is 25. |  | {nbsp}
 | refine a| Array of String |  Parameter that represents a refinement attribute/value(s) pair. The following system refinement attribute ids are supported: cgid: Allows to refine per single category id. Multiple category ids are not supported. price: Allows to refine per single price range. Multiple price ranges are not supported. pmid: Allows to refine per promotion id(s). orderable_only: Unavailable products will be excluded from the search results if true is set. Multiple refinement values are not supported. |  | {nbsp}
 | locale a| String |  The locale context. |  | {nbsp}
@@ -1858,8 +1859,8 @@ Access product availability information of products that are online and assigned
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| id a| String |  The requested product id. |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| id a| String |  The requested product id. |  | *{y}*{nbsp}
 | Inventory ids a| Array of String |  Inventory ids |  | {nbsp}
 | locale a| String |  locale |  | {nbsp}
 | Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | {nbsp}
@@ -1926,8 +1927,8 @@ Access bundled product information of products that are online and assigned to s
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| id a| String |  The requested product id. |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| id a| String |  The requested product id. |  | *{y}*{nbsp}
 | locale a| String |  locale |  | {nbsp}
 | Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | {nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
@@ -1993,8 +1994,8 @@ To access single product resources, you construct a URL using the template shown
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| id a| String |  The id of the requested product. |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| id a| String |  The id of the requested product. |  | *{y}*{nbsp}
 | Inventory ids a| Array of String |  Inventory ids |  | {nbsp}
 | locale a| String |  locale |  | {nbsp}
 | expand a| Array of String |  expand |  | {nbsp}
@@ -2064,8 +2065,8 @@ Get Products By IDs This operation makes an HTTP GET request to the /products/({
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| ids a| Array of String |  ids |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| ids a| Array of String |  ids |  | *{y}*{nbsp}
 | Inventory ids a| Array of String |  Inventory ids |  | {nbsp}
 | locale a| String |  locale |  | {nbsp}
 | expand a| Array of String |  expand |  | {nbsp}
@@ -2135,8 +2136,8 @@ Access product image information of products that are online and assigned to sit
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| id a| String |  The requested product id. |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| id a| String |  The requested product id. |  | *{y}*{nbsp}
 | View type a| Array of String |  View type |  | {nbsp}
 | All images a| Boolean |  All images |  false | {nbsp}
 | Variation attribute a| String |  Variation attribute |  | {nbsp}
@@ -2205,8 +2206,8 @@ Access product link information of products that are online and assigned to site
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| id a| String |  The requested product id. |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| id a| String |  The requested product id. |  | *{y}*{nbsp}
 | type a| String |  type |  | {nbsp}
 | direction a| String |  direction |  | {nbsp}
 | locale a| String |  locale |  | {nbsp}
@@ -2274,8 +2275,8 @@ Access product option information of products that are online and assigned to si
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| id a| String |  The requested product id. |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| id a| String |  The requested product id. |  | *{y}*{nbsp}
 | locale a| String |  locale |  | {nbsp}
 | Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | {nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
@@ -2341,8 +2342,8 @@ Access product price information of products that are online and assigned to the
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| id a| String |  The requested product id. |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| id a| String |  The requested product id. |  | *{y}*{nbsp}
 | locale a| String |  locale |  | {nbsp}
 | Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | {nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
@@ -2408,8 +2409,8 @@ Access product promotion information of products that are online and assigned to
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| id a| String |  The requested product id. |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| id a| String |  The requested product id. |  | *{y}*{nbsp}
 | currency a| String |  currency |  | {nbsp}
 | locale a| String |  locale |  | {nbsp}
 | Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | {nbsp}
@@ -2476,8 +2477,8 @@ Access product recommendation information of products that are online and assign
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| id a| String |  The requested product id. |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| id a| String |  The requested product id. |  | *{y}*{nbsp}
 | Recommendation type a| Number |  Recommendation type |  | {nbsp}
 | locale a| String |  locale |  | {nbsp}
 | Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | {nbsp}
@@ -2544,8 +2545,8 @@ Access product set information of products that are online and assigned to site 
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| id a| String |  The requested product id. |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| id a| String |  The requested product id. |  | *{y}*{nbsp}
 | locale a| String |  locale |  | {nbsp}
 | Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | {nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
@@ -2611,8 +2612,8 @@ Access product variation information of products that are online and assigned to
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| id a| String |  The requested product id. |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| id a| String |  The requested product id. |  | *{y}*{nbsp}
 | locale a| String |  locale |  | {nbsp}
 | Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | {nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
@@ -2678,8 +2679,8 @@ Handles get promotion by filter criteria Returns an array of enabled promotions 
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Campaign id a| String |  Find the promotions assigned to this campaign (mandatory) |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Campaign id a| String |  Find the promotions assigned to this campaign (mandatory) |  | *{y}*{nbsp}
 | Start date a| String |  The start date of the promotion in ISO8601 date time format: yyyy-MM-dd'T'HH:mmZ |  | {nbsp}
 | End date a| String |  The end date of the promotion in ISO8601 date time format: yyyy-MM-dd'T'HH:mmZ |  | {nbsp}
 | currency a| String |  The currency mnemonic specified for price |  | {nbsp}
@@ -2747,8 +2748,8 @@ Returns an enabled promotion using a specified id. Each request returns a respon
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| id a| String |  The id of the requested promotion. |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| id a| String |  The id of the requested promotion. |  | *{y}*{nbsp}
 | locale a| String |  locale |  | {nbsp}
 | Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | {nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
@@ -2814,8 +2815,8 @@ Get Promotions By IDs This operation makes an HTTP GET request to the /promotion
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| ids a| Array of String |  ids |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| ids a| Array of String |  ids |  | *{y}*{nbsp}
 | locale a| String |  locale |  | {nbsp}
 | Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | {nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
@@ -2881,8 +2882,8 @@ Provides keyword search functionality for products, categories, content, brands 
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| q a| String |  The query phrase to search for. |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| q a| String |  The query phrase to search for. |  | *{y}*{nbsp}
 | count a| Number |  The maximum number of suggestions per request. Default value is 5. This affects all types of suggestions (category, product, content, brand, custom suggestions). |  | {nbsp}
 | currency a| String |  The currency mnemonic specified for price. This parameter is effective only for product suggestions. |  | {nbsp}
 | locale a| String |  locale |  | {nbsp}
@@ -2950,7 +2951,7 @@ Access site information, like site status and site content URLs. This operation 
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
 | Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | {nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
@@ -3015,7 +3016,7 @@ This resource retrieves a list of stores, for the given site, those are within a
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
 | count a| Number |  The maximum number of instances per request. Default value is 25. |  | {nbsp}
 | latitude a| Number |  The geo coordinate latitude to search for stores (value range -90.00 .. 90.00). |  | {nbsp}
 | longitude a| Number |  The geo coordinate longitude to search for stores (value range -180.00 .. 180.00). |  | {nbsp}
@@ -3088,8 +3089,8 @@ To access a store, you construct a URL using the template shown below. This temp
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| id a| String |  The id of the requested store. |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| id a| String |  The id of the requested store. |  | *{y}*{nbsp}
 | Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | {nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
@@ -3154,8 +3155,8 @@ Get Stores By IDs This operation makes an HTTP GET request to the /stores/({ids}
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| ids a| Array of String |  ids |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| ids a| Array of String |  ids |  | *{y}*{nbsp}
 | Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | {nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
@@ -3220,7 +3221,7 @@ Deletes all the access token information of a given resource owner id so that it
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
 | Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | {nbsp}
 |===
 
@@ -3244,9 +3245,9 @@ Creates a new basket based on a basket reference. The returned basket will be a 
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
 | Content a| Binary |  the content to use |  #[payload] | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -3310,8 +3311,8 @@ Exchanges a valid JWT into a new session, which is associated with the authentic
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -3375,10 +3376,10 @@ Updates the customer's password. This operation makes an HTTP PUT request to the
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Customer id a| String |  the customer id |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Customer id a| String |  the customer id |  | *{y}*{nbsp}
 | Content a| Binary |  the content to use |  #[payload] | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Custom Query Parameters a| Object |  |  | {nbsp}
 | Custom Headers a| Object |  |  | {nbsp}
 | Response Timeout a| Number |  The timeout for request to the remote service. |  | {nbsp}
@@ -3454,9 +3455,9 @@ An agent must provide an OAuth token. The agent can use this resource to create 
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
 | Content a| Binary |  the content to use |  #[payload] | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -3520,10 +3521,10 @@ Adds a coupon to an existing basket. This operation makes an HTTP POST request t
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Basket id a| String |  The id of the basket to be modified. |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Basket id a| String |  The id of the basket to be modified. |  | *{y}*{nbsp}
 | Content a| Binary |  the content to use |  #[payload] | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -3587,10 +3588,10 @@ Adds a gift certificate item to an existing basket. This operation makes an HTTP
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Basket id a| String |  the id of the basket to be modified |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Basket id a| String |  the id of the basket to be modified |  | *{y}*{nbsp}
 | Content a| Binary |  the content to use |  #[payload] | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -3659,10 +3660,10 @@ This is the id of the product to be added to the basket. If the product is alrea
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Basket id a| String |  The id of the basket to be modified. |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Basket id a| String |  The id of the basket to be modified. |  | *{y}*{nbsp}
 | Content a| Binary |  the content to use |  #[payload] | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -3733,10 +3734,10 @@ NOTE: If CREDIT_CARD is selected as the payment_method_id, it is mandatory to pr
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Basket id a| String |  the basket id |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Basket id a| String |  the basket id |  | *{y}*{nbsp}
 | Content a| Binary |  the content to use |  #[payload] | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -3810,10 +3811,10 @@ This operation makes an HTTP POST request to the /baskets/{basket_id}/shipments 
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Basket id a| String |  the id of the basket to be modified |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Basket id a| String |  the id of the basket to be modified |  | *{y}*{nbsp}
 | Content a| Binary |  the content to use |  #[payload] | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -3877,9 +3878,9 @@ Register's a customer. The mandatory data are the credentials and profile last n
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
 | Content a| Binary |  the content to use |  #[payload] | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -3943,10 +3944,10 @@ Creates a new address with the given name for the given customer. This operation
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Customer id a| String |  the id of the customer to create the address for |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Customer id a| String |  the id of the customer to create the address for |  | *{y}*{nbsp}
 | Content a| Binary |  the content to use |  #[payload] | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -4010,9 +4011,9 @@ It starts a password reset process. A password reset token is generated and pass
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Customer id a| String |  the id of the customer |  | *x*{nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Customer id a| String |  the id of the customer |  | *{y}*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -4076,10 +4077,10 @@ Adds a payment instrument to a customer information. This operation makes an HTT
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Customer id a| String |  the id of the customer |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Customer id a| String |  the id of the customer |  | *{y}*{nbsp}
 | Content a| Binary |  the content to use |  #[payload] | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -4143,10 +4144,10 @@ Creates a customer product list. This operation makes an HTTP POST request to th
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Customer id a| String |  The customer id. |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Customer id a| String |  The customer id. |  | *{y}*{nbsp}
 | Content a| Binary |  the content to use |  #[payload] | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -4221,11 +4222,11 @@ This operation makes an HTTP POST request to the /customers/{customer_id}/produc
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Customer id a| String |  The id of the customer - owner of the product list. |  | *x*{nbsp}
-| List id a| String |  The id of the product list |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Customer id a| String |  The id of the customer - owner of the product list. |  | *{y}*{nbsp}
+| List id a| String |  The id of the product list |  | *{y}*{nbsp}
 | Content a| Binary |  the content to use |  #[payload] | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -4299,12 +4300,12 @@ This operation makes an HTTP POST request to the /customers/{customer_id}/produc
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Customer id a| String |  The id of the customer - owner of the product list. |  | *x*{nbsp}
-| List id a| String |  The id of the product list. |  | *x*{nbsp}
-| Item id a| String |  The id of the product list item where to add the purchase. |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Customer id a| String |  The id of the customer - owner of the product list. |  | *{y}*{nbsp}
+| List id a| String |  The id of the product list. |  | *{y}*{nbsp}
+| Item id a| String |  The id of the product list item where to add the purchase. |  | *{y}*{nbsp}
 | Content a| Binary |  the content to use |  #[payload] | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -4368,9 +4369,9 @@ Action to retrieve an existing gift certificate. This operation makes an HTTP PO
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
 | Content a| Binary |  the content to use |  #[payload] | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -4438,9 +4439,9 @@ This operation makes an HTTP POST request to the /orders endpoint
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
 | Content a| Binary |  the content to use |  #[payload] | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -4508,11 +4509,11 @@ The default implementation places the order if the order status is CREATED and t
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Order no a| String |  the order number |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Order no a| String |  the order number |  | *{y}*{nbsp}
 | Skip authorization a| Boolean |  Skip authorization |  false | {nbsp}
 | Content a| Binary |  the content to use |  #[payload] | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -4576,9 +4577,9 @@ Removes a basket. This operation makes an HTTP DELETE request to the /baskets/{b
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Basket id a| String |  the id of the basket to be retrieved |  | *x*{nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Basket id a| String |  the id of the basket to be retrieved |  | *{y}*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Custom Query Parameters a| Object |  |  #[null] | {nbsp}
 | Custom Headers a| Object |  |  | {nbsp}
 | Response Timeout a| Number |  The timeout for request to the remote service. |  | {nbsp}
@@ -4639,10 +4640,10 @@ Removes a coupon from the basket. This operation makes an HTTP DELETE request to
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Basket id a| String |  the id of the basket to be modified |  | *x*{nbsp}
-| Coupon item id a| String |  the id of the coupon item to be removed |  | *x*{nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Basket id a| String |  the id of the basket to be modified |  | *{y}*{nbsp}
+| Coupon item id a| String |  the id of the coupon item to be removed |  | *{y}*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -4706,10 +4707,10 @@ Deletes a gift certificate item from an existing basket. This operation makes an
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Basket id a| String |  the id of the basket to be modified |  | *x*{nbsp}
-| Gift certificate item id a| String |  the id of the gift certificate item to be removed |  | *x*{nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Basket id a| String |  the id of the basket to be modified |  | *{y}*{nbsp}
+| Gift certificate item id a| String |  the id of the gift certificate item to be removed |  | *{y}*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -4773,10 +4774,10 @@ Removes a product item from the basket. This operation makes an HTTP DELETE requ
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Basket id a| String |  the id of the basket to be modified |  | *x*{nbsp}
-| Item id a| String |  the id of the product item to be removed |  | *x*{nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Basket id a| String |  the id of the basket to be modified |  | *{y}*{nbsp}
+| Item id a| String |  the id of the product item to be removed |  | *{y}*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -4840,10 +4841,10 @@ Removes a payment instrument of a basket. This operation makes an HTTP DELETE re
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Basket id a| String |  the basket id |  | *x*{nbsp}
-| Payment instrument id a| String |  the id of the payment instrument to be removed |  | *x*{nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Basket id a| String |  the basket id |  | *{y}*{nbsp}
+| Payment instrument id a| String |  the id of the payment instrument to be removed |  | *{y}*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -4907,10 +4908,10 @@ Removes a specified shipment and all associated product, gift certificate, shipp
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Basket id a| String |  the id of the basket to be modified |  | *x*{nbsp}
-| Shipment id a| String |  the id of the shipment to be deleted |  | *x*{nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Basket id a| String |  the id of the basket to be modified |  | *{y}*{nbsp}
+| Shipment id a| String |  the id of the shipment to be deleted |  | *{y}*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -4974,10 +4975,10 @@ Deletes a customer's address by address name. This operation makes an HTTP DELET
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Customer id a| String |  the id of the customer to delete the address for |  | *x*{nbsp}
-| Address name a| String |  the name of the address to delete |  | *x*{nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Customer id a| String |  the id of the customer to delete the address for |  | *{y}*{nbsp}
+| Address name a| String |  the name of the address to delete |  | *{y}*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Custom Query Parameters a| Object |  |  #[null] | {nbsp}
 | Custom Headers a| Object |  |  | {nbsp}
 | Response Timeout a| Number |  The timeout for request to the remote service. |  | {nbsp}
@@ -5038,9 +5039,9 @@ Invalidates the JWT provided in the header. This operation makes an HTTP DELETE 
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
 | Authorization a| String |  the JWT token |  | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Custom Query Parameters a| Object |  |  #[null] | {nbsp}
 | Custom Headers a| Object |  |  | {nbsp}
 | Response Timeout a| Number |  The timeout for request to the remote service. |  | {nbsp}
@@ -5101,10 +5102,10 @@ Deletes a customer's payment instrument. This operation makes an HTTP DELETE req
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Customer id a| String |  the id of the customer to delete the payment instrument for |  | *x*{nbsp}
-| Payment instrument id a| String |  the id of the payment instrument to be deleted |  | *x*{nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Customer id a| String |  the id of the customer to delete the payment instrument for |  | *{y}*{nbsp}
+| Payment instrument id a| String |  the id of the payment instrument to be deleted |  | *{y}*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Custom Query Parameters a| Object |  |  #[null] | {nbsp}
 | Custom Headers a| Object |  |  | {nbsp}
 | Response Timeout a| Number |  The timeout for request to the remote service. |  | {nbsp}
@@ -5165,10 +5166,10 @@ Deletes a customer product list. This operation makes an HTTP DELETE request to 
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Customer id a| String |  The customer id. |  | *x*{nbsp}
-| List id a| String |  The product list id. |  | *x*{nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Customer id a| String |  The customer id. |  | *{y}*{nbsp}
+| List id a| String |  The product list id. |  | *{y}*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Custom Query Parameters a| Object |  |  #[null] | {nbsp}
 | Custom Headers a| Object |  |  | {nbsp}
 | Response Timeout a| Number |  The timeout for request to the remote service. |  | {nbsp}
@@ -5229,11 +5230,11 @@ Removes an item from a customer product list. This operation makes an HTTP DELET
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Customer id a| String |  The id of the owner of the product list |  | *x*{nbsp}
-| List id a| String |  The id of the product list. |  | *x*{nbsp}
-| Item id a| String |  The id of the product list item to delete. |  | *x*{nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Customer id a| String |  The id of the owner of the product list |  | *{y}*{nbsp}
+| List id a| String |  The id of the product list. |  | *{y}*{nbsp}
+| Item id a| String |  The id of the product list item to delete. |  | *{y}*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Custom Query Parameters a| Object |  |  #[null] | {nbsp}
 | Custom Headers a| Object |  |  | {nbsp}
 | Response Timeout a| Number |  The timeout for request to the remote service. |  | {nbsp}
@@ -5294,10 +5295,10 @@ Removes a payment instrument of an order. This operation makes an HTTP DELETE re
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Order no a| String |  the order number |  | *x*{nbsp}
-| Payment instrument id a| String |  the id of the payment instrument to be updated |  | *x*{nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Order no a| String |  the order number |  | *{y}*{nbsp}
+| Payment instrument id a| String |  the id of the payment instrument to be updated |  | *{y}*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -5361,8 +5362,8 @@ This is a beta feature that has been canceled. A future release will include the
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Recommender name a| String |  The recommender name. |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Recommender name a| String |  The recommender name. |  | *{y}*{nbsp}
 | uuid a| String |  uuid |  | {nbsp}
 | Inventory ids a| Array of String |  Inventory ids |  | {nbsp}
 | products a| Array of String |  products |  | {nbsp}
@@ -5370,7 +5371,7 @@ This is a beta feature that has been canceled. A future release will include the
 | categories a| Array of String |  categories |  | {nbsp}
 | currency a| String |  currency |  | {nbsp}
 | All images a| Boolean |  All images |  false | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -5434,9 +5435,9 @@ Gets the approaching discounts of a basket This operation makes an HTTP GET requ
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Basket id a| String |  The id of the basket to be checked. |  | *x*{nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Basket id a| String |  The id of the basket to be checked. |  | *{y}*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -5500,9 +5501,9 @@ Gets a basket. This operation makes an HTTP GET request to the /baskets/{basket_
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Basket id a| String |  the id of the basket to be retrieved |  | *x*{nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Basket id a| String |  the id of the basket to be retrieved |  | *{y}*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -5566,9 +5567,9 @@ Gets applicable payment methods for an existing basket considering the open paym
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Basket id a| String |  the basket id |  | *x*{nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Basket id a| String |  the basket id |  | *{y}*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -5632,10 +5633,10 @@ Gets the applicable shipping methods for a certain shipment of a basket. This op
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Basket id a| String |  the id of the basket |  | *x*{nbsp}
-| Shipment id a| String |  the id of the shipment |  | *x*{nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Basket id a| String |  the id of the basket |  | *{y}*{nbsp}
+| Shipment id a| String |  the id of the shipment |  | *{y}*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -5699,10 +5700,10 @@ Reads a custom object with a given object type ID and a value for the key attrib
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Object type a| String |  the ID of the object type |  | *x*{nbsp}
-| key a| String |  the key attribute value of the custom object |  | *x*{nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Object type a| String |  the ID of the object type |  | *{y}*{nbsp}
+| key a| String |  the key attribute value of the custom object |  | *{y}*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -5766,12 +5767,12 @@ Returns a sorted pageable list of all customer addresses in the address book. Th
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Customer id a| String |  The customer uuid |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Customer id a| String |  The customer uuid |  | *{y}*{nbsp}
 | count a| Number |  count |  | {nbsp}
 | Initial Offset a| Number |  the initial offset to apply on the first request |  0 | {nbsp}
 | Output Mime Type a| String |  The mime type of the payload that this operation outputs. |  | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryIterable>>
 * <<RepeatableFileStoreIterable>>
 * non-repeatable-iterable |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -5833,10 +5834,10 @@ Retrieves a customer's address by address name. This operation makes an HTTP GET
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Customer id a| String |  the id of the customer to retrieve the address for |  | *x*{nbsp}
-| Address name a| String |  the name of the address to retrieve |  | *x*{nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Customer id a| String |  the id of the customer to retrieve the address for |  | *{y}*{nbsp}
+| Address name a| String |  the name of the address to retrieve |  | *{y}*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -5900,9 +5901,9 @@ Gets the baskets of a customer. This operation makes an HTTP GET request to the 
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Customer id a| String |  the id of the customer to retrieve the baskets for |  | *x*{nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Customer id a| String |  the id of the customer to retrieve the baskets for |  | *{y}*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -5966,10 +5967,10 @@ Gets a customer. This operation makes an HTTP GET request to the /customers/{cus
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Customer id a| String |  The customer id |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Customer id a| String |  The customer id |  | *{y}*{nbsp}
 | expand a| Array of String |  expand |  | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -6033,15 +6034,15 @@ Returns a pageable list of all customer's orders. The default page size is 10. T
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Customer id a| String |  the customer uuid |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Customer id a| String |  the customer uuid |  | *{y}*{nbsp}
 | count a| Number |  count |  | {nbsp}
 | until a| String |  until |  | {nbsp}
 | Cross sites a| Boolean |  Cross sites |  false | {nbsp}
 | status a| String |  status |  | {nbsp}
 | from a| String |  from |  | {nbsp}
 | start a| Number |  start |  | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -6105,10 +6106,10 @@ Gets customer payment instruments for a customer. It can be limited to a specifi
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Customer id a| String |  the id of the customer to retrieve the payment instruments for |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Customer id a| String |  the id of the customer to retrieve the payment instruments for |  | *{y}*{nbsp}
 | Payment method id a| String |  Payment method id |  | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -6172,10 +6173,10 @@ Retrieves a customer's payment instrument by its id. This operation makes an HTT
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Customer id a| String |  the id of the customer to retrieve the payment instrument for |  | *x*{nbsp}
-| Payment instrument id a| String |  the id of the payment instrument to be retrievedCustomer |  | *x*{nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Customer id a| String |  the id of the customer to retrieve the payment instrument for |  | *{y}*{nbsp}
+| Payment instrument id a| String |  the id of the payment instrument to be retrievedCustomer |  | *{y}*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -6239,10 +6240,10 @@ Returns all customer product lists. This operation makes an HTTP GET request to 
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Customer id a| String |  The customer id. |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Customer id a| String |  The customer id. |  | *{y}*{nbsp}
 | expand a| Array of String |  expand |  | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -6306,11 +6307,11 @@ Returns a customer product list of the given customer. This operation makes an H
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Customer id a| String |  The customer id. |  | *x*{nbsp}
-| List id a| String |  The product list id. |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Customer id a| String |  The customer id. |  | *{y}*{nbsp}
+| List id a| String |  The product list id. |  | *{y}*{nbsp}
 | expand a| Array of String |  expand |  | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -6374,13 +6375,13 @@ Returns a pageable list of all items of a customer's product list. The default p
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Customer id a| String |  The id of the customer to retrieve the product list items for. |  | *x*{nbsp}
-| List id a| String |  The id of the product list. |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Customer id a| String |  The id of the customer to retrieve the product list items for. |  | *{y}*{nbsp}
+| List id a| String |  The id of the product list. |  | *{y}*{nbsp}
 | expand a| Array of String |  expand |  | {nbsp}
 | start a| Number |  start |  | {nbsp}
 | count a| Number |  count |  | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -6444,12 +6445,12 @@ Returns an item of a customer product list. This operation makes an HTTP GET req
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Customer id a| String |  The id of the customer to retrieve the product list items for. |  | *x*{nbsp}
-| List id a| String |  The id of the product list. |  | *x*{nbsp}
-| Item id a| String |  The id of the product list item to retrieve. |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Customer id a| String |  The id of the customer to retrieve the product list items for. |  | *{y}*{nbsp}
+| List id a| String |  The id of the product list. |  | *{y}*{nbsp}
+| Item id a| String |  The id of the product list item to retrieve. |  | *{y}*{nbsp}
 | expand a| Array of String |  expand |  | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -6513,11 +6514,11 @@ Returns a list of all purchases of an item from a customer's product list. This 
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Customer id a| String |  The id of the customer to retrieve the product list item purchases for. |  | *x*{nbsp}
-| List id a| String |  The id of the product list. |  | *x*{nbsp}
-| Item id a| String |  The id of the product list item to retrieve from. |  | *x*{nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Customer id a| String |  The id of the customer to retrieve the product list item purchases for. |  | *{y}*{nbsp}
+| List id a| String |  The id of the product list. |  | *{y}*{nbsp}
+| Item id a| String |  The id of the product list item to retrieve from. |  | *{y}*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -6581,12 +6582,12 @@ Returns a purchase of an item from a customer's product list. This operation mak
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Customer id a| String |  The id of the customer to retrieve the product list items for. |  | *x*{nbsp}
-| List id a| String |  The id of the product list. |  | *x*{nbsp}
-| Item id a| String |  The id of the product list item to retrieve. |  | *x*{nbsp}
-| Purchase id a| String |  The id of the product list item purchase to retrieve. |  | *x*{nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Customer id a| String |  The id of the customer to retrieve the product list items for. |  | *{y}*{nbsp}
+| List id a| String |  The id of the product list. |  | *{y}*{nbsp}
+| Item id a| String |  The id of the product list item to retrieve. |  | *{y}*{nbsp}
+| Purchase id a| String |  The id of the product list item purchase to retrieve. |  | *{y}*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -6650,9 +6651,9 @@ Gets information for an order. This operation makes an HTTP GET request to the /
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Order no a| String |  the order number |  | *x*{nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Order no a| String |  the order number |  | *{y}*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -6716,9 +6717,9 @@ Gets the applicable payment methods for an existing order considering the open p
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Order no a| String |  the order number |  | *x*{nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Order no a| String |  the order number |  | *{y}*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -6782,9 +6783,9 @@ Retrieves the applicable shipping methods for a certain product. This operation 
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| id a| String |  the requested product id |  | *x*{nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| id a| String |  the requested product id |  | *{y}*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -6848,10 +6849,10 @@ Updates a basket. Only the currency of the basket, source code, and the custom p
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Basket id a| String |  the id of the basket to be modified |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Basket id a| String |  the id of the basket to be modified |  | *{y}*{nbsp}
 | Content a| Binary |  the content to use |  #[payload] | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -6915,11 +6916,11 @@ Updates a gift certificate item of an existing basket. This operation makes an H
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Basket id a| String |  the id of the basket to be modified |  | *x*{nbsp}
-| Gift certificate item id a| String |  the id of the gift certificate item to be updated |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Basket id a| String |  the id of the basket to be modified |  | *{y}*{nbsp}
+| Gift certificate item id a| String |  the id of the gift certificate item to be updated |  | *{y}*{nbsp}
 | Content a| Binary |  the content to use |  #[payload] | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -6995,11 +6996,11 @@ The following values in the request body are considered by the server:
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Basket id a| String |  the id of the basket to be modified |  | *x*{nbsp}
-| Item id a| String |  the it of the item to be updated |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Basket id a| String |  the id of the basket to be modified |  | *{y}*{nbsp}
+| Item id a| String |  the it of the item to be updated |  | *{y}*{nbsp}
 | Content a| Binary |  the content to use |  #[payload] | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -7065,11 +7066,11 @@ This operation makes an HTTP PATCH request to the /baskets/{basket_id}/payment_i
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Basket id a| String |  the basket id |  | *x*{nbsp}
-| Payment instrument id a| String |  the id of the payment instrument to be updated |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Basket id a| String |  the basket id |  | *{y}*{nbsp}
+| Payment instrument id a| String |  the id of the payment instrument to be updated |  | *{y}*{nbsp}
 | Content a| Binary |  the content to use |  #[payload] | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -7135,11 +7136,11 @@ This operation makes an HTTP PATCH request to the /baskets/{basket_id}/shipments
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Basket id a| String |  the id of the basket to be modified |  | *x*{nbsp}
-| Shipment id a| String |  the id of the shipment to be modified |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Basket id a| String |  the id of the basket to be modified |  | *{y}*{nbsp}
+| Shipment id a| String |  the id of the shipment to be modified |  | *{y}*{nbsp}
 | Content a| Binary |  the content to use |  #[payload] | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -7203,11 +7204,11 @@ Updates a customer's address by address name. This operation makes an HTTP PATCH
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Customer id a| String |  the id of the customer to update the address for |  | *x*{nbsp}
-| Address name a| String |  the name of the address to update |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Customer id a| String |  the id of the customer to update the address for |  | *{y}*{nbsp}
+| Address name a| String |  the name of the address to update |  | *{y}*{nbsp}
 | Content a| Binary |  the content to use |  #[payload] | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -7271,10 +7272,10 @@ Updates a customer. This operation makes an HTTP PATCH request to the /customers
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Customer id a| String |  the customer id |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Customer id a| String |  the customer id |  | *{y}*{nbsp}
 | Content a| Binary |  the content to use |  #[payload] | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -7338,11 +7339,11 @@ Changes a product list. Changeable properties are the name, description and if t
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Customer id a| String |  The customer id. |  | *x*{nbsp}
-| List id a| String |  The product list id. |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Customer id a| String |  The customer id. |  | *{y}*{nbsp}
+| List id a| String |  The product list id. |  | *{y}*{nbsp}
 | Content a| Binary |  the content to use |  #[payload] | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -7418,12 +7419,12 @@ This operation makes an HTTP PATCH request to the /customers/{customer_id}/produ
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Customer id a| String |  The id of the owner of the product list. |  | *x*{nbsp}
-| List id a| String |  The id of the product list. |  | *x*{nbsp}
-| Item id a| String |  The id of the product list item to update. |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Customer id a| String |  The id of the owner of the product list. |  | *{y}*{nbsp}
+| List id a| String |  The id of the product list. |  | *{y}*{nbsp}
+| Item id a| String |  The id of the product list item to update. |  | *{y}*{nbsp}
 | Content a| Binary |  the content to use |  #[payload] | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -7487,13 +7488,13 @@ Updates a purchase of an item from a customer's product list. Considered values 
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Customer id a| String |  The id of the customer to retrieve the product list item purchases for. |  | *x*{nbsp}
-| List id a| String |  The id of the product list. |  | *x*{nbsp}
-| Item id a| String |  The id of the product list item to retrieve. |  | *x*{nbsp}
-| Purchase id a| String |  The id of the product list item purchase to retrieve. |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Customer id a| String |  The id of the customer to retrieve the product list item purchases for. |  | *{y}*{nbsp}
+| List id a| String |  The id of the product list. |  | *{y}*{nbsp}
+| Item id a| String |  The id of the product list item to retrieve. |  | *{y}*{nbsp}
+| Purchase id a| String |  The id of the product list item purchase to retrieve. |  | *{y}*{nbsp}
 | Content a| Binary |  the content to use |  #[payload] | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -7557,10 +7558,10 @@ Update an order. Considered fields for update are status (same status transition
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Order no a| String |  the order number |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Order no a| String |  the order number |  | *{y}*{nbsp}
 | Content a| Binary |  the content to use |  #[payload] | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -7628,12 +7629,12 @@ This operation makes an HTTP PATCH request to the /orders/{order_no}/payment_ins
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Order no a| String |  the order number |  | *x*{nbsp}
-| Payment instrument id a| String |  the id of the payment instrument to be updated |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Order no a| String |  the order number |  | *{y}*{nbsp}
+| Payment instrument id a| String |  the id of the payment instrument to be updated |  | *{y}*{nbsp}
 | Skip authorization a| Boolean |  Skip authorization |  false | {nbsp}
 | Content a| Binary |  the content to use |  #[payload] | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -7697,9 +7698,9 @@ Marks a basket as an agent basket. This operation makes an HTTP PUT request to t
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Basket id a| String |  the basket id |  | *x*{nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Basket id a| String |  the basket id |  | *{y}*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -7764,12 +7765,12 @@ Sets the billing address of a basket. This operation makes an HTTP PUT request t
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Basket id a| String |  The id of the basket to be modified. |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Basket id a| String |  The id of the basket to be modified. |  | *{y}*{nbsp}
 | Use as shipping a| Boolean |  Use as shipping |  false | {nbsp}
 | Customer address id a| String |  Customer address id |  | {nbsp}
 | Content a| Binary |  the content to use |  #[payload] | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -7833,10 +7834,10 @@ Sets customer information for an existing basket. This operation makes an HTTP P
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Basket id a| String |  the id of the basket to be modified |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Basket id a| String |  the id of the basket to be modified |  | *{y}*{nbsp}
 | Content a| Binary |  the content to use |  #[payload] | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -7900,13 +7901,13 @@ Sets a shipping address of a specific shipment of a basket. This operation makes
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Basket id a| String |  The id of the basket to be modified. |  | *x*{nbsp}
-| Shipment id a| String |  The id of the shipment to be modified. |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Basket id a| String |  The id of the basket to be modified. |  | *{y}*{nbsp}
+| Shipment id a| String |  The id of the shipment to be modified. |  | *{y}*{nbsp}
 | Use as billing a| Boolean |  Use as billing |  false | {nbsp}
 | Customer address id a| String |  Customer address id |  | {nbsp}
 | Content a| Binary |  the content to use |  #[payload] | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -7970,11 +7971,11 @@ Sets a shipping method to a specific shipment of a basket. This operation makes 
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Basket id a| String |  the id of the basket to be modified |  | *x*{nbsp}
-| Shipment id a| String |  the id of the shipment to be modified |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Basket id a| String |  the id of the basket to be modified |  | *{y}*{nbsp}
+| Shipment id a| String |  the id of the shipment to be modified |  | *{y}*{nbsp}
 | Content a| Binary |  the content to use |  #[payload] | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -8038,10 +8039,10 @@ Adds a note to an existing basket. This operation makes an HTTP POST request to 
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Basket id a| String |  The id of the basket to be modified. |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Basket id a| String |  The id of the basket to be modified. |  | *{y}*{nbsp}
 | Content a| Binary |  the content to use |  #[payload] | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -8105,10 +8106,10 @@ Adds a custom manual price adjustment to the basket. This operation makes an HTT
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Basket id a| String |  the id of the basket to be modified |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Basket id a| String |  the id of the basket to be modified |  | *{y}*{nbsp}
 | Content a| Binary |  the content to use |  #[payload] | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -8176,9 +8177,9 @@ This operation makes an HTTP POST request to the /customers/{customer_id}/auth e
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Customer id a| String |  specifies the customer to act on behalf of |  | *x*{nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Customer id a| String |  specifies the customer to act on behalf of |  | *{y}*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -8328,9 +8329,9 @@ This operation makes an HTTP POST request to the /order_search endpoint
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
 | Content a| Binary |  the content to use |  #[payload] | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -8394,10 +8395,10 @@ Adds a note to an existing order. This operation makes an HTTP POST request to t
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Order no a| String |  The id of the order to be modified. |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Order no a| String |  The id of the order to be modified. |  | *{y}*{nbsp}
 | Content a| Binary |  the content to use |  #[payload] | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -8461,10 +8462,10 @@ Removes a basket note. This operation makes an HTTP DELETE request to the /baske
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Basket id a| String |  the id of the basket to be modified |  | *x*{nbsp}
-| Note id a| String |  the id of the note to be removed |  | *x*{nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Basket id a| String |  the id of the basket to be modified |  | *{y}*{nbsp}
+| Note id a| String |  the id of the note to be removed |  | *{y}*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -8528,10 +8529,10 @@ Removes a custom manual price adjustment from the basket. This operation makes a
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Basket id a| String |  the id of the basket to be modified |  | *x*{nbsp}
-| Price adjustment id a| String |  the uuid of the adjustment to be removed |  | *x*{nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Basket id a| String |  the id of the basket to be modified |  | *{y}*{nbsp}
+| Price adjustment id a| String |  the uuid of the adjustment to be removed |  | *{y}*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -8595,10 +8596,10 @@ Removes an order note. This operation makes an HTTP DELETE request to the /order
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Order no a| String |  the id of the order to be modified |  | *x*{nbsp}
-| Note id a| String |  the id of the note to be removed |  | *x*{nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Order no a| String |  the id of the order to be modified |  | *{y}*{nbsp}
+| Note id a| String |  the id of the note to be removed |  | *{y}*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -8662,9 +8663,9 @@ Retrieves notes for a basket. This operation makes an HTTP GET request to the /b
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Basket id a| String |  The id of the basket for which you want to retrieve the notes. |  | *x*{nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Basket id a| String |  The id of the basket for which you want to retrieve the notes. |  | *{y}*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -8728,9 +8729,9 @@ Retrieves notes for an order. This operation makes an HTTP GET request to the /o
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Order no a| String |  The id of the order from which you want to retrieve notes. |  | *x*{nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Order no a| String |  The id of the order from which you want to retrieve notes. |  | *{y}*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -8796,8 +8797,8 @@ This operation makes an HTTP GET request to the /price_adjustment_limits endpoin
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -8875,11 +8876,11 @@ This operation makes an HTTP PATCH request to the /baskets/{basket_id}/price_adj
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Basket id a| String |  the id of the basket to be modified |  | *x*{nbsp}
-| Price adjustment id a| String |  the uuid of the adjustment to be updated |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Basket id a| String |  the id of the basket to be modified |  | *{y}*{nbsp}
+| Price adjustment id a| String |  the uuid of the adjustment to be updated |  | *{y}*{nbsp}
 | Content a| Binary |  the content to use |  #[payload] | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -8943,10 +8944,10 @@ Marks a basket as storefront basket. This operation makes an HTTP PUT request to
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Basket id a| String |  the basket id |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Basket id a| String |  the basket id |  | *{y}*{nbsp}
 | exchange a| Boolean |  exchange |  false | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
@@ -9012,10 +9013,10 @@ This operation makes an HTTP PUT request to the /orders/{order_no} endpoint
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *x*{nbsp}
-| Order no a| String |  The order number to assign to the new order. |  | *x*{nbsp}
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Order no a| String |  The order number to assign to the new order. |  | *{y}*{nbsp}
 | Content a| Binary |  the content to use |  #[payload] | {nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *x*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Streaming Strategy a| * <<RepeatableInMemoryStream>>
 * <<RepeatableFileStoreStream>>
 * non-repeatable-stream |  Configure if repeatable streams should be used and their behaviour |  | {nbsp}
