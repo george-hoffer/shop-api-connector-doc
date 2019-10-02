@@ -3646,7 +3646,12 @@ Adds a gift certificate item to an existing basket. This operation makes an HTTP
 `<shop:create-baskets-items-by-basket-id>`
 
 
-Adds new items to a basket. The added items are associated with the specified shipment. If no shipment id is specified, the added items are associated with the default shipment. Considered values from the request body, for each item are: product_id: a valid product id. This is the id of the product to be added to the basket. If the product is already in the basket, the API either increments the quantity of the existing product line item or creates a new product line item, based on the site preference 'Add Product Behavior'. This operation makes an HTTP POST request to the /baskets/{basket_id}/items endpoint
+Adds new items to a basket. The added items are associated with the specified shipment. If no shipment id is specified, the added items are associated with the default shipment. 
+
+Considered values from the request body, for each item are: 
+. product_id: a valid product id. 
+
+This is the id of the product to be added to the basket. If the product is already in the basket, the API either increments the quantity of the existing product line item or creates a new product line item, based on the site preference Add Product Behavior. This operation makes an HTTP POST request to the /baskets/{basket_id}/items endpoint
 
 
 === Parameters
@@ -3713,7 +3718,14 @@ Adds new items to a basket. The added items are associated with the specified sh
 `<shop:create-baskets-payment-instruments-by-basket-id>`
 
 
-Adds a payment instrument to a basket. Payment instruments are usually authorized after order creation, for example in a custom hook. The default payment authorization process executes an authorization when a payment instrument is added to an order or updated. See POST /orders/{order_no}/payment_instruments and PATCH /orders/{order_no}/payment_instruments/{payment_instrument_id}. NOTE: If CREDIT_CARD is selected as the payment_method_id, it is mandatory to provide the property card_type. This operation makes an HTTP POST request to the /baskets/{basket_id}/payment_instruments endpoint
+Adds a payment instrument to a basket. Payment instruments are usually authorized after order creation, for example in a custom hook. The default payment authorization process executes an authorization when a payment instrument is added to an order or updated. 
+
+See  
+ 
+.POST /orders/{order_no}/payment_instruments
+.PATCH /orders/{order_no}/payment_instruments/{payment_instrument_id} 
+
+NOTE: If CREDIT_CARD is selected as the payment_method_id, it is mandatory to provide the property card_type. This operation makes an HTTP POST request to the /baskets/{basket_id}/payment_instruments endpoint
 
 
 === Parameters
@@ -3780,7 +3792,17 @@ Adds a payment instrument to a basket. Payment instruments are usually authorize
 `<shop:create-baskets-shipments-by-basket-id>`
 
 
-Creates a new shipment for a basket. The created shipment is initialized with values provided in the body document and can be updated with further data API calls. Considered from the body are the following properties if specified: the id the shipping address the shipping method gift boolean flag gift message custom properties This operation makes an HTTP POST request to the /baskets/{basket_id}/shipments endpoint
+Creates a new shipment for a basket. The created shipment is initialized with values provided in the body document and can be updated with further data API calls. 
+
+Considered values from the body are the following properties if specified: 
+
+. Id 
+. Shipping address 
+. Shipping method 
+. Gift boolean flag 
+. Gift message custom properties 
+
+This operation makes an HTTP POST request to the /baskets/{basket_id}/shipments endpoint
 
 
 === Parameters
@@ -4180,7 +4202,18 @@ Creates a customer product list. This operation makes an HTTP POST request to th
 `<shop:create-customers-product-lists-items-by-customer-id-list-id>`
 
 
-Adds an item to the customer's product list. Considered values from the request body are: type: a valid type, mandatory. This is the type of the item to be added to the customer's product list. priority: This is the priority of the item to be added to the customer's product list. public: This is the flag whether the item to be added to the customer's product list is public. product_id: a valid product id, used for product item type only. This is the id (sku) of the product related to the item to be added to the customer's product list. It is mandatory for product item type and it must be a valid product id, otherwise ProductListProductIdMissingException or ProductListProductNotFoundException will be thrown. quantity: used for product item type only. This is the quantity of the item to be added to the customer's product list. custom properties in the form c_: the custom property must correspond to a custom attribute () defined for ProductListItem. The value of this property must be valid for the type of custom attribute defined for ProductListItem. This operation makes an HTTP POST request to the /customers/{customer_id}/product_lists/{list_id}/items endpoint
+Adds an item to the customer's product list. 
+
+Considered values from the request body are: type: 
+
+. A valid type, mandatory. This is the type of the item to be added to the customer's product list.  
+. Priority: This is the priority of the item to be added to the customer's product list.  
+. Public: This is the flag whether the item to be added to the customer's product list is public.  
+. Product_id: a valid product id, used for product item type only. This is the id (sku) of the product related to the item to be added to the customer's product list. It is mandatory for product item type and it must be a valid product id, otherwise ProductListProductIdMissingException or ProductListProductNotFoundException will be thrown.    
+. Quantity: used for product item type only. This is the quantity of the item to be added to the customer's product list.  
+. Custom properties in the form c_: the custom property must correspond to a custom attribute () defined for ProductListItem. The value of this property must be valid for the type of custom attribute defined for ProductListItem.  
+
+This operation makes an HTTP POST request to the /customers/{customer_id}/product_lists/{list_id}/items endpoint.
 
 
 === Parameters
@@ -4248,7 +4281,13 @@ Adds an item to the customer's product list. Considered values from the request 
 `<shop:create-customers-product-lists-items-purchases-by-customer-id-list-id-item-id>`
 
 
-Adds a purchase to an item in the customer's product list. Considered values from the request body are: purchaser_name: name of the purchaser, mandatory. This is the full name of the purchaser of this product list item. quantity: amount purchased, mandatory. This is the quantity of the items purchased from the product list. custom properties in the form c_: the custom property must correspond to a custom attribute () defined for ProductListItemPurchase. The value of this property must be valid for the type of custom attribute defined for ProductListItemPurchase. This operation makes an HTTP POST request to the /customers/{customer_id}/product_lists/{list_id}/items/{item_id}/purchases endpoint
+Adds a purchase to an item in the customer's product list.   
+
+Considered values from the request body are:   
+. Purchaser_name: name of the purchaser, mandatory. This is the full name of the purchaser of this product list item. 
+. Quantity: amount purchased, mandatory. This is the quantity of the items purchased from the product list.   
+. Custom properties in the form c_: the custom property must correspond to a custom attribute () defined for ProductListItemPurchase. The value of this property must be valid for the type of custom attribute defined for ProductListItemPurchase.    
+This operation makes an HTTP POST request to the /customers/{customer_id}/product_lists/{list_id}/items/{item_id}/purchases endpoint
 
 
 === Parameters
