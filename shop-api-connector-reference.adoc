@@ -3432,7 +3432,9 @@ Updates the customer's password. This operation makes an HTTP PUT request to the
 
 
 Creates a new basket. The created basket is initialized with default values. Data provided in the body document will be populated into the created basket. It can be updated with further Shop API calls. 
+
 Considered values from the request body are: 
+
 . customer information: PUT /baskets/{basket_id}/customer 
 . billing address: PUT /baskets/{basket_id}/billing_address 
 . shipments including shipping address and shipping method: POST /baskets/{basket_id}/shipments 
