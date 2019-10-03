@@ -8449,45 +8449,6 @@ Exchanges a valid JWT into a new session, which is associated with the authentic
 * SHOP:UNSUPPORTED_MEDIA_TYPE {nbsp}
 
 
-[[Unauthorize]]
-== Unauthorize
-`<shop:unauthorize>`
-
-
-Deletes all the access token information of a given resource owner id so that it's impossible to execute any operation for that user without doing the authorization dance again
-
-
-=== Parameters
-
-[%header%autowidth.spread]
-|===
-| Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | {nbsp}
-|===
-
-
-=== For Configurations
-
-* <<ShopConfiguration>> {nbsp}
-
-=== Throws
-
-* SHOP:BAD_REQUEST {nbsp}
-* SHOP:CLIENT_ERROR {nbsp}
-* SHOP:CONNECTIVITY {nbsp}
-* SHOP:INTERNAL_SERVER_ERROR {nbsp}
-* SHOP:NOT_ACCEPTABLE {nbsp}
-* SHOP:NOT_FOUND {nbsp}
-* SHOP:RETRY_EXHAUSTED {nbsp}
-* SHOP:SERVER_ERROR {nbsp}
-* SHOP:SERVICE_UNAVAILABLE {nbsp}
-* SHOP:TIMEOUT {nbsp}
-* SHOP:TOO_MANY_REQUESTS {nbsp}
-* SHOP:UNAUTHORIZED {nbsp}
-* SHOP:UNSUPPORTED_MEDIA_TYPE {nbsp}
-
-
 [[UpdateBasketsAgentByBasketId]]
 == Put Baskets By IDAgent
 `<shop:update-baskets-agent-by-basket-id>`
@@ -9011,6 +8972,45 @@ This operation makes an HTTP PUT request to the /orders/{order_no} endpoint
 === For Configurations
 
 * <<ShopOauth2Configuration>> {nbsp}
+
+=== Throws
+
+* SHOP:BAD_REQUEST {nbsp}
+* SHOP:CLIENT_ERROR {nbsp}
+* SHOP:CONNECTIVITY {nbsp}
+* SHOP:INTERNAL_SERVER_ERROR {nbsp}
+* SHOP:NOT_ACCEPTABLE {nbsp}
+* SHOP:NOT_FOUND {nbsp}
+* SHOP:RETRY_EXHAUSTED {nbsp}
+* SHOP:SERVER_ERROR {nbsp}
+* SHOP:SERVICE_UNAVAILABLE {nbsp}
+* SHOP:TIMEOUT {nbsp}
+* SHOP:TOO_MANY_REQUESTS {nbsp}
+* SHOP:UNAUTHORIZED {nbsp}
+* SHOP:UNSUPPORTED_MEDIA_TYPE {nbsp}
+
+
+[[Unauthorize]]
+== Unauthorize
+`<shop:unauthorize>`
+
+
+Deletes all the access token information of a given resource owner id so that it's impossible to execute any operation for that user without doing the authorization dance again
+
+
+=== Parameters
+
+[%header%autowidth.spread]
+|===
+| Name | Type | Description | Default Value | Required
+| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
+| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | {nbsp}
+|===
+
+
+=== For Configurations
+
+* <<ShopConfiguration>> {nbsp}
 
 === Throws
 
