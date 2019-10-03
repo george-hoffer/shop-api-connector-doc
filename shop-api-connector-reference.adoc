@@ -446,7 +446,6 @@ The Shop API Connector is an Operation Based Connector, which means that when yo
 * <<DeleteBasketsPaymentInstrumentsByBasketIdPaymentInstrumentId>> {nbsp}
 * <<DeleteBasketsShipmentsByBasketIdShipmentId>> {nbsp}
 * <<DeleteCustomersAddressesByCustomerIdAddressName>> {nbsp}
-* <<DeleteCustomersAuth>> {nbsp}
 * <<DeleteCustomersPaymentInstrumentsByCustomerIdPaymentInstrumentId>> {nbsp}
 * <<DeleteCustomersProductListsByCustomerIdListId>> {nbsp}
 * <<DeleteCustomersProductListsItemsByCustomerIdListIdItemId>> {nbsp}
@@ -1221,69 +1220,6 @@ Deletes a customer's address by address name. This operation makes an HTTP DELET
 | Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
 | Customer id a| String |  the id of the customer to delete the address for |  | *{y}*{nbsp}
 | Address name a| String |  the name of the address to delete |  | *{y}*{nbsp}
-| Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
-| Custom Query Parameters a| Object |  |  #[null] | {nbsp}
-| Custom Headers a| Object |  |  | {nbsp}
-| Response Timeout a| Number |  The timeout for request to the remote service. |  | {nbsp}
-| Response Timeout Unit a| Enumeration, one of:
-
-** NANOSECONDS
-** MICROSECONDS
-** MILLISECONDS
-** SECONDS
-** MINUTES
-** HOURS
-** DAYS |  A time unit which qualifies the Response Timeout} |  | {nbsp}
-| Target Variable a| String |  The name of a variable on which the operation's output will be placed |  | {nbsp}
-| Target Value a| String |  An expression that will be evaluated against the operation's output and the outcome of that expression will be stored in the target variable |  #[payload] | {nbsp}
-| Reconnection Strategy a| * <<Reconnect>>
-* <<ReconnectForever>> |  A retry strategy in case of connectivity errors |  | {nbsp}
-|===
-
-=== Output
-
-[%autowidth.spread]
-|===
-| *Type* a| String
-| *Attributes Type* a| <<HttpResponseAttributes>>
-|===
-
-=== For Configurations
-
-* <<ShopJwtAndOauth2Configuration>> {nbsp}
-
-=== Throws
-
-* SHOP:BAD_REQUEST {nbsp}
-* SHOP:CLIENT_ERROR {nbsp}
-* SHOP:CONNECTIVITY {nbsp}
-* SHOP:INTERNAL_SERVER_ERROR {nbsp}
-* SHOP:NOT_ACCEPTABLE {nbsp}
-* SHOP:NOT_FOUND {nbsp}
-* SHOP:RETRY_EXHAUSTED {nbsp}
-* SHOP:SERVER_ERROR {nbsp}
-* SHOP:SERVICE_UNAVAILABLE {nbsp}
-* SHOP:TIMEOUT {nbsp}
-* SHOP:TOO_MANY_REQUESTS {nbsp}
-* SHOP:UNAUTHORIZED {nbsp}
-* SHOP:UNSUPPORTED_MEDIA_TYPE {nbsp}
-
-
-[[DeleteCustomersAuth]]
-== Delete Customers Auth
-`<shop:delete-customers-auth>`
-
-
-Invalidates the JWT provided in the header. This operation makes an HTTP DELETE request to the /customers/auth endpoint
-
-
-=== Parameters
-
-[%header%autowidth.spread]
-|===
-| Name | Type | Description | Default Value | Required
-| Configuration | String | The name of the configuration to use. | | *{y}*{nbsp}
-| Authorization a| String |  the JWT token |  | {nbsp}
 | Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Custom Query Parameters a| Object |  |  #[null] | {nbsp}
 | Custom Headers a| Object |  |  | {nbsp}
